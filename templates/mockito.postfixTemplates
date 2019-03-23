@@ -1,0 +1,25 @@
+# Mockito postfix templates
+.createMockByMockito : mockito create a mock instance
+    java.lang.Class    [org.mockito.Mockito]  →  org.mockito.Mockito.mock($expr$)               [USE_STATIC_IMPORTS]
+.createMockWithNameByMockito : mockito create a mock instance with name
+    java.lang.Class    [org.mockito.Mockito]  →  org.mockito.Mockito.mock($expr$, $name$)       [USE_STATIC_IMPORTS]
+.createMockWithAnswerByMockito : mockito create a mock instance with answer
+    java.lang.Class    [org.mockito.Mockito]  →  org.mockito.Mockito.mock($expr$, (org.mockito.stubbing.Answer<$defaultAnswerType$>) invocation -> {$answerValue$})  [USE_STATIC_IMPORTS]
+.createSpyByMockito : mockito create a spy instance
+    java.lang.Object   [org.mockito.Mockito]  →  org.mockito.Mockito.spy($expr$)                [USE_STATIC_IMPORTS]
+.whenByMockito : mockito when
+    ANY                 [org.mockito.Mockito] -> org.mockito.Mockito.when($expr$)               [USE_STATIC_IMPORTS]
+.verifyByMockito : mockito verify
+    ANY                 [org.mockito.Mockito] -> org.mockito.Mockito.verify($expr$)             [USE_STATIC_IMPORTS]
+.verifyWithModeByMockito : mockito verify
+    ANY                 [org.mockito.Mockito] -> org.mockito.Mockito.verify($expr$,$mode$)      [USE_STATIC_IMPORTS]
+.resetByMockito : mockito reset
+    ANY                 [org.mockito.Mockito] -> org.mockito.Mockito.reset($expr$)              [USE_STATIC_IMPORTS]
+.clearInvocationsByMockito : mockito clear invocations
+    ANY                 [org.mockito.Mockito] -> org.mockito.Mockito.clearInvocations($expr$)   [USE_STATIC_IMPORTS]
+.doThrowByMockito : doThrow in mockito
+    java.lang.Throwable [org.mockito.Mockito] -> org.mockito.Mockito.doThrow($expr$)            [USE_STATIC_IMPORTS]
+.doAnswerByMockito : doAnswer in mockito
+    org.mockito.stubbing.Answer [org.mockito.Mockito] -> org.mockito.Mockito.doAnswer($expr$)   [USE_STATIC_IMPORTS]
+.doReturnByMockito : doReturn in mockito
+    ANY [org.mockito.Mockito] -> org.mockito.Mockito.doReturn($expr$)                           [USE_STATIC_IMPORTS]
