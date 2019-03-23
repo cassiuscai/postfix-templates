@@ -1,0 +1,11 @@
+## Templates for assertj ##
+.assertThat : AssertJ Fluent Assertions
+    ARRAY            [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThat($expr$)
+    BYTE             [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThat($expr$)
+    SHORT            [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThat($expr$)
+    CHAR             [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThat($expr$)
+    INT              [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThat($expr$)
+    LONG             [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThat($expr$)
+    FLOAT            [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThat($expr$)
+    DOUBLE           [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThat($expr$)
+    java.lang.Object [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThat($expr$)
