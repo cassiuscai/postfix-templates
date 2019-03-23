@@ -1,37 +1,37 @@
 # convert java object
 .toJsonString : convert java object to json string
-    ANY                         [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.toJSONString($expr$)
+    ANY                         [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.toJSONString($expr$)                                      [USE_STATIC_IMPORTS]
 
 .toJsonObject : convert java object to json object
-    ANY                         [com.alibaba.fastjson.JSON]  →  ((com.alibaba.fastjson.JSONObject) com.alibaba.fastjson.JSON.toJSON($expr$))
+    ANY                         [com.alibaba.fastjson.JSON]  →  ((com.alibaba.fastjson.JSONObject) com.alibaba.fastjson.JSON.toJSON($expr$))        [USE_STATIC_IMPORTS]
 
 .toJsonArray : convert java collection to json array
-    java.util.Collection        [com.alibaba.fastjson.JSON]  →  ((com.alibaba.fastjson.JSONArray) com.alibaba.fastjson.JSON.toJSON($expr$))
+    java.util.Collection        [com.alibaba.fastjson.JSON]  →  ((com.alibaba.fastjson.JSONArray) com.alibaba.fastjson.JSON.toJSON($expr$))         [USE_STATIC_IMPORTS]
 
 # parse json array string
 .parseToJavaList : parse json string to java object list
-    java.lang.String            [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.parseArray($expr$,$clazz$)
+    java.lang.String            [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.parseArray($expr$,$clazz$)                                [USE_STATIC_IMPORTS]
 
 .parseToJsonArray : parse json array string to JSONArray
-    java.lang.String            [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.parseArray($expr$)
+    java.lang.String            [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.parseArray($expr$)                                        [USE_STATIC_IMPORTS]
 
 # parse json object string
 .parseToJavaObject : parse json string to java object
-    java.lang.String            [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.parseObject($expr$, $clazz$)
+    java.lang.String            [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.parseObject($expr$, $clazz$)                              [USE_STATIC_IMPORTS]
 
 .parseToJsonObject : parse json string to JSONObject
-    java.lang.String            [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.parseObject($expr$)
+    java.lang.String            [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.parseObject($expr$)                                       [USE_STATIC_IMPORTS]
 
 # convert json object to java object
 .toJavaObject : convert json object to java object
-    com.alibaba.fastjson.JSON   [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.toJavaObject($expr$, $clazz$)
+    com.alibaba.fastjson.JSON   [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.toJavaObject($expr$, $clazz$)                             [USE_STATIC_IMPORTS]
 
 # check json string is valid
 .isJsonArray : check the string is valid json array string
-    java.lang.String            [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.isValidArray($expr$)
+    java.lang.String            [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.isValidArray($expr$)                                      [USE_STATIC_IMPORTS]
 
 .isJsonObject : check the string is valid json object string
-    java.lang.String            [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.isValidObject($expr$)
+    java.lang.String            [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.isValidObject($expr$)                                     [USE_STATIC_IMPORTS]
 
 .isJson : check the string is valid json string
-    java.lang.String            [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.isValid($expr$)
+    java.lang.String            [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.isValid($expr$)                                           [USE_STATIC_IMPORTS]
