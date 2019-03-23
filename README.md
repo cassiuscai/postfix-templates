@@ -2,3 +2,6 @@
 
 #### Java
 - [AssertJ Core Template](templates/assertj-core.postfixTemplates)
+- FastJSON,TODO
+- Guava,TODO
+- Mockito,TODO
