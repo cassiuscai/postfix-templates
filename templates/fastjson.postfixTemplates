@@ -1,35 +1,36 @@
-.toJSONString : convert java object to json string via fastjson
-    java.lang.Object            [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.toJSONString($expr$)
+.toJsonString : convert java object to json string
+    ANY                         [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.toJSONString($expr$)
 
-.toJSONObject : convert java object to json object via fastjson
-    java.lang.Object            [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.toJSON($expr$)
+.toJsonObject : convert java object to json object
+    ANY                         [com.alibaba.fastjson.JSON]  →  ((com.alibaba.fastjson.JSONObject) com.alibaba.fastjson.JSON.toJSON($expr$))
 
+.toJsonArray : convert java collection to json array
+    java.util.Collection        [com.alibaba.fastjson.JSON]  →  ((com.alibaba.fastjson.JSONArray) com.alibaba.fastjson.JSON.toJSON($expr$))
 
 # parse json array string
-.parseToJavaList : parse json string to java list
+.parseToJavaList : parse json string to java object list
     java.lang.String            [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.parseArray($expr$,$clazz$)
 
-.parseToJSONArray : parse json array string to JSONArray
+.parseToJsonArray : parse json array string to JSONArray
     java.lang.String            [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.parseArray($expr$)
-
 
 # parse json object string
 .parseToJavaObject : parse json string to java object
     java.lang.String            [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.parseObject($expr$, $clazz$)
 
-.parseToJSONObject : parse json string to JSONObject
+.parseToJsonObject : parse json string to JSONObject
     java.lang.String            [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.parseObject($expr$)
 
-# convert JSON to Java object
-.toJavaObject : convert json string to java object
+# convert json object to java object
+.toJavaObject : convert json object to java object
     com.alibaba.fastjson.JSON   [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.toJavaObject($expr$, $clazz$)
 
 # check json string is valid
-.isValidJSONArray : check the string is valid json array string
+.isJsonArray : check the string is valid json array string
     java.lang.String            [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.isValidArray($expr$)
 
-.isValidJSONObject : check the string is valid json object string
+.isJsonObject : check the string is valid json object string
     java.lang.String            [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.isValidObject($expr$)
 
-.isValidJSONString : check the string is valid json string
+.isJson : check the string is valid json string
     java.lang.String            [com.alibaba.fastjson.JSON]  →  com.alibaba.fastjson.JSON.isValid($expr$)
