@@ -2,7 +2,7 @@
 
 #### Java
 - [assertj-core templates](templates/assertj-core.postfixTemplates)
-- [fastJson templates](templates/fastjson.postfixTemplates)
+- [fastjson templates](templates/fastjson.postfixTemplates)
 - [mockito templates](templates/mockito.postfixTemplates)
 - [slf4j templates](templates/slf4j.postfixTemplates)
 
