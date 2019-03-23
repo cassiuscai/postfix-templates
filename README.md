@@ -2,9 +2,3 @@
 
 #### Java
 - [AssertJ Core Template](templates/assertj-core.postfixTemplates)
-
-### Scala
-- [AssertJ Core Template](templates/assertj-core.postfixTemplates)
-
-### Kotlin
-- [AssertJ Core Template](templates/assertj-core.postfixTemplates)
