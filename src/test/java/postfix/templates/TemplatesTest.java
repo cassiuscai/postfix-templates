@@ -14,8 +14,10 @@ import static org.mockito.Mockito.*;
 
 public class TemplatesTest {
 
+
     @Test
     public void testFastJSONTemplates() {
+
         Person p1 = new Person();
         p1.setAge(8);
         p1.setName("Tommy");
@@ -62,8 +64,7 @@ public class TemplatesTest {
         doReturn(101).when(service2).count();
         assertThat(service2.count()).isEqualTo(101);
 
+        assertThat(ps.toArray(new Person[0])).hasSize(2);
 
     }
-
-
 }

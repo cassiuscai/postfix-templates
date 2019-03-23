@@ -1,0 +1,38 @@
+# Slf4j postfix templates
+.getLogger : get slf4j logger instance
+    java.lang.String    →  final org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger($expr$);
+    java.lang.Class     →  final org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger($expr$);
+
+# log with default logger
+# logTrace
+.loggerTrace : logger trace
+    java.lang.String    → if(logger.isTraceEnabled()) {\
+                            logger.trace($expr$);\
+                          }
+    java.lang.Throwable → if(logger.isTraceEnabled()) {\
+                            logger.trace($msg$,$expr$);\
+                          }
+# loggerDebug
+.loggerDebug : logger debug
+    java.lang.String    → if(logger.isDebugEnabled()) {\
+                            logger.debug($expr$);\
+                          }
+    java.lang.Throwable → if(logger.isDebugEnabled()) {\
+                            logger.debug($msg$,$expr$);\
+                          }
+# loggerInfo
+.loggerInfo : logger info
+    java.lang.String    → if(logger.isInfoEnabled()) {\
+                            logger.info($expr$);\
+                          }
+    java.lang.Throwable → if(logger.isInfoEnabled()) {\
+                            logger.info($msg$,$expr$);\
+                          }
+# loggerWarn
+.loggerWarn : logger warn
+    java.lang.String    → logger.warn($expr$);
+    java.lang.Throwable → logger.warm($msg$,$expr$);
+# loggerError
+.loggerError : loggerError
+    java.lang.String    → logger.error($expr$);
+    java.lang.Throwable → logger.error($msg$,$expr$);
