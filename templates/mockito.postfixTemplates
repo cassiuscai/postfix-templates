@@ -1,15 +1,15 @@
 # Mockito postfix templates
 # create mock instance
 .mock : mockito create a mock instance
-    java.lang.Class    [org.mockito.Mockito]  →  org.mockito.Mockito.mock($expr$)               [USE_STATIC_IMPORTS]
+    java.lang.Class     [org.mockito.Mockito]  →  org.mockito.Mockito.mock($expr$)               [USE_STATIC_IMPORTS]
 .mockWithName : mockito create a mock instance with name
-    java.lang.Class    [org.mockito.Mockito]  →  org.mockito.Mockito.mock($expr$, $name$)       [USE_STATIC_IMPORTS]
+    java.lang.Class     [org.mockito.Mockito]  →  org.mockito.Mockito.mock($expr$, $name$)       [USE_STATIC_IMPORTS]
 .mockWithAnswer : mockito create a mock instance with default answer
-    java.lang.Class    [org.mockito.Mockito]  →  org.mockito.Mockito.mock($expr$, (org.mockito.stubbing.Answer<$defaultAnswerType$>) invocation -> $answerBody$)  [USE_STATIC_IMPORTS]
+    java.lang.Class     [org.mockito.Mockito]  →  org.mockito.Mockito.mock($expr$, (org.mockito.stubbing.Answer<$defaultAnswerType$>) invocation -> $answerBody$)  [USE_STATIC_IMPORTS]
 
 # create spy instance
 .spy : mockito create a spy instance
-    java.lang.Object   [org.mockito.Mockito]  →  org.mockito.Mockito.spy($expr$)                [USE_STATIC_IMPORTS]
+    java.lang.Object    [org.mockito.Mockito]  →  org.mockito.Mockito.spy($expr$)                [USE_STATIC_IMPORTS]
 
 # mockito stubing operations
 .when : mockito when
