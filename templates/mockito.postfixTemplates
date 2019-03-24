@@ -13,20 +13,20 @@
 
 # mockito stubing operations
 .when : mockito when
-    ANY                 [org.mockito.Mockito] -> org.mockito.Mockito.when($expr$)               [USE_STATIC_IMPORTS]
+    ANY                 [org.mockito.Mockito] → org.mockito.Mockito.when($expr$)               [USE_STATIC_IMPORTS]
 .verify : mockito verify
-    ANY                 [org.mockito.Mockito] -> org.mockito.Mockito.verify($expr$)             [USE_STATIC_IMPORTS]
+    ANY                 [org.mockito.Mockito] → org.mockito.Mockito.verify($expr$)             [USE_STATIC_IMPORTS]
 .verifyWithMode : mockito verify
-    ANY                 [org.mockito.Mockito] -> org.mockito.Mockito.verify($expr$,$mode$)      [USE_STATIC_IMPORTS]
+    ANY                 [org.mockito.Mockito] → org.mockito.Mockito.verify($expr$,$mode$)      [USE_STATIC_IMPORTS]
 .reset : mockito reset
-    ANY                 [org.mockito.Mockito] -> org.mockito.Mockito.reset($expr$)              [USE_STATIC_IMPORTS]
+    ANY                 [org.mockito.Mockito] → org.mockito.Mockito.reset($expr$)              [USE_STATIC_IMPORTS]
 .clearInvocations : mockito clear invocations
-    ANY                 [org.mockito.Mockito] -> org.mockito.Mockito.clearInvocations($expr$)   [USE_STATIC_IMPORTS]
+    ANY                 [org.mockito.Mockito] → org.mockito.Mockito.clearInvocations($expr$)   [USE_STATIC_IMPORTS]
 .doThrow : mockito doThrow
-    ANY                 [org.mockito.Mockito] -> org.mockito.Mockito.doThrow($throwable$).when($expr$).$END$    [USE_STATIC_IMPORTS]
+    ANY                 [org.mockito.Mockito] → org.mockito.Mockito.doThrow($throwable$).when($expr$).$END$    [USE_STATIC_IMPORTS]
 .doNothing : mockito doNothing
-    ANY                 [org.mockito.Mockito] -> org.mockito.Mockito.doNothing().when($expr$).$END$
+    ANY                 [org.mockito.Mockito] → org.mockito.Mockito.doNothing().when($expr$).$END$
 .doAnswer : mockito doAnswer
-    ANY                 [org.mockito.Mockito] -> org.mockito.Mockito.doAnswer((org.mockito.stubbing.Answer<$defaultAnswerType$>) invocation -> $answerBody$).when($expr$).$END$   [USE_STATIC_IMPORTS]
+    ANY                 [org.mockito.Mockito] → org.mockito.Mockito.doAnswer((org.mockito.stubbing.Answer<$defaultAnswerType$>) invocation -> $answerBody$).when($expr$).$END$   [USE_STATIC_IMPORTS]
 .doReturn : mockito doReturn
-    ANY                 [org.mockito.Mockito] -> org.mockito.Mockito.doReturn($returnValue$).when($expr$).$END$ [USE_STATIC_IMPORTS]
+    ANY                 [org.mockito.Mockito] → org.mockito.Mockito.doReturn($returnValue$).when($expr$).$END$ [USE_STATIC_IMPORTS]
