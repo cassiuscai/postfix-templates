@@ -3,9 +3,11 @@
     ARRAY                           [com.google.common.base.Joiner]         →  com.google.common.base.Joiner.on($separator$).join($expr$)
     java.lang.Iterable              [com.google.common.base.Joiner]         →  com.google.common.base.Joiner.on($separator$).join($expr$)
     java.util.Map                   [com.google.common.base.Joiner]         →  com.google.common.base.Joiner.on($separator$).withKeyValueSeparator($keyValueSeparator$).useForNull($nullReplacement$).join($expr$)
+
 .joinSkipNull : guava joining together a sequence of strings with a separator and skip null values
     ARRAY                           [com.google.common.base.Joiner]         →  com.google.common.base.Joiner.on($separator$).skipNull().join($expr$)
     java.lang.Iterable              [com.google.common.base.Joiner]         →  com.google.common.base.Joiner.on($separator$).skipNull().join($expr$)
+
 .joinReplaceNull : guava joining together a sequence of strings with a separator and replace null values
     ARRAY                           [com.google.common.base.Joiner]         →  com.google.common.base.Joiner.on($separator$).useForNull($nullReplacement$).join($expr$)
     java.lang.Iterable              [com.google.common.base.Joiner]         →  com.google.common.base.Joiner.on($separator$).useForNull($nullReplacement$).join($expr$)
@@ -40,8 +42,8 @@
 
 
 # split to map
-.splitToMap : guava splitting strings to list with a separator
+.splitToMap : guava splitting strings to map with a separator
     java.lang.String                [com.google.common.base.Splitter]       →  com.google.common.base.Splitter.on($separator$).trimResults().omitEmptyStrings().withKeyValueSeparator($keyValueSeparator$).split($expr$)
 
-.splitToMapByRegexp : guava splitting strings to list with a regexp pattern
+.splitToMapByRegexp : guava splitting strings to map with a regexp pattern
     java.lang.String                [com.google.common.base.Splitter]       →  com.google.common.base.Splitter.onPattern($regexp$).trimResults().omitEmptyStrings().withKeyValueSeparator($keyValueSeparator$).split($expr$)
