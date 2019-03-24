@@ -66,5 +66,16 @@ public class TemplatesTest {
 
         assertThat(ps.toArray(new Person[0])).hasSize(2);
 
+
+        doNothing().when(service1).count();
+
+        doReturn(2).when(service1).count();
+
+        doAnswer(
+                (Answer<Integer>) invocation -> {
+                    return 1;
+                }
+        ).when(service1).count();
+
     }
 }
