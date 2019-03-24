@@ -1,0 +1,47 @@
+# Templates for guava string utils ref: https://github.com/google/guava/wiki/StringsExplained
+.join : guava joining together a sequence of strings with a separator
+    ARRAY                           [com.google.common.base.Joiner]         →  com.google.common.base.Joiner.on($separator$).join($expr$)
+    java.lang.Iterable              [com.google.common.base.Joiner]         →  com.google.common.base.Joiner.on($separator$).join($expr$)
+    java.util.Map                   [com.google.common.base.Joiner]         →  com.google.common.base.Joiner.on($separator$).withKeyValueSeparator($keyValueSeparator$).useForNull($nullReplacement$).join($expr$)
+.joinSkipNull : guava joining together a sequence of strings with a separator and skip null values
+    ARRAY                           [com.google.common.base.Joiner]         →  com.google.common.base.Joiner.on($separator$).skipNull().join($expr$)
+    java.lang.Iterable              [com.google.common.base.Joiner]         →  com.google.common.base.Joiner.on($separator$).skipNull().join($expr$)
+.joinReplaceNull : guava joining together a sequence of strings with a separator and replace null values
+    ARRAY                           [com.google.common.base.Joiner]         →  com.google.common.base.Joiner.on($separator$).useForNull($nullReplacement$).join($expr$)
+    java.lang.Iterable              [com.google.common.base.Joiner]         →  com.google.common.base.Joiner.on($separator$).useForNull($nullReplacement$).join($expr$)
+    java.util.Map                   [com.google.common.base.Joiner]         →  com.google.common.base.Joiner.on($separator$).withKeyValueSeparator($keyValueSeparator$).useForNull($nullReplacement$).join($expr$)
+
+
+# split to array
+.split : guava splitting strings with a separator
+    java.lang.String                [com.google.common.base.Splitter]       →  com.google.common.base.Splitter.on($separator$).trimResults().omitEmptyStrings().split($expr$)
+
+.splitByRegexp : guava splitting strings with a regexp pattern
+    java.lang.String                [com.google.common.base.Splitter]       →  com.google.common.base.Splitter.onPattern($regexp$).trimResults().omitEmptyStrings().split($expr$)
+
+.splitToFixedLength : guava splitting strings into substrings of the specified fixed length
+    java.lang.String                [com.google.common.base.Splitter]       →  com.google.common.base.Splitter.fixedLength($length$).split($expr$)
+
+.splitWithLimitSize : guava splitting strings into substrings with result size limited
+    java.lang.String                [com.google.common.base.Splitter]       →  com.google.common.base.Splitter.on($separator$).limit($size$).split($expr$)
+
+# split to list
+.splitToList : guava splitting strings to list with a separator
+    java.lang.String                [com.google.common.base.Splitter]       →  com.google.common.base.Splitter.on($separator$).trimResults().omitEmptyStrings().splitToList($expr$)
+
+.splitToListByRegexp : guava splitting strings to list with a regexp pattern
+    java.lang.String                [com.google.common.base.Splitter]       →  com.google.common.base.Splitter.onPattern($regexp$).trimResults().omitEmptyStrings().splitToList($expr$)
+
+.splitToListWithFixedLength : guava splitting strings into list of substrings of the specified fixed length
+    java.lang.String                [com.google.common.base.Splitter]       →  com.google.common.base.Splitter.fixedLength($length$).splitToList($expr$)
+
+.splitToListWithLimitSize : guava splitting strings into list of substrings with result size limited
+    java.lang.String                [com.google.common.base.Splitter]       →  com.google.common.base.Splitter.on($separator$).limit($size$).splitToList($expr$)
+
+
+# split to map
+.splitToMap : guava splitting strings to list with a separator
+    java.lang.String                [com.google.common.base.Splitter]       →  com.google.common.base.Splitter.on($separator$).trimResults().omitEmptyStrings().withKeyValueSeparator($keyValueSeparator$).split($expr$)
+
+.splitToMapByRegexp : guava splitting strings to list with a regexp pattern
+    java.lang.String                [com.google.common.base.Splitter]       →  com.google.common.base.Splitter.onPattern($regexp$).trimResults().omitEmptyStrings().withKeyValueSeparator($keyValueSeparator$).split($expr$)

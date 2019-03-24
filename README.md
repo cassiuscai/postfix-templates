@@ -5,6 +5,5 @@
 - [fastjson templates](templates/fastjson.postfixTemplates)
 - [mockito templates](templates/mockito.postfixTemplates)
 - [slf4j templates](templates/slf4j.postfixTemplates)
+- [guava-string](templates/guava-string.postfixTemplates)
 
-#### Todo
-- Guava
