@@ -3,8 +3,7 @@ package postfix.templates;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.google.common.base.Joiner;
-import com.google.common.base.Splitter;
+import com.google.common.base.CharMatcher;
 import org.mockito.stubbing.Answer;
 import org.testng.annotations.Test;
 
@@ -84,6 +83,14 @@ public class TemplatesTest {
 
     Map<String, String> map = new HashMap<>();
     map.put("a", null);
+
+
+    String testString = "sadasdasd   asd\nasd       asdas";
+    System.out.println(testString);
+    System.out.println(CharMatcher.breakingWhitespace().replaceFrom(testString, ' '));
+    System.out.println(CharMatcher.whitespace().collapseFrom(testString, ' '));
+    System.out.println(CharMatcher.whitespace().replaceFrom(testString, "@"));
+    System.out.println(CharMatcher.whitespace().removeFrom(testString));
 
   }
 }

@@ -47,3 +47,38 @@
 
 .splitToMapByRegexp : guava splitting strings to map with a regexp pattern
     java.lang.String                [com.google.common.base.Splitter]       →  com.google.common.base.Splitter.onPattern($regexp$).trimResults().omitEmptyStrings().withKeyValueSeparator($keyValueSeparator$).split($expr$)
+
+# Strings.repeat
+.repeat : returns a string consisting of a specific number of concatenated copies of an input string
+    java.lang.String                [com.google.common.base.Strings]        →   com.google.common.base.Strings.repeat($expr$, $times$)
+
+# Strings.padding
+.padStart : padding the start of a string with a padding char
+    java.lang.String                [com.google.common.base.Strings]        →   com.google.common.base.Strings.padStart($expr$, $minLength$, $padChar$)
+
+.padEnd : padding the end of a string with a padding char
+    java.lang.String                [com.google.common.base.Strings]        →   com.google.common.base.Strings.padEnd($expr$, $minLength$, $padChar$)
+
+# Strings null empty convert
+.nullToEmpty : returns the given string if it is non-null; the empty string otherwise
+    java.lang.String                [com.google.common.base.Strings]        →   com.google.common.base.Strings.nullToEmpty($expr$)
+
+.emptyToNull : returns the given string if it is nonempty null otherwise
+    java.lang.String                [com.google.common.base.Strings]        →   com.google.common.base.Strings.emptyToNull($expr$)
+
+# CharMatcher.breakingWhitespace()
+.formatToOneLine : format multiple lines text to on one line with a space
+    java.lang.String                [com.google.common.base.CharMatcher]    →   com.google.common.base.CharMatcher.breakingWhitespace().replaceFrom($expr$,' ')
+
+# CharMatcher.whitespace()
+.removeExtraWhitespace : remove multiple consecutive tabs and spaces and collapse them into single spaces
+    java.lang.String                [com.google.common.base.CharMatcher]    →   com.google.common.base.CharMatcher.whitespace().collapseFrom($expr$,' ')
+
+.removeWhitespace : remove all white space from the string
+    java.lang.String                [com.google.common.base.CharMatcher]    →   com.google.common.base.CharMatcher.whitespace().removeFrom($expr$)
+
+.trimWhitespace : remove leading and trailing whitespace
+    java.lang.String                [com.google.common.base.CharMatcher]    →   com.google.common.base.CharMatcher.whitespace().trimFrom($expr$)
+
+.replaceWhitespace : replace white space
+    java.lang.String                [com.google.common.base.CharMatcher]    →   com.google.common.base.CharMatcher.whitespace().replaceFrom($expr$, $replace$)
