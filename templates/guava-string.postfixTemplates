@@ -72,7 +72,7 @@
 
 # CharMatcher.whitespace()
 .removeExtraWhitespace : remove multiple consecutive tabs and spaces and collapse them into single spaces
-    java.lang.String                [com.google.common.base.CharMatcher]    →   com.google.common.base.CharMatcher.whitespace().collapseFrom($expr$,' ')
+    java.lang.String                [com.google.common.base.CharMatcher]    →   com.google.common.base.CharMatcher.whitespace().trimAndCollapseFrom($expr$,' ')
 
 .removeWhitespace : remove all white space from the string
     java.lang.String                [com.google.common.base.CharMatcher]    →   com.google.common.base.CharMatcher.whitespace().removeFrom($expr$)
