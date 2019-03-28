@@ -2,6 +2,12 @@
 .assertThat : AssertJ Fluent Assertions
     ANY               [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThat($expr$)  [USE_STATIC_IMPORTS]
 
+.assertThatCode : AssertJ assertThatCode
+    ANY               [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThatCode(() -> $expr$)  [USE_STATIC_IMPORTS]
+
+.assertThatObject : AssertJ assertThatObject
+    NON_VOID		  [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThatObject($expr$)  [USE_STATIC_IMPORTS]
+
 .assertThatThrownBy : AssertJ Throwable Assertions
     ANY               [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThatThrownBy(() -> $expr$)  [USE_STATIC_IMPORTS]
 

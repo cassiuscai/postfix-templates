@@ -92,8 +92,7 @@ public class TemplatesTest {
         System.out.println(CharMatcher.whitespace().replaceFrom(testString, "@"));
         System.out.println(CharMatcher.whitespace().removeFrom(testString));
 
-        doThrow(new RuntimeException("aa")).when(service1).count();
-
-        assertThatExceptionOfType(RuntimeException.class).isThrownBy(() -> service1.count()).withMessage("aa");
+        doReturn(1).when(service1).count();
+        assertThatObject(service1.count()).isEqualTo(1);
     }
 }
