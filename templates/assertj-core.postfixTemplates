@@ -1,3 +1,24 @@
 ## Templates for assertj ##
 .assertThat : AssertJ Fluent Assertions
-    ANY               [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThat($expr$)          [USE_STATIC_IMPORTS]
+    ANY               [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThat($expr$)  [USE_STATIC_IMPORTS]
+
+.assertThatThrownBy : AssertJ Throwable Assertions
+    ANY               [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThatThrownBy(() -> $expr$)  [USE_STATIC_IMPORTS]
+
+.assertThatExceptionOfType : AssertJ assertThatExceptionOfType
+    ANY               [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThatExceptionOfType($throwableType$).isThrownBy(() -> $expr$)  [USE_STATIC_IMPORTS]
+
+.assertThatIOException : AssertJ assertThatIOException
+    ANY               [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThatIOException().isThrownBy(() -> $expr$)  [USE_STATIC_IMPORTS]
+
+.assertThatIllegalArgumentException : AssertJ assertThatIllegalArgumentException
+    ANY               [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThatIllegalArgumentException().isThrownBy(() -> $expr$)  [USE_STATIC_IMPORTS]
+
+.assertThatIllegalStateException : AssertJ assertThatIllegalStateException
+    ANY               [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThatIllegalStateException().isThrownBy(() -> $expr$)  [USE_STATIC_IMPORTS]
+
+.assertThatNullPointerException : AssertJ assertThatNullPointerException
+    ANY               [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThatNullPointerException().isThrownBy(() -> $expr$)  [USE_STATIC_IMPORTS]
+
+.assertThatRuntimeException : AssertJ assertThatRuntimeException
+    ANY               [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThatExceptionOfType(java.lang.RuntimeException.class).isThrownBy(() -> $expr$)  [USE_STATIC_IMPORTS]

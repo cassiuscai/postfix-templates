@@ -12,85 +12,88 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 public class TemplatesTest {
 
-  @Test
-  public void testFastJSONTemplates() {
+    @Test
+    public void testFastJSONTemplates() {
 
-    Person p1 = new Person();
-    p1.setAge(8);
-    p1.setName("Tommy");
-    Person p2 = new Person();
-    p2.setAge(8);
-    p2.setName("Jerry");
-    List<Person> ps = new ArrayList<>();
-    ps.add(p1);
-    ps.add(p2);
-    // toJSONString
-    String jsonString = JSON.toJSONString(p1);
-    String jsonArray = JSON.toJSONString(ps);
-    assertThat((JSONObject) JSON.toJSON(p1)).isInstanceOf(JSONObject.class);
-    assertThat((JSONArray) JSON.toJSON(ps)).isInstanceOf(JSONArray.class);
-    assertThat(JSON.parseObject(jsonString)).hasSize(2).containsKeys("name", "age");
-    assertThat(JSON.parseObject(jsonString, Person.class).getName()).isEqualTo("Tommy");
-    assertThat(JSON.parseArray(jsonArray, Person.class)).hasSize(2);
-    assertThat(JSON.parseArray(jsonArray)).hasSize(2);
-    assertThat(JSON.isValidArray(jsonString)).isFalse();
-    assertThat(JSON.isValid(jsonString)).isTrue();
-    assertThat(JSON.isValidObject(jsonString)).isTrue();
-    assertThat(JSON.isValidObject(jsonArray)).isFalse();
-    assertThat(JSON.isValid(jsonArray)).isTrue();
-    assertThat(JSON.isValidArray(jsonArray)).isTrue();
+        Person p1 = new Person();
+        p1.setAge(8);
+        p1.setName("Tommy");
+        Person p2 = new Person();
+        p2.setAge(8);
+        p2.setName("Jerry");
+        List<Person> ps = new ArrayList<>();
+        ps.add(p1);
+        ps.add(p2);
+        // toJSONString
+        String jsonString = JSON.toJSONString(p1);
+        String jsonArray = JSON.toJSONString(ps);
+        assertThat((JSONObject) JSON.toJSON(p1)).isInstanceOf(JSONObject.class);
+        assertThat((JSONArray) JSON.toJSON(ps)).isInstanceOf(JSONArray.class);
+        assertThat(JSON.parseObject(jsonString)).hasSize(2).containsKeys("name", "age");
+        assertThat(JSON.parseObject(jsonString, Person.class).getName()).isEqualTo("Tommy");
+        assertThat(JSON.parseArray(jsonArray, Person.class)).hasSize(2);
+        assertThat(JSON.parseArray(jsonArray)).hasSize(2);
+        assertThat(JSON.isValidArray(jsonString)).isFalse();
+        assertThat(JSON.isValid(jsonString)).isTrue();
+        assertThat(JSON.isValidObject(jsonString)).isTrue();
+        assertThat(JSON.isValidObject(jsonArray)).isFalse();
+        assertThat(JSON.isValid(jsonArray)).isTrue();
+        assertThat(JSON.isValidArray(jsonArray)).isTrue();
 
-    assertThat(1).isPositive();
-    assertThat(1.0).isGreaterThan(0);
+        assertThat(1).isPositive();
+        assertThat(1.0).isGreaterThan(0);
 
-    assertThat(new String[] {"a", "b"}).contains("a").contains("b").hasSize(2);
+        assertThat(new String[]{"a", "b"}).contains("a").contains("b").hasSize(2);
 
-    Service service1 =
-        mock(
-            Service.class,
-            (Answer<Integer>)
-                invocation -> {
-                  return 100;
-                });
+        Service service1 =
+                mock(
+                        Service.class,
+                        (Answer<Integer>)
+                                invocation -> {
+                                    return 100;
+                                });
 
-    Service service2 = spy(service1);
-    when(service2.count()).thenReturn(100).thenReturn(200);
-    assertThat(service2.count()).isEqualTo(100);
-    assertThat(service2.count()).isEqualTo(200);
-    reset(service2);
+        Service service2 = spy(service1);
+        when(service2.count()).thenReturn(100).thenReturn(200);
+        assertThat(service2.count()).isEqualTo(100);
+        assertThat(service2.count()).isEqualTo(200);
+        reset(service2);
 
-    assertThat(service2.count()).isEqualTo(100);
+        assertThat(service2.count()).isEqualTo(100);
 
-    doReturn(101).when(service2).count();
-    assertThat(service2.count()).isEqualTo(101);
+        doReturn(101).when(service2).count();
+        assertThat(service2.count()).isEqualTo(101);
 
-    assertThat(ps.toArray(new Person[0])).hasSize(2);
+        assertThat(ps.toArray(new Person[0])).hasSize(2);
 
-    doReturn(2).when(service1).count();
+        doReturn(2).when(service1).count();
 
-    doAnswer(
-            (Answer<Integer>)
-                invocation -> {
-                  return 1;
-                })
-        .when(service1)
-        .count();
+        doAnswer(
+                (Answer<Integer>)
+                        invocation -> {
+                            return 1;
+                        })
+                .when(service1)
+                .count();
 
-    Map<String, String> map = new HashMap<>();
-    map.put("a", null);
+        Map<String, String> map = new HashMap<>();
+        map.put("a", null);
 
 
-    String testString = "sadasdasd   asd\nasd       asdas";
-    System.out.println(testString);
-    System.out.println(CharMatcher.breakingWhitespace().replaceFrom(testString, ' '));
-    System.out.println(CharMatcher.whitespace().collapseFrom(testString, ' '));
-    System.out.println(CharMatcher.whitespace().replaceFrom(testString, "@"));
-    System.out.println(CharMatcher.whitespace().removeFrom(testString));
+        String testString = "sadasdasd   asd\nasd       asdas";
+        System.out.println(testString);
+        System.out.println(CharMatcher.breakingWhitespace().replaceFrom(testString, ' '));
+        System.out.println(CharMatcher.whitespace().collapseFrom(testString, ' '));
+        System.out.println(CharMatcher.whitespace().replaceFrom(testString, "@"));
+        System.out.println(CharMatcher.whitespace().removeFrom(testString));
 
-  }
+        doThrow(new RuntimeException("aa")).when(service1).count();
+
+        assertThatExceptionOfType(RuntimeException.class).isThrownBy(() -> service1.count()).withMessage("aa");
+    }
 }
