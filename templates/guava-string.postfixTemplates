@@ -4,9 +4,9 @@
     java.lang.Iterable              [com.google.common.base.Joiner]         →  com.google.common.base.Joiner.on($separator$).join($expr$)
     java.util.Map                   [com.google.common.base.Joiner]         →  com.google.common.base.Joiner.on($separator$).withKeyValueSeparator($keyValueSeparator$).useForNull($nullReplacement$).join($expr$)
 
-.joinSkipNull : guava joining together a sequence of strings with a separator and skip null values
-    ARRAY                           [com.google.common.base.Joiner]         →  com.google.common.base.Joiner.on($separator$).skipNull().join($expr$)
-    java.lang.Iterable              [com.google.common.base.Joiner]         →  com.google.common.base.Joiner.on($separator$).skipNull().join($expr$)
+.joinSkipNulls : guava joining together a sequence of strings with a separator and skip null values
+    ARRAY                           [com.google.common.base.Joiner]         →  com.google.common.base.Joiner.on($separator$).skipNulls().join($expr$)
+    java.lang.Iterable              [com.google.common.base.Joiner]         →  com.google.common.base.Joiner.on($separator$).skipNulls().join($expr$)
 
 .joinReplaceNull : guava joining together a sequence of strings with a separator and replace null values
     ARRAY                           [com.google.common.base.Joiner]         →  com.google.common.base.Joiner.on($separator$).useForNull($nullReplacement$).join($expr$)
