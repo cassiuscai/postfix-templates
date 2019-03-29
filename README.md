@@ -6,4 +6,5 @@
 - [mockito templates](templates/mockito.postfixTemplates)
 - [slf4j templates](templates/slf4j.postfixTemplates)
 - [guava-string templates](templates/guava-string.postfixTemplates)
+- [common-assert templates](templates/common-assert.postfixTemplates)
 
