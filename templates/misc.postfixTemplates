@@ -1,4 +1,4 @@
-# argument check  guava > spring > commons-lang
+# argument check
 .shouldNotFalse : assert should not be false
     BOOLEAN                 [com.google.common.base.Preconditions]  →  com.google.common.base.Preconditions.checkArgument($expr$, "$desc:"the expression"$ should be true");
     BOOLEAN                 [org.springframework.util.Assert]       →  org.springframework.util.Assert.isTrue($expr$, "$desc:"the expression"$ should be true");

@@ -7,5 +7,4 @@
 - [slf4j templates](templates/slf4j.postfixTemplates)
 - [guava-string templates](templates/guava-string.postfixTemplates)
 - [guava-collection templates](templates/guava-collection.postfixTemplates)
-- [common-assert templates](templates/common-assert.postfixTemplates)
-
+- [others templates](templates/misc.postfixTemplates)
