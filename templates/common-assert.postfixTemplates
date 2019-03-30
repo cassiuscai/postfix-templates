@@ -12,13 +12,13 @@
     NON_VOID                [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.notNull($expr$, "$desc:"the expression"$ should not be null");
 
 .shouldNotBlank : assert should not be blank
-    java.lang.String        [com.google.common.base.Preconditions]  →  com.google.common.base.Preconditions.checkArgument(!com.google.common.base.CharMatcher.whitespace().matchesAllOf($expr$), "$desc:"the expression"$ should not be blank"); 
+    java.lang.String        [com.google.common.base.Preconditions]  →  com.google.common.base.Preconditions.checkArgument(!com.google.common.base.CharMatcher.whitespace().matchesAllOf($expr$), "$desc:"the expression"$ should not be blank");
     java.lang.String        [org.springframework.util.Assert]       →  org.springframework.util.Assert.hasText($expr$, "$desc:"the expression"$ should not be blank");
     java.lang.String        [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notBlank($expr$, "$desc:"the expression"$ should not be blank");
     java.lang.String        [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.notBlank($expr$, "$desc:"the expression"$ should not be blank");
 
 .shouldNotEmpty : assert should not be empty
-    java.util.Collection    [com.google.common.base.Preconditions]  →  com.google.common.base.Preconditions.checkArgument(!com.google.common.collect.Iterables.isEmpty($expr$), "$desc:"the expression"$ should not be empty"); 
+    java.util.Collection    [com.google.common.base.Preconditions]  →  com.google.common.base.Preconditions.checkArgument(!com.google.common.collect.Iterables.isEmpty($expr$), "$desc:"the expression"$ should not be empty");
     java.util.Map           [com.google.common.base.Preconditions]  →  com.google.common.base.Preconditions.checkArgument($expr$ !=null && !$expr$.isEmpty(), "$desc:"the expression"$ should not be empty");
     java.util.Collection    [org.springframework.util.Assert]       →  org.springframework.util.Assert.notEmpty($expr$, "$desc:"the expression"$ should not be empty");
     java.util.Map           [org.springframework.util.Assert]       →  org.springframework.util.Assert.notEmpty($expr$, "$desc:"the expression"$ should not be empty");
