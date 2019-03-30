@@ -1,15 +1,28 @@
 # argument check  guava > spring > commons-lang
-.shouldBeTrue : assert should be true
-    BOOLEAN             [com.google.common.base.Preconditions]  →  com.google.common.base.Preconditions.checkArgument($expr$, "$desc:"the expression"$ should be true"); [USE_STATIC_IMPORTS]
-    BOOLEAN             [org.springframework.util.Assert]       →  org.springframework.util.Assert.isTrue($expr$, "$desc:"the expression"$ should be true"); [USE_STATIC_IMPORTS]
-    BOOLEAN             [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.isTrue($expr$, "$desc:"the expression"$ should be true"); [USE_STATIC_IMPORTS]
+.shouldNotFalse : assert should not be false
+    BOOLEAN                 [com.google.common.base.Preconditions]  →  com.google.common.base.Preconditions.checkArgument($expr$, "$desc:"the expression"$ should be true");
+    BOOLEAN                 [org.springframework.util.Assert]       →  org.springframework.util.Assert.isTrue($expr$, "$desc:"the expression"$ should be true");
+    BOOLEAN                 [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.isTrue($expr$, "$desc:"the expression"$ should be true");
+    BOOLEAN                 [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.isTrue($expr$, "$desc:"the expression"$ should be true");
 
 .shouldNotNull : assert should not be null
-    NON_VOID            [com.google.common.base.Preconditions]  →  com.google.common.base.Preconditions.checkNotNull($expr$, "$desc:"the expression"$ should not be null"); [USE_STATIC_IMPORTS]
-    NON_VOID            [org.springframework.util.Assert]       →  org.springframework.util.Assert.notNull($expr$, "$desc:"the expression"$ should not be null"); [USE_STATIC_IMPORTS]
-    NON_VOID            [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notNull($expr$, "$desc:"the expression"$ should not be null"); [USE_STATIC_IMPORTS]
+    NON_VOID                [com.google.common.base.Preconditions]  →  com.google.common.base.Preconditions.checkNotNull($expr$, "$desc:"the expression"$ should not be null");
+    NON_VOID                [org.springframework.util.Assert]       →  org.springframework.util.Assert.notNull($expr$, "$desc:"the expression"$ should not be null");
+    NON_VOID                [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notNull($expr$, "$desc:"the expression"$ should not be null");
+    NON_VOID                [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.notNull($expr$, "$desc:"the expression"$ should not be null");
 
 .shouldNotBlank : assert should not be blank
-    java.lang.String    [com.google.common.base.Preconditions]  →  com.google.common.base.Preconditions.checkArgument(!com.google.common.base.CharMatcher.whitespace().matchesAllOf($expr$), "$desc:"the expression"$ should not be blank"); [USE_STATIC_IMPORTS]
-    java.lang.String    [org.springframework.util.Assert]       →  org.springframework.util.Assert.hasText($expr$, "$desc:"the expression"$ should not be blank"); [USE_STATIC_IMPORTS]
-    java.lang.String    [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notBlank($expr$, "$desc:"the expression"$ should not be blank"); [USE_STATIC_IMPORTS]
+    java.lang.String        [com.google.common.base.Preconditions]  →  com.google.common.base.Preconditions.checkArgument(!com.google.common.base.CharMatcher.whitespace().matchesAllOf($expr$), "$desc:"the expression"$ should not be blank"); 
+    java.lang.String        [org.springframework.util.Assert]       →  org.springframework.util.Assert.hasText($expr$, "$desc:"the expression"$ should not be blank");
+    java.lang.String        [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notBlank($expr$, "$desc:"the expression"$ should not be blank");
+    java.lang.String        [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.notBlank($expr$, "$desc:"the expression"$ should not be blank");
+
+.shouldNotEmpty : assert should not be empty
+    java.util.Collection    [com.google.common.base.Preconditions]  →  com.google.common.base.Preconditions.checkArgument(!com.google.common.collect.Iterables.isEmpty($expr$), "$desc:"the expression"$ should not be empty"); 
+    java.util.Map           [com.google.common.base.Preconditions]  →  com.google.common.base.Preconditions.checkArgument($expr$ !=null && !$expr$.isEmpty(), "$desc:"the expression"$ should not be empty");
+    java.util.Collection    [org.springframework.util.Assert]       →  org.springframework.util.Assert.notEmpty($expr$, "$desc:"the expression"$ should not be empty");
+    java.util.Map           [org.springframework.util.Assert]       →  org.springframework.util.Assert.notEmpty($expr$, "$desc:"the expression"$ should not be empty");
+    java.util.Collection    [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notEmpty($expr$, "$desc:"the expression"$ should not be empty");
+    java.util.Map           [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notEmpty($expr$, "$desc:"the expression"$ should not be empty");
+    java.util.Collection    [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.notEmpty($expr$, "$desc:"the expression"$ should not be empty");
+    java.util.Map           [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.notEmpty($expr$, "$desc:"the expression"$ should not be empty");
