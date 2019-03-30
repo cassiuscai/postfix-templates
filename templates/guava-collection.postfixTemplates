@@ -100,16 +100,16 @@
 # Create Lists
 
 .asList : guava asList
-    ITERABLE_OR_ARRAY           [com.google.common.collect.Lists]           →   com.google.common.collect.Lists.newArrayList($expr$)
-    BOOLEAN                     [com.google.common.collect.Lists]           →   com.google.common.collect.Lists.asList($expr$, new Boolean[]{$END$})
-    CHAR_LITERAL                [com.google.common.collect.Lists]           →   com.google.common.collect.Lists.asList($expr$, new Character[]{$END$})
-    BYTE_LITERAL                [com.google.common.collect.Lists]           →   com.google.common.collect.Lists.asList($expr$, new Byte[]{$END$})
-    SHORT_LITERAL               [com.google.common.collect.Lists]           →   com.google.common.collect.Lists.asList($expr$, new Short[]{$END$})
-    INT_LITERAL                 [com.google.common.collect.Lists]           →   com.google.common.collect.Lists.asList($expr$, new Integer[]{$END$})
-    LONG_LITERAL                [com.google.common.collect.Lists]           →   com.google.common.collect.Lists.asList($expr$, new Long[]{$END$})
-    DOUBLE_LITERAL              [com.google.common.collect.Lists]           →   com.google.common.collect.Lists.asList($expr$, new Double[]{$END$})
-    FLOAT_LITERAL               [com.google.common.collect.Lists]           →   com.google.common.collect.Lists.asList($expr$, new Float[]{$END$})
-    NOT_PRIMITIVE               [com.google.common.collect.Lists]           →   com.google.common.collect.Lists.asList($expr$, new $type*:expressionType(expr)$[]{$END$})
+    ITERABLE_OR_ARRAY   [com.google.common.collect.Lists]                   →   com.google.common.collect.Lists.newArrayList($expr$)
+    BOOLEAN             [com.google.common.collect.Lists]                   →   com.google.common.collect.Lists.asList($expr$, new Boolean[]{$END$})
+    CHAR_LITERAL        [com.google.common.collect.Lists]                   →   com.google.common.collect.Lists.asList($expr$, new Character[]{$END$})
+    BYTE_LITERAL        [com.google.common.collect.Lists]                   →   com.google.common.collect.Lists.asList($expr$, new Byte[]{$END$})
+    SHORT_LITERAL       [com.google.common.collect.Lists]                   →   com.google.common.collect.Lists.asList($expr$, new Short[]{$END$})
+    INT_LITERAL         [com.google.common.collect.Lists]                   →   com.google.common.collect.Lists.asList($expr$, new Integer[]{$END$})
+    LONG_LITERAL        [com.google.common.collect.Lists]                   →   com.google.common.collect.Lists.asList($expr$, new Long[]{$END$})
+    DOUBLE_LITERAL      [com.google.common.collect.Lists]                   →   com.google.common.collect.Lists.asList($expr$, new Double[]{$END$})
+    FLOAT_LITERAL       [com.google.common.collect.Lists]                   →   com.google.common.collect.Lists.asList($expr$, new Float[]{$END$})
+    NOT_PRIMITIVE       [com.google.common.collect.Lists]                   →   com.google.common.collect.Lists.asList($expr$, new $type*:expressionType(expr)$[]{$END$})
 
 .newArrayList : guava newArrayList
     java.util.ArrayList                                                     →   java.util.List<$type*:iterableComponentType(expr)$> $var:suggestVariableName()$ = $expr$;
