@@ -1,0 +1,71 @@
+# guava partition
+.split : guava split
+    java.util.List      [com.google.common.collect.Lists]           →   com.google.common.collect.Lists.partition($expr$, $size$)
+    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.partition($expr$, $size$)
+    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.partition($expr$, $size$)
+
+.splitWithSameSize : guava split with the same size
+    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.paddedPartition($expr$, $size$)
+    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.paddedPartition($expr$, $size$)
+
+.reverse : guava reverse
+    java.util.List      [com.google.common.collect.Lists]           →   com.google.common.collect.Lists.reverse($expr$)
+
+.limit : guava limit
+    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.limit($expr$, $size$)
+    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.limit($expr$, $size$)
+
+.addAllTo : guava add all to
+    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.addAll($addTo$, $expr$)
+    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.addAll($addTo$, $expr$)
+
+.removeAll : guava remove all
+    java.util.Collection                                            →  [SKIP]
+    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.removeAll($expr$,$target$)
+    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.removeAll($expr$,$target$)
+
+.removeIf : guava remove if
+    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.removeIf($expr$,$filter$)
+    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.removeIf($expr$,$filter$)
+
+.retainAll : guava retain all
+    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.retainAll($expr$,$target$)
+    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.retainAll($expr$,$target$)
+
+.contains : guava contains
+    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.contains($expr$, $element$)
+    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.contains($expr$, $element$)
+
+.getFirstOrDefault : guava get first or default
+    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.getFirst($expr$, $defaultValue$)
+
+.getLast : guava get last
+    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.getLast($expr$)
+    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.getLast($expr$)
+
+.getLastOrDefault : guava get last or default
+    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.getLast($expr$, $defaultValue$)
+    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.getLast($expr$, $defaultValue$)
+
+.getOnly : guava get only
+    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.getOnlyElement($expr$)
+    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.getOnlyElement($expr$)
+
+.getOnlyOrDefault : guava get only or default
+    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.getOnlyElement($expr$, $defaultValue$)
+    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.getOnlyElement($expr$, $defaultValue$)
+
+.size : guava size
+    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.size($expr$)
+    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.size($expr$)
+
+.toArray : guava to array
+    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.toArray($expr$, $clazz$)
+    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.toArray($expr$, $clazz$)
+
+.toString : guava to string
+    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.toString($expr$)
+    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.toString($expr$)
+
+.isEmpty : guava is empty
+    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.isEmpty($expr$)
