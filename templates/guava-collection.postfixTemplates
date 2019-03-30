@@ -1,71 +1,125 @@
 # guava partition
 .split : guava split
-    java.util.List      [com.google.common.collect.Lists]           →   com.google.common.collect.Lists.partition($expr$, $size$)
-    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.partition($expr$, $size$)
-    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.partition($expr$, $size$)
+    java.util.List      [com.google.common.collect.Lists]                   →   com.google.common.collect.Lists.partition($expr$, $size$)
+    java.lang.Iterable  [com.google.common.collect.Iterables]               →   com.google.common.collect.Iterables.partition($expr$, $size$)
+    java.util.Iterator  [com.google.common.collect.Iterators]               →   com.google.common.collect.Iterators.partition($expr$, $size$)
 
 .splitWithSameSize : guava split with the same size
-    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.paddedPartition($expr$, $size$)
-    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.paddedPartition($expr$, $size$)
+    java.lang.Iterable  [com.google.common.collect.Iterables]               →   com.google.common.collect.Iterables.paddedPartition($expr$, $size$)
+    java.util.Iterator  [com.google.common.collect.Iterators]               →   com.google.common.collect.Iterators.paddedPartition($expr$, $size$)
 
 .reverse : guava reverse
-    java.util.List      [com.google.common.collect.Lists]           →   com.google.common.collect.Lists.reverse($expr$)
+    java.util.List      [com.google.common.collect.Lists]                   →   com.google.common.collect.Lists.reverse($expr$)
 
 .limit : guava limit
-    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.limit($expr$, $size$)
-    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.limit($expr$, $size$)
+    java.lang.Iterable  [com.google.common.collect.Iterables]               →   com.google.common.collect.Iterables.limit($expr$, $size$)
+    java.util.Iterator  [com.google.common.collect.Iterators]               →   com.google.common.collect.Iterators.limit($expr$, $size$)
 
 .addAllTo : guava add all to
-    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.addAll($addTo$, $expr$)
-    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.addAll($addTo$, $expr$)
+    java.lang.Iterable  [com.google.common.collect.Iterables]               →   com.google.common.collect.Iterables.addAll($addTo$, $expr$)
+    java.util.Iterator  [com.google.common.collect.Iterators]               →   com.google.common.collect.Iterators.addAll($addTo$, $expr$)
 
 .removeAll : guava remove all
-    java.util.Collection                                            →  [SKIP]
-    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.removeAll($expr$,$target$)
-    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.removeAll($expr$,$target$)
+    java.lang.Iterable  [com.google.common.collect.Iterables]               →   com.google.common.collect.Iterables.removeAll($expr$, $target$)
+    java.util.Iterator  [com.google.common.collect.Iterators]               →   com.google.common.collect.Iterators.removeAll($expr$, $target$)
 
 .removeIf : guava remove if
-    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.removeIf($expr$,$filter$)
-    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.removeIf($expr$,$filter$)
+    java.lang.Iterable  [com.google.common.collect.Iterables]               →   com.google.common.collect.Iterables.removeIf($expr$, $filter$)
+    java.util.Iterator  [com.google.common.collect.Iterators]               →   com.google.common.collect.Iterators.removeIf($expr$, $filter$)
 
 .retainAll : guava retain all
-    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.retainAll($expr$,$target$)
-    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.retainAll($expr$,$target$)
+    java.lang.Iterable  [com.google.common.collect.Iterables]               →   com.google.common.collect.Iterables.retainAll($expr$, $target$)
+    java.util.Iterator  [com.google.common.collect.Iterators]               →   com.google.common.collect.Iterators.retainAll($expr$, $target$)
 
 .contains : guava contains
-    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.contains($expr$, $element$)
-    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.contains($expr$, $element$)
+    java.lang.Iterable  [com.google.common.collect.Iterables]               →   com.google.common.collect.Iterables.contains($expr$, $element$)
+    java.util.Iterator  [com.google.common.collect.Iterators]               →   com.google.common.collect.Iterators.contains($expr$, $element$)
 
 .getFirstOrDefault : guava get first or default
-    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.getFirst($expr$, $defaultValue$)
+    java.lang.Iterable  [com.google.common.collect.Iterables]               →   com.google.common.collect.Iterables.getFirst($expr$, $defaultValue$)
+
+
+.get : guava get last
+    java.lang.Iterable  [com.google.common.collect.Iterables]               →   com.google.common.collect.Iterables.get($expr$, $index$)
+    java.util.Iterator  [com.google.common.collect.Iterators]               →   com.google.common.collect.Iterators.get($expr$, $index$)
+
+.getOrDefault : guava get last
+    java.lang.Iterable  [com.google.common.collect.Iterables]               →   com.google.common.collect.Iterables.get($expr$, $index$, $defaultValue$)
+    java.util.Iterator  [com.google.common.collect.Iterators]               →   com.google.common.collect.Iterators.get($expr$, $index$, $defaultValue$)
 
 .getLast : guava get last
-    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.getLast($expr$)
-    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.getLast($expr$)
+    java.lang.Iterable  [com.google.common.collect.Iterables]               →   com.google.common.collect.Iterables.getLast($expr$)
+    java.util.Iterator  [com.google.common.collect.Iterators]               →   com.google.common.collect.Iterators.getLast($expr$)
 
 .getLastOrDefault : guava get last or default
-    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.getLast($expr$, $defaultValue$)
-    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.getLast($expr$, $defaultValue$)
+    java.lang.Iterable  [com.google.common.collect.Iterables]               →   com.google.common.collect.Iterables.getLast($expr$, $defaultValue$)
+    java.util.Iterator  [com.google.common.collect.Iterators]               →   com.google.common.collect.Iterators.getLast($expr$, $defaultValue$)
 
 .getOnly : guava get only
-    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.getOnlyElement($expr$)
-    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.getOnlyElement($expr$)
+    java.lang.Iterable  [com.google.common.collect.Iterables]               →   com.google.common.collect.Iterables.getOnlyElement($expr$)
+    java.util.Iterator  [com.google.common.collect.Iterators]               →   com.google.common.collect.Iterators.getOnlyElement($expr$)
 
 .getOnlyOrDefault : guava get only or default
-    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.getOnlyElement($expr$, $defaultValue$)
-    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.getOnlyElement($expr$, $defaultValue$)
+    java.lang.Iterable  [com.google.common.collect.Iterables]               →   com.google.common.collect.Iterables.getOnlyElement($expr$, $defaultValue$)
+    java.util.Iterator  [com.google.common.collect.Iterators]               →   com.google.common.collect.Iterators.getOnlyElement($expr$, $defaultValue$)
 
 .size : guava size
-    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.size($expr$)
-    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.size($expr$)
+    java.lang.Iterable  [com.google.common.collect.Iterables]               →   com.google.common.collect.Iterables.size($expr$)
+    java.util.Iterator  [com.google.common.collect.Iterators]               →   com.google.common.collect.Iterators.size($expr$)
 
 .toArray : guava to array
-    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.toArray($expr$, $clazz$)
-    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.toArray($expr$, $clazz$)
+    java.lang.Iterable  [com.google.common.collect.Iterables]               →   com.google.common.collect.Iterables.toArray($expr$, $clazz$)
+    java.util.Iterator  [com.google.common.collect.Iterators]               →   com.google.common.collect.Iterators.toArray($expr$, $clazz$)
 
 .toString : guava to string
-    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.toString($expr$)
-    java.util.Iterator  [com.google.common.collect.Iterators]       →   com.google.common.collect.Iterators.toString($expr$)
+    java.lang.Iterable  [com.google.common.collect.Iterables]               →   com.google.common.collect.Iterables.toString($expr$)
+    java.util.Iterator  [com.google.common.collect.Iterators]               →   com.google.common.collect.Iterators.toString($expr$)
 
 .isEmpty : guava is empty
-    java.lang.Iterable  [com.google.common.collect.Iterables]       →   com.google.common.collect.Iterables.isEmpty($expr$)
+    java.lang.Iterable  [com.google.common.collect.Iterables]               →   com.google.common.collect.Iterables.isEmpty($expr$)
+
+.frequency : guava frequency
+    java.lang.Iterable  [com.google.common.collect.Iterables]               →   com.google.common.collect.Iterables.frequency($expr$, $element$)
+    java.util.Iterator  [com.google.common.collect.Iterators]               →   com.google.common.collect.Iterators.frequency($expr$, $element$)
+
+.toImmutable : guava convert to toImmutable
+    java.lang.Iterable  [com.google.common.collect.Iterables]               →   com.google.common.collect.Iterables.unmodifiableIterable($expr$)
+    java.util.Iterator  [com.google.common.collect.Iterators]               →   com.google.common.collect.Iterators.unmodifiableIterator($expr$)
+
+.toImmutableList : guava convert to immutable list
+    java.lang.Iterable  [com.google.common.collect.ImmutableList]           →   com.google.common.collect.ImmutableList.copyOf($expr$)
+    java.util.Iterator  [com.google.common.collect.ImmutableList]           →   com.google.common.collect.ImmutableList.copyOf($expr$)
+
+.toImmutableSortedList : guava convert to immutable sorted list
+    java.lang.Iterable  [com.google.common.collect.ImmutableList]           →   com.google.common.collect.ImmutableList.sortedCopyOf($expr$)
+    java.util.Iterator  [com.google.common.collect.ImmutableList]           →   com.google.common.collect.ImmutableList.sortedCopyOf(com.google.common.collect.ImmutableList.copyOf($expr$))
+
+.toImmutableSet : guava convert to immutable set
+    java.lang.Iterable  [com.google.common.collect.ImmutableSet]            →   com.google.common.collect.ImmutableSet.copyOf($expr$)
+    java.util.Iterator  [com.google.common.collect.ImmutableSet]            →   com.google.common.collect.ImmutableSet.copyOf($expr$)
+
+.toImmutableSortedSet : guava convert to immutable sorted set
+    java.lang.Iterable  [com.google.common.collect.ImmutableSortedSet]      →   com.google.common.collect.ImmutableSortedSet.copyOf($expr$)
+    java.util.Iterator  [com.google.common.collect.ImmutableSortedSet]      →   com.google.common.collect.ImmutableSortedSet.copyOf($expr$)
+
+# Sets
+.union : guava set union
+    java.util.Set       [com.google.common.collect.Sets]                    →   com.google.common.collect.Sets.union($expr$, $other$)
+
+.intersection : guava set  intersection
+    java.util.Set       [com.google.common.collect.Sets]                    →   com.google.common.collect.Sets.intersection($expr$, $other$)
+
+.difference : guava set  difference
+    java.util.Set       [com.google.common.collect.Sets]                    →   com.google.common.collect.Sets.difference($expr$, $other$)
+
+.symmetricDifference : guava set  difference
+    java.util.Set       [com.google.common.collect.Sets]                    →   com.google.common.collect.Sets.symmetricDifference($expr$, $other$)
+
+.combinations : guava set combinations
+    java.util.Set       [com.google.common.collect.Sets]                    →   com.google.common.collect.Sets.combinations($expr$, int size)
+
+.powerset : guava set power set
+    java.util.Set       [com.google.common.collect.Sets]                    →   com.google.common.collect.Sets.powerSet($expr$)
+
+.cartesianProduct : guava set cartesian product
+    java.util.Set       [com.google.common.collect.Sets]                    →   com.google.common.collect.Sets.cartesianProduct($expr$, $other$)
