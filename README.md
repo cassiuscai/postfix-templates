@@ -3,6 +3,7 @@
 ## Table of Contents
 
 * Java templates
+    * [slf4j](#slf4j)
     * [assertj-core](#assertj-core)
     * [mockito](#mockito)
     * [guava-string](#guava-string)
@@ -10,6 +11,15 @@
     * [commons-lang3](#commons-lang3)
 
 ****
+
+### [slf4j](https://www.slf4j.org/)
+- [`org.slf4j.Logger`](templates/slf4j.postfixTemplates)
+    - `.getLogger`
+    - `.loggerTrace`
+    - `.loggerDebug`
+    - `.loggerInfo`
+    - `.loggerWarn`
+    - `.loggerError`
 
 ### [assertj-core](http://joel-costigliola.github.io/assertj/)
 - [`org.assertj.core.api.Assertions`](templates/assertj-core.postfixTemplates)

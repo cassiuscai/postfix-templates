@@ -1,38 +1,31 @@
 # Slf4j postfix templates
-.getLogger : get slf4j logger instance
-    java.lang.String    →  final org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger($expr$);
-    java.lang.Class     →  final org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger($expr$);
 
-# log with default logger
+# getLogger
+.getLogger : slf4j getLogger
+    java.lang.String    [org.slf4j.LoggerFactory]   → final org.slf4j.Logger $logger:"logger"$ = org.slf4j.LoggerFactory.getLogger($expr$);
+    java.lang.Class     [org.slf4j.LoggerFactory]   → final org.slf4j.Logger $logger:"logger"$ = org.slf4j.LoggerFactory.getLogger($expr$);
+
 # logTrace
-.loggerTrace : logger trace
-    java.lang.String    → if(logger.isTraceEnabled()) {\
-                            logger.trace($expr$);\
-                          }
-    java.lang.Throwable → if(logger.isTraceEnabled()) {\
-                            logger.trace($msg$,$expr$);\
-                          }
+.loggerTrace : slf4j loggerTrace
+    java.lang.String    [org.slf4j.Logger]          → if($log:variableOfType("org.slf4j.Logger"):"logger"$.isTraceEnabled()) { $log:variableOfType("org.slf4j.Logger"):"logger"$.trace($expr$); }
+    java.lang.Throwable [org.slf4j.Logger]          → if($log:variableOfType("org.slf4j.Logger"):"logger"$.isTraceEnabled()) { $log:variableOfType("org.slf4j.Logger"):"logger"$.trace($msg$, $expr$); }
+
 # loggerDebug
-.loggerDebug : logger debug
-    java.lang.String    → if(logger.isDebugEnabled()) {\
-                            logger.debug($expr$);\
-                          }
-    java.lang.Throwable → if(logger.isDebugEnabled()) {\
-                            logger.debug($msg$,$expr$);\
-                          }
+.loggerDebug : slf4j loggerDebug
+    java.lang.String    [org.slf4j.Logger]          → if($log:variableOfType("org.slf4j.Logger"):"logger"$.isDebugEnabled()) { $log:variableOfType("org.slf4j.Logger"):"logger"$.debug($expr$); }
+    java.lang.Throwable [org.slf4j.Logger]          → if($log:variableOfType("org.slf4j.Logger"):"logger"$.isDebugEnabled()) { $log:variableOfType("org.slf4j.Logger"):"logger"$.debug($msg$, $expr$); }
+
 # loggerInfo
-.loggerInfo : logger info
-    java.lang.String    → if(logger.isInfoEnabled()) {\
-                            logger.info($expr$);\
-                          }
-    java.lang.Throwable → if(logger.isInfoEnabled()) {\
-                            logger.info($msg$,$expr$);\
-                          }
+.loggerInfo : slf4j loggerInfo
+    java.lang.String    [org.slf4j.Logger]          → if($log:variableOfType("org.slf4j.Logger"):"logger"$.isInfoEnabled()) { $log:variableOfType("org.slf4j.Logger"):"logger"$.info($expr$); }
+    java.lang.Throwable [org.slf4j.Logger]          → if($log:variableOfType("org.slf4j.Logger"):"logger"$.isInfoEnabled()) { $log:variableOfType("org.slf4j.Logger"):"logger"$.info($msg$, $expr$); }
+
 # loggerWarn
-.loggerWarn : logger warn
-    java.lang.String    → logger.warn($expr$);
-    java.lang.Throwable → logger.warm($msg$,$expr$);
+.loggerWarn : slf4j loggerWarn
+    java.lang.String    [org.slf4j.Logger]          → $log:variableOfType("org.slf4j.Logger"):"logger"$.warn($expr$);
+    java.lang.Throwable [org.slf4j.Logger]          → $log:variableOfType("org.slf4j.Logger"):"logger"$.warm($msg$, $expr$);
+
 # loggerError
-.loggerError : loggerError
-    java.lang.String    → logger.error($expr$);
-    java.lang.Throwable → logger.error($msg$,$expr$);
+.loggerError : slf4j loggerError
+    java.lang.String    [org.slf4j.Logger]          → $log:variableOfType("org.slf4j.Logger"):"logger"$.error($expr$);
+    java.lang.Throwable [org.slf4j.Logger]          → $log:variableOfType("org.slf4j.Logger"):"logger"$.error($msg$, $expr$);
