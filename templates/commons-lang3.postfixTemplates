@@ -159,3 +159,40 @@
 
 .toCalendarWithTimeZone : commons-lang3 toCalendarWithTimeZone
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.toCalendar($expr$, java.util.TimeZone.getTimeZone($timeZone$))
+
+# org.apache.commons.lang3.exception.ExceptionUtils
+.getMessage : common-lang3 getMessage
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   org.apache.commons.lang3.exception.ExceptionUtils.getMessage($expr$)
+
+.getRootCause : common-lang3 getRootCause
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   org.apache.commons.lang3.exception.ExceptionUtils.getRootCause($expr$)
+
+.getRootCauseMessage : common-lang3 getRootCauseMessage
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   org.apache.commons.lang3.exception.ExceptionUtils.getRootCauseMessage($expr$)
+
+.getRootCauseStackTrace : common-lang3 getRootCauseStackTrace
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   org.apache.commons.lang3.exception.ExceptionUtils.getRootCauseStackTrace($expr$)
+
+.getStackFrames : common-lang3 getStackFrames
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   org.apache.commons.lang3.exception.ExceptionUtils.getStackFrames($expr$)
+
+.getThrowableCount : common-lang3 getThrowableCount
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   org.apache.commons.lang3.exception.ExceptionUtils.getThrowableCount($expr$)
+
+.getThrowableList : common-lang3 getThrowableList
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   org.apache.commons.lang3.exception.ExceptionUtils.getThrowableList($expr$)
+
+.getThrowableArray : common-lang3 getThrowableList
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   org.apache.commons.lang3.exception.ExceptionUtils.getThrowables($expr$)
+
+.getStackTraceAsString : common-lang3 getStackTraceAsString
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   org.apache.commons.lang3.exception.ExceptionUtils.getStackTrace($expr$)
+
+.printRootCauseStackTrace : commons-lang3 printRootCauseStackTrace
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   org.apache.commons.lang3.exception.ExceptionUtils.printRootCauseStackTrace($expr$)
+
+.rethrow : commons-lang3 rethrow
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   org.apache.commons.lang3.exception.ExceptionUtils.rethrow($expr$)
+
+.wrapAndThrow : commons-lang3 wrapAndThrow
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   org.apache.commons.lang3.exception.ExceptionUtils.wrapAndThrow($expr$)
