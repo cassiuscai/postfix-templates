@@ -15,11 +15,11 @@
 ### [slf4j](https://www.slf4j.org/)
 - [`org.slf4j.Logger`](templates/slf4j.postfixTemplates)
     - `.getLogger`
-    - `.loggerTrace`
-    - `.loggerDebug`
-    - `.loggerInfo`
-    - `.loggerWarn`
-    - `.loggerError`
+    - `.logTrace`
+    - `.logDebug`
+    - `.logInfo`
+    - `.logWarn`
+    - `.logError`
 
 ### [assertj-core](http://joel-costigliola.github.io/assertj/)
 - [`org.assertj.core.api.Assertions`](templates/assertj-core.postfixTemplates)

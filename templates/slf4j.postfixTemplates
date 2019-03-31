@@ -6,26 +6,26 @@
     java.lang.Class     [org.slf4j.LoggerFactory]   → final org.slf4j.Logger $logger:"logger"$ = org.slf4j.LoggerFactory.getLogger($expr$);
 
 # logTrace
-.loggerTrace : slf4j loggerTrace
+.logTrace : slf4j logTrace
     java.lang.String    [org.slf4j.Logger]          → if($log:variableOfType("org.slf4j.Logger"):"logger"$.isTraceEnabled()) { $log:variableOfType("org.slf4j.Logger"):"logger"$.trace($expr$); }
     java.lang.Throwable [org.slf4j.Logger]          → if($log:variableOfType("org.slf4j.Logger"):"logger"$.isTraceEnabled()) { $log:variableOfType("org.slf4j.Logger"):"logger"$.trace($msg$, $expr$); }
 
 # loggerDebug
-.loggerDebug : slf4j loggerDebug
+.logDebug : slf4j logDebug
     java.lang.String    [org.slf4j.Logger]          → if($log:variableOfType("org.slf4j.Logger"):"logger"$.isDebugEnabled()) { $log:variableOfType("org.slf4j.Logger"):"logger"$.debug($expr$); }
     java.lang.Throwable [org.slf4j.Logger]          → if($log:variableOfType("org.slf4j.Logger"):"logger"$.isDebugEnabled()) { $log:variableOfType("org.slf4j.Logger"):"logger"$.debug($msg$, $expr$); }
 
 # loggerInfo
-.loggerInfo : slf4j loggerInfo
+.logInfo : slf4j logInfo
     java.lang.String    [org.slf4j.Logger]          → if($log:variableOfType("org.slf4j.Logger"):"logger"$.isInfoEnabled()) { $log:variableOfType("org.slf4j.Logger"):"logger"$.info($expr$); }
     java.lang.Throwable [org.slf4j.Logger]          → if($log:variableOfType("org.slf4j.Logger"):"logger"$.isInfoEnabled()) { $log:variableOfType("org.slf4j.Logger"):"logger"$.info($msg$, $expr$); }
 
 # loggerWarn
-.loggerWarn : slf4j loggerWarn
+.logWarn : slf4j logWarn
     java.lang.String    [org.slf4j.Logger]          → $log:variableOfType("org.slf4j.Logger"):"logger"$.warn($expr$);
     java.lang.Throwable [org.slf4j.Logger]          → $log:variableOfType("org.slf4j.Logger"):"logger"$.warm($msg$, $expr$);
 
 # loggerError
-.loggerError : slf4j loggerError
+.logError : slf4j logError
     java.lang.String    [org.slf4j.Logger]          → $log:variableOfType("org.slf4j.Logger"):"logger"$.error($expr$);
     java.lang.Throwable [org.slf4j.Logger]          → $log:variableOfType("org.slf4j.Logger"):"logger"$.error($msg$, $expr$);
