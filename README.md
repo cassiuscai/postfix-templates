@@ -12,7 +12,6 @@
 ****
 
 ### [assertj-core](http://joel-costigliola.github.io/assertj/)
-
 - [`org.assertj.core.api.Assertions`](templates/assertj-core.postfixTemplates)
     - `.assertThat`
     - `.assertThatCode`
@@ -26,7 +25,6 @@
     - `.assertThatRuntimeException`
 
 ### [mockito](https://site.mockito.org/)
-
 - [`org.mockito.Mockito`](templates/mockito.postfixTemplates)
     - `.mock`
     - `.mockWithName`
@@ -43,7 +41,6 @@
     - `.doReturn`
 
 ### [guava-string](https://github.com/google/guava/wiki/StringsExplained)
-
 - [`com.google.common.base.Joiner`](templates/guava-string.postfixTemplates)
     - `.join`
     - `.joinSkipNulls`
@@ -172,7 +169,6 @@
 
 
 ### [commons-lang3](https://commons.apache.org/proper/commons-lang/)
-
 - [`org.apache.commons.lang3.Validate`](templates/commons-lang3.postfixTemplates)
     - `.shouldBeTrue`
     - `.shouldNotFalse`
