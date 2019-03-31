@@ -1,4 +1,4 @@
-##Templates for plugin [Custom Postfix Templates](https://plugins.jetbrains.com/plugin/9862-custom-postfix-templates)
+## Templates for plugin [Custom Postfix Templates](https://plugins.jetbrains.com/plugin/9862-custom-postfix-templates)
 
 ### [AssertJ](http://joel-costigliola.github.io/assertj/)
 - [org.assertj.core.api.Assertions](templates/assertj-core.postfixTemplates)
