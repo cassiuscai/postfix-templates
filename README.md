@@ -1,14 +1,18 @@
-Templates for plugin [Custom Postfix Templates](https://plugins.jetbrains.com/plugin/9862-custom-postfix-templates)
+Templates for jetbrains platform plugin [Custom Postfix Templates](https://plugins.jetbrains.com/plugin/9862-custom-postfix-templates)
 ==================================
 
-Table of Contents
-=================
+******
+
+## Table of Contents
+
 * Java templates
     * [assertj-core](#assertj-core)
     * [mockito](#mockito)
     * [guava-string](#guava-string)
     * [guava-collection](#guava-collection)
     * [commons-lang3](#commons-lang3)
+
+****
 
 ### [assertj-core](http://joel-costigliola.github.io/assertj/)
 - [`org.assertj.core.api.Assertions`](templates/assertj-core.postfixTemplates)
