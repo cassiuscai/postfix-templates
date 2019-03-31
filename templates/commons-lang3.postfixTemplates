@@ -1,0 +1,21 @@
+# Argument Check: org.apache.commons.lang3.Validate
+.shouldBeTrue : assert should be true
+    BOOLEAN                 [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.isTrue($expr$);
+
+.shouldNotFalse : assert should not be false
+    BOOLEAN                 [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.isTrue($expr$);
+
+.shouldNotNull : assert should not be null
+    NON_VOID                [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notNull($expr$);
+
+.shouldNotBlank : assert should not be blank
+    java.lang.String        [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notBlank($expr$);
+
+.shouldNotEmpty : assert should not be empty
+    ARRAY                   [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notEmpty($expr$);
+    java.util.Collection    [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notEmpty($expr$);
+    java.util.Map           [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notEmpty($expr$);
+
+.shouldNotContainsNull : assert should not contains null elements
+    ARRAY                   [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.noNullElements($expr$);
+    java.lang.Iterable      [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.noNullElements($expr$);
