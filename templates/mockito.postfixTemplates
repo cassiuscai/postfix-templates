@@ -1,14 +1,14 @@
 # Mockito postfix templates
 # create mock instance
-.mock : mockito create a mock instance
+.mock : mockito mock
     java.lang.Class     [org.mockito.Mockito]  →  org.mockito.Mockito.mock($expr$)  [USE_STATIC_IMPORTS]
-.mockWithName : mockito create a mock instance with name
+.mockWithName : mockito mockWithName
     java.lang.Class     [org.mockito.Mockito]  →  org.mockito.Mockito.mock($expr$, $name$)  [USE_STATIC_IMPORTS]
-.mockWithAnswer : mockito create a mock instance with default answer
+.mockWithAnswer : mockito mockWithAnswer
     java.lang.Class     [org.mockito.Mockito]  →  org.mockito.Mockito.mock($expr$, (org.mockito.stubbing.Answer<$answerType$>) invocation -> $answerBody$)   [USE_STATIC_IMPORTS]
 
 # create spy instance
-.spy : mockito create a spy instance
+.spy : mockito spy
     java.lang.Object    [org.mockito.Mockito]  →  org.mockito.Mockito.spy($expr$)   [USE_STATIC_IMPORTS]
 
 # mockito stubing operations
@@ -16,11 +16,11 @@
     ANY                 [org.mockito.Mockito]  →  org.mockito.Mockito.when($expr$)  [USE_STATIC_IMPORTS]
 .verify : mockito verify
     ANY                 [org.mockito.Mockito]  →  org.mockito.Mockito.verify($expr$)    [USE_STATIC_IMPORTS]
-.verifyWithMode : mockito verify
+.verifyWithMode : mockito verifyWithMode
     ANY                 [org.mockito.Mockito]  →  org.mockito.Mockito.verify($expr$,$mode$) [USE_STATIC_IMPORTS]
 .reset : mockito reset
     ANY                 [org.mockito.Mockito]  →  org.mockito.Mockito.reset($expr$) [USE_STATIC_IMPORTS]
-.clearInvocations : mockito clear invocations
+.clearInvocations : mockito clearInvocations
     ANY                 [org.mockito.Mockito]  →  org.mockito.Mockito.clearInvocations($expr$)  [USE_STATIC_IMPORTS]
 .doThrow : mockito doThrow
     ANY                 [org.mockito.Mockito]  →  org.mockito.Mockito.doThrow($throwable$).when($expr$).$END$   [USE_STATIC_IMPORTS]

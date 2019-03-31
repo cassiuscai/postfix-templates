@@ -1,30 +1,30 @@
 ## Templates for assertj ##
-.assertThat : AssertJ Fluent Assertions
+.assertThat : assertj-core assertThat
     ANY               [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThat($expr$)  [USE_STATIC_IMPORTS]
 
-.assertThatCode : AssertJ assertThatCode
+.assertThatCode : assertj-core assertThatCode
     ANY               [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThatCode(() -> $expr$)  [USE_STATIC_IMPORTS]
 
-.assertThatObject : AssertJ assertThatObject
+.assertThatObject : assertj-core assertThatObject
     NON_VOID		  [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThatObject($expr$)  [USE_STATIC_IMPORTS]
 
-.assertThatThrownBy : AssertJ Throwable Assertions
+.assertThatThrownBy : assertj-core assertThatThrownBy
     ANY               [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThatThrownBy(() -> $expr$)  [USE_STATIC_IMPORTS]
 
-.assertThatExceptionOfType : AssertJ assertThatExceptionOfType
+.assertThatExceptionOfType : assertj-core assertThatExceptionOfType
     ANY               [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThatExceptionOfType($throwableType$).isThrownBy(() -> $expr$)  [USE_STATIC_IMPORTS]
 
-.assertThatIOException : AssertJ assertThatIOException
+.assertThatIOException : assertj-core assertThatIOException
     ANY               [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThatIOException().isThrownBy(() -> $expr$)  [USE_STATIC_IMPORTS]
 
-.assertThatIllegalArgumentException : AssertJ assertThatIllegalArgumentException
+.assertThatIllegalArgumentException : assertj-core assertThatIllegalArgumentException
     ANY               [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThatIllegalArgumentException().isThrownBy(() -> $expr$)  [USE_STATIC_IMPORTS]
 
-.assertThatIllegalStateException : AssertJ assertThatIllegalStateException
+.assertThatIllegalStateException : assertj-core assertThatIllegalStateException
     ANY               [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThatIllegalStateException().isThrownBy(() -> $expr$)  [USE_STATIC_IMPORTS]
 
-.assertThatNullPointerException : AssertJ assertThatNullPointerException
+.assertThatNullPointerException : assertj-core assertThatNullPointerException
     ANY               [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThatNullPointerException().isThrownBy(() -> $expr$)  [USE_STATIC_IMPORTS]
 
-.assertThatRuntimeException : AssertJ assertThatRuntimeException
+.assertThatRuntimeException : assertj-core assertThatRuntimeException
     ANY               [org.assertj.core.api.Assertions]  →  org.assertj.core.api.Assertions.assertThatExceptionOfType(java.lang.RuntimeException.class).isThrownBy(() -> $expr$)  [USE_STATIC_IMPORTS]
