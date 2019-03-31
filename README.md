@@ -13,8 +13,9 @@
 ****
 
 ### [slf4j](https://www.slf4j.org/)
-- [`org.slf4j.Logger`](templates/slf4j.postfixTemplates)
+- [`org.slf4j.LoggerFactory`](templates/slf4j.postfixTemplates)
     - `.getLogger`
+- [`org.slf4j.Logger`](templates/slf4j.postfixTemplates)
     - `.logTrace`
     - `.logDebug`
     - `.logInfo`
