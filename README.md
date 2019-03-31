@@ -1,7 +1,4 @@
-Templates for jetbrains platform plugin [Custom Postfix Templates](https://plugins.jetbrains.com/plugin/9862-custom-postfix-templates)
-==================================
-
-******
+# Templates for plugin [Custom Postfix Templates](https://plugins.jetbrains.com/plugin/9862-custom-postfix-templates)
 
 ## Table of Contents
 
@@ -60,7 +57,6 @@ Templates for jetbrains platform plugin [Custom Postfix Templates](https://plugi
 
 ### [commons-lang3](https://commons.apache.org/proper/commons-lang/)
 - [`org.apache.commons.lang3.Validate`](templates/commons-lang3.postfixTemplates)
-- [`org.apache.commons.lang3.StringUtils`](templates/commons-lang3.postfixTemplates)
 - [`org.apache.commons.lang3.time.DateUtils`](templates/commons-lang3.postfixTemplates)
 - [`org.apache.commons.lang3.time.DateFormatUtils`](templates/commons-lang3.postfixTemplates)
 - [`org.apache.commons.lang3.time.FastDateFormat`](templates/commons-lang3.postfixTemplates)
