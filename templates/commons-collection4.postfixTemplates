@@ -1,0 +1,15 @@
+.isEmpty : commons-collection4 isEmpty
+    java.util.Collection [org.apache.commons.collections4.CollectionUtils]  → org.apache.commons.collections4.CollectionUtils.isEmpty($expr$)
+    java.util.Map        [org.apache.commons.collections4.MapUtils]         → org.apache.commons.collections4.MapUtils.isEmpty($expr$)
+
+.isNotEmpty : commons-collection4 isNotEmpty
+    java.util.Collection [org.apache.commons.collections4.CollectionUtils]  → org.apache.commons.collections4.CollectionUtils.isNotEmpty($expr$)
+    java.util.Map        [org.apache.commons.collections4.MapUtils]         → org.apache.commons.collections4.MapUtils.isNotEmpty($expr$)
+
+.ifEmpty : commons-collection4 ifEmpty
+    java.util.Collection [org.apache.commons.collections4.CollectionUtils]  → if(org.apache.commons.collections4.CollectionUtils.isEmpty($expr$)){$END$}
+    java.util.Map        [org.apache.commons.collections4.MapUtils]         → if(org.apache.commons.collections4.MapUtils.isEmpty($expr$)){$END$}
+
+.ifNotEmpty : commons-collection4 ifNotEmpty
+    java.util.Collection [org.apache.commons.collections4.CollectionUtils]  → if(org.apache.commons.collections4.CollectionUtils.isNotEmpty($expr$)){$END$}
+    java.util.Map        [org.apache.commons.collections4.MapUtils]         → if(org.apache.commons.collections4.MapUtils.isNotEmpty($expr$)){$END$}
