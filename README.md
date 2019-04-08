@@ -9,6 +9,7 @@
     * [guava-string](#guava-string)
     * [guava-collection](#guava-collection)
     * [commons-lang3](#commons-lang3)
+    * [other](#other)
 
 ****
 
@@ -262,3 +263,10 @@
     - `.printRootCauseStackTrace`
     - `.rethrow`
     - `.wrapAndThrow`
+
+### other
+- [null-safe-empty](templates/null-safe-empty.postfixTemplates)
+    - `.isEmpty`
+    - `.isNotEmpty`
+    - `.ifEmpty`
+    - `.ifNotEmpty`

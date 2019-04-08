@@ -1,0 +1,71 @@
+# isEmpty
+.isEmpty : null-safe-empty isEmpty
+    ARRAY                [org.apache.commons.lang3.ArrayUtils]              → org.apache.commons.lang3.ArrayUtils.isEmpty($expr$)
+    ARRAY                [org.apache.commons.lang.ArrayUtils]               → org.apache.commons.lang.ArrayUtils.isEmpty($expr$)
+    ARRAY                                                                   → ($expr$ == null || $expr$.length == 0)
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.isEmpty($expr$)
+    java.lang.String     [org.apache.commons.lang.StringUtils]              → org.apache.commons.lang.StringUtils.isEmpty($expr$)
+    java.lang.String     [org.springframework.util.StringUtils]             → org.springframework.util.StringUtils.isEmpty($expr$)
+    java.lang.String                                                        → ($expr$ == null || "".equals($expr$))
+    java.util.Collection [org.apache.commons.collections4.CollectionUtils]  → org.apache.commons.collections4.CollectionUtils.isEmpty($expr$)
+    java.util.Map        [org.apache.commons.collections4.MapUtils]         → org.apache.commons.collections4.MapUtils.isEmpty($expr$)
+    java.util.Collection [org.apache.commons.collections.CollectionUtils]   → org.apache.commons.collections.CollectionUtils.isEmpty($expr$)
+    java.util.Map        [org.apache.commons.collections.MapUtils]          → org.apache.commons.collections.MapUtils.isEmpty($expr$)
+    java.util.Collection [org.springframework.util.CollectionUtils]         → org.springframework.util.CollectionUtils.isEmpty($expr$)
+    java.util.Map        [org.springframework.util.CollectionUtils]         → org.springframework.util.CollectionUtils.isEmpty($expr$)
+    java.util.Collection                                                    → ($expr$ == null || $expr$.isEmpty())
+    java.util.Map                                                           → ($expr$ == null || $expr$.isEmpty())
+
+# isNotEmpty
+.isNotEmpty : null-safe-empty isNotEmpty
+    ARRAY                [org.apache.commons.lang3.ArrayUtils]              → org.apache.commons.lang3.ArrayUtils.isNotEmpty($expr$)
+    ARRAY                [org.apache.commons.lang.ArrayUtils]               → org.apache.commons.lang.ArrayUtils.isNotEmpty($expr$)
+    ARRAY                                                                   → ($expr$ != null && $expr$.length > 0)
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.isEmpty($expr$)
+    java.lang.String     [org.apache.commons.lang.StringUtils]              → org.apache.commons.lang.StringUtils.isEmpty($expr$)
+    java.lang.String     [org.springframework.util.StringUtils]             → org.springframework.util.StringUtils.isEmpty($expr$)
+    java.lang.String                                                        → ($expr$ != null && !"".equals($expr$))
+    java.util.Collection [org.apache.commons.collections4.CollectionUtils]  → org.apache.commons.collections4.CollectionUtils.isNotEmpty($expr$)
+    java.util.Map        [org.apache.commons.collections4.MapUtils]         → org.apache.commons.collections4.MapUtils.isNotEmpty($expr$)
+    java.util.Collection [org.apache.commons.collections.CollectionUtils]   → org.apache.commons.collections.CollectionUtils.isNotEmpty($expr$)
+    java.util.Map        [org.apache.commons.collections.MapUtils]          → org.apache.commons.collections.MapUtils.isNotEmpty($expr$)
+    java.util.Collection [org.springframework.util.CollectionUtils]         → !org.springframework.util.CollectionUtils.isEmpty($expr$)
+    java.util.Map        [org.springframework.util.CollectionUtils]         → !org.springframework.util.CollectionUtils.isEmpty($expr$)
+    java.util.Collection                                                    → ($expr$ != null && !$expr$.isEmpty())
+    java.util.Map                                                           → ($expr$ != null && !$expr$.isEmpty())
+
+# ifEmpty
+.ifEmpty : null-safe-empty ifEmpty
+    ARRAY                [org.apache.commons.lang3.ArrayUtils]              → if(org.apache.commons.lang3.ArrayUtils.isEmpty($expr$)){$END$}
+    ARRAY                [org.apache.commons.lang.ArrayUtils]               → if(org.apache.commons.lang.ArrayUtils.isEmpty($expr$)){$END$}
+    ARRAY                                                                   → if($expr$ == null || $expr$.length == 0){$END$}
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → if(org.apache.commons.lang3.StringUtils.isEmpty($expr$)){$END$}
+    java.lang.String     [org.apache.commons.lang.StringUtils]              → if(org.apache.commons.lang.StringUtils.isEmpty($expr$)){$END$}
+    java.lang.String     [org.springframework.util.StringUtils]             → if(org.springframework.util.StringUtils.isEmpty($expr$)){$END$}
+    java.lang.String                                                        → if($expr$ == null || "".equals($expr$)){$END$}
+    java.util.Collection [org.apache.commons.collections.CollectionUtils]   → if(org.apache.commons.collections.CollectionUtils.isEmpty($expr$)){$END$}
+    java.util.Map        [org.apache.commons.collections.MapUtils]          → if(org.apache.commons.collections.MapUtils.isEmpty($expr$)){$END$}
+    java.util.Collection [org.apache.commons.collections4.CollectionUtils]  → if(org.apache.commons.collections4.CollectionUtils.isEmpty($expr$)){$END$}
+    java.util.Map        [org.apache.commons.collections4.MapUtils]         → if(org.apache.commons.collections4.MapUtils.isEmpty($expr$)){$END$}
+    java.util.Collection [org.springframework.util.CollectionUtils]         → if(org.springframework.util.CollectionUtils.isEmpty($expr$)){$END$}
+    java.util.Map        [org.springframework.util.CollectionUtils]         → if(org.springframework.util.CollectionUtils.isEmpty($expr$)){$END$}
+    java.util.Collection                                                    → if($expr$ == null || $expr$.isEmpty()){$END$}
+    java.util.Map                                                           → if($expr$ == null || $expr$.isEmpty()){$END$}
+
+# ifNotEmpty
+.ifNotEmpty : null-safe-empty ifNotEmpty
+    ARRAY                [org.apache.commons.lang3.ArrayUtils]              → if(org.apache.commons.lang3.ArrayUtils.isNotEmpty($expr$)){$END$}
+    ARRAY                [org.apache.commons.lang.ArrayUtils]               → if(org.apache.commons.lang.ArrayUtils.isNotEmpty($expr$)){$END$}
+    ARRAY                                                                   → if($expr$ != null && $expr$.length > 0){$END$}
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → if(org.apache.commons.lang3.StringUtils.isEmpty($expr$)){$END$}
+    java.lang.String     [org.apache.commons.lang.StringUtils]              → if(org.apache.commons.lang.StringUtils.isEmpty($expr$)){$END$}
+    java.lang.String     [org.springframework.util.StringUtils]             → if(org.springframework.util.StringUtils.isEmpty($expr$)){$END$}
+    java.lang.String                                                        → if($expr$ != null && !"".equals($expr$)){$END$}
+    java.util.Collection [org.apache.commons.collections.CollectionUtils]   → if(org.apache.commons.collections.CollectionUtils.isNotEmpty($expr$)){$END$}
+    java.util.Map        [org.apache.commons.collections.MapUtils]          → if(org.apache.commons.collections.MapUtils.isNotEmpty($expr$)){$END$}
+    java.util.Collection [org.apache.commons.collections4.CollectionUtils]  → if(org.apache.commons.collections4.CollectionUtils.isNotEmpty($expr$)){$END$}
+    java.util.Map        [org.apache.commons.collections4.MapUtils]         → if(org.apache.commons.collections4.MapUtils.isNotEmpty($expr$)){$END$}
+    java.util.Collection [org.springframework.util.CollectionUtils]         → if(!org.springframework.util.CollectionUtils.isEmpty($expr$)){$END$}
+    java.util.Map        [org.springframework.util.CollectionUtils]         → if(!org.springframework.util.CollectionUtils.isEmpty($expr$)){$END$}
+    java.util.Collection                                                    → if($expr$ != null && !$expr$.isEmpty()){$END$}
+    java.util.Map                                                           → if($expr$ != null && !$expr$.isEmpty()){$END$}
