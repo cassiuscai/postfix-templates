@@ -1,0 +1,29 @@
+# Argument Check: org.apache.commons.lang3.Validate
+.requireTrue : postfix misc-require requireTrue
+    BOOLEAN                 [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.isTrue($expr$, "the parameter require to be true");
+    BOOLEAN                 [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.isTrue($expr$, "the parameter require to be true");
+
+.requireNotFalse : postfix misc-require requireNotFalse
+    BOOLEAN                 [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.isTrue($expr$, "the parameter require not false");
+    BOOLEAN                 [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.isTrue($expr$, "the parameter require not false");
+
+.requireNotNull : postfix misc-require requireNotNull
+    NON_VOID                [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notNull($expr$, "the parameter require not null");
+    NON_VOID                [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.notNull($expr$, "the parameter require not null");
+
+.requireNotBlank : postfix misc-require requireNotBlank
+    java.lang.String        [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notBlank($expr$, "the parameter require not be blank");
+
+.requireNotEmpty : postfix misc-require requireNotEmpty
+    ARRAY                   [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notEmpty($expr$, "the parameter require not empty");
+    java.util.Collection    [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notEmpty($expr$, "the parameter require not empty");
+    java.util.Map           [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notEmpty($expr$, "the parameter require not empty");
+    ARRAY                   [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.notEmpty($expr$, "the parameter require not empty");
+    java.util.Collection    [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.notEmpty($expr$, "the parameter require not empty");
+    java.util.Map           [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.notEmpty($expr$, "the parameter require not empty");
+
+.requireNotContainsNull : postfix misc-require requireNotContainsNull
+    ARRAY                   [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.noNullElements($expr$, "the parameter require not contains null element");
+    java.lang.Iterable      [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.noNullElements($expr$, "the parameter require not contains null element");
+    ARRAY                   [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.noNullElements($expr$, "the parameter require not contains null element");
+    java.util.Collection    [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.noNullElements($expr$, "the parameter require not contains null element");
