@@ -1,0 +1,23 @@
+#### [misc-empty](../templates/misc-empty.postfixTemplates)
+> Check the `Array/Collection/Map/String` is or not empty
+- Utility classes preferred to use in order if available, otherwise using JDK methods.
+    - Array
+        - `org.apache.commons.lang3.ArrayUtils`
+        - `org.apache.commons.lang.ArrayUtils`
+    - Collections
+        - `org.apache.commons.collections4.CollectionUtils`
+        - `org.apache.commons.collections.CollectionUtils`
+        - `org.springframework.util.CollectionUtils`
+    - Map
+        - `org.apache.commons.collections4.MapUtils`
+        - `org.apache.commons.collections.MapUtils`
+        - `org.springframework.util.CollectionUtils`
+    - String
+        - `org.apache.commons.lang3.StringUtils`
+        - `org.apache.commons.lang.StringUtils`
+        - `org.springframework.util.StringUtils`
+- Available postfix    
+    - `.isEmpty` Check the target object if is empty, `boolean expression`
+    - `.isNotEmpty` Check the target object if not empty, `boolean expression`
+    - `.ifEmpty` Check the target object if is empty, `if condition code block`
+    - `.ifNotEmpty` Check the target object if not empty, `if condition code block`
