@@ -187,28 +187,28 @@
 
 # org.apache.commons.lang3.time.FastDateFormat
 .parseToDate : commons-lang3 parseToDate
-    java.lang.String    [org.apache.commons.lang3.time.FastDateFormat]  → try { java.util.Date $var:suggestVariableName()$ = org.apache.commons.lang3.time.FastDateFormat.getInstance("yyyy-MM-dd HH:mm:ss SSS"$END$).parse($expr$); } catch (ParseException e) { org.apache.commons.lang3.exception.ExceptionUtils.wrapAndThrow(e); }
+    java.lang.String    [org.apache.commons.lang3.time.FastDateFormat]  → try { java.util.Date $var:suggestVariableName()$ = org.apache.commons.lang3.time.FastDateFormat.getInstance("yyyy-MM-dd HH:mm:ss SSS"$END$).parse($expr$); } catch (java.text.ParseException e) { org.apache.commons.lang3.exception.ExceptionUtils.wrapAndThrow(e); }
 
 .parseToDateFromMillisecond : commons-lang3 parseToDateFromMillisecond
-    java.lang.String    [org.apache.commons.lang3.time.FastDateFormat]  → try { java.util.Date $var:suggestVariableName()$ = org.apache.commons.lang3.time.FastDateFormat.getInstance("yyyy-MM-dd HH:mm:ss SSS").parse($expr$); } catch (ParseException e) { org.apache.commons.lang3.exception.ExceptionUtils.wrapAndThrow(e); }
+    java.lang.String    [org.apache.commons.lang3.time.FastDateFormat]  → try { java.util.Date $var:suggestVariableName()$ = org.apache.commons.lang3.time.FastDateFormat.getInstance("yyyy-MM-dd HH:mm:ss SSS").parse($expr$); } catch (java.text.ParseException e) { org.apache.commons.lang3.exception.ExceptionUtils.wrapAndThrow(e); }
 
 .parseToDateFromSecond : commons-lang3 parseToDateFromSecond
-    java.lang.String    [org.apache.commons.lang3.time.FastDateFormat]  → try { java.util.Date $var:suggestVariableName()$ = org.apache.commons.lang3.time.FastDateFormat.getInstance("yyyy-MM-dd HH:mm:ss").parse($expr$); } catch (ParseException e) { org.apache.commons.lang3.exception.ExceptionUtils.wrapAndThrow(e); }
+    java.lang.String    [org.apache.commons.lang3.time.FastDateFormat]  → try { java.util.Date $var:suggestVariableName()$ = org.apache.commons.lang3.time.FastDateFormat.getInstance("yyyy-MM-dd HH:mm:ss").parse($expr$); } catch (java.text.ParseException e) { org.apache.commons.lang3.exception.ExceptionUtils.wrapAndThrow(e); }
 
 .parseToDateFromMinute : commons-lang3 parseToDateFromMinute
-    java.lang.String    [org.apache.commons.lang3.time.FastDateFormat]  → try { java.util.Date $var:suggestVariableName()$ = org.apache.commons.lang3.time.FastDateFormat.getInstance("yyyy-MM-dd HH:mm").parse($expr$); } catch (ParseException e) { org.apache.commons.lang3.exception.ExceptionUtils.wrapAndThrow(e); }
+    java.lang.String    [org.apache.commons.lang3.time.FastDateFormat]  → try { java.util.Date $var:suggestVariableName()$ = org.apache.commons.lang3.time.FastDateFormat.getInstance("yyyy-MM-dd HH:mm").parse($expr$); } catch (java.text.ParseException e) { org.apache.commons.lang3.exception.ExceptionUtils.wrapAndThrow(e); }
 
 .parseToDateFromHour : commons-lang3 parseToDateFromHour
-    java.lang.String    [org.apache.commons.lang3.time.FastDateFormat]  → try { java.util.Date $var:suggestVariableName()$ = org.apache.commons.lang3.time.FastDateFormat.getInstance("yyyy-MM-dd HH").parse($expr$); } catch (ParseException e) { org.apache.commons.lang3.exception.ExceptionUtils.wrapAndThrow(e); }
+    java.lang.String    [org.apache.commons.lang3.time.FastDateFormat]  → try { java.util.Date $var:suggestVariableName()$ = org.apache.commons.lang3.time.FastDateFormat.getInstance("yyyy-MM-dd HH").parse($expr$); } catch (java.text.ParseException e) { org.apache.commons.lang3.exception.ExceptionUtils.wrapAndThrow(e); }
 
 .parseToDateFromDay : commons-lang3 parseToDateFromDay
-    java.lang.String    [org.apache.commons.lang3.time.FastDateFormat]  → try { java.util.Date $var:suggestVariableName()$ = org.apache.commons.lang3.time.FastDateFormat.getInstance("yyyy-MM-dd").parse($expr$); } catch (ParseException e) { org.apache.commons.lang3.exception.ExceptionUtils.wrapAndThrow(e); }
+    java.lang.String    [org.apache.commons.lang3.time.FastDateFormat]  → try { java.util.Date $var:suggestVariableName()$ = org.apache.commons.lang3.time.FastDateFormat.getInstance("yyyy-MM-dd").parse($expr$); } catch (java.text.ParseException e) { org.apache.commons.lang3.exception.ExceptionUtils.wrapAndThrow(e); }
 
 .parseToDateFromMonth : commons-lang3 parseToDateFromMonth
-    java.lang.String    [org.apache.commons.lang3.time.FastDateFormat]  → try { java.util.Date $var:suggestVariableName()$ = org.apache.commons.lang3.time.FastDateFormat.getInstance("yyyy-MM").parse($expr$); } catch (ParseException e) { org.apache.commons.lang3.exception.ExceptionUtils.wrapAndThrow(e); }
+    java.lang.String    [org.apache.commons.lang3.time.FastDateFormat]  → try { java.util.Date $var:suggestVariableName()$ = org.apache.commons.lang3.time.FastDateFormat.getInstance("yyyy-MM").parse($expr$); } catch (java.text.ParseException e) { org.apache.commons.lang3.exception.ExceptionUtils.wrapAndThrow(e); }
 
 .parseToDateFromYear : commons-lang3 parseToDateFromYear
-    java.lang.String    [org.apache.commons.lang3.time.FastDateFormat]  → try { java.util.Date $var:suggestVariableName()$ = org.apache.commons.lang3.time.FastDateFormat.getInstance("yyyy").parse($expr$); } catch (ParseException e) { org.apache.commons.lang3.exception.ExceptionUtils.wrapAndThrow(e); }
+    java.lang.String    [org.apache.commons.lang3.time.FastDateFormat]  → try { java.util.Date $var:suggestVariableName()$ = org.apache.commons.lang3.time.FastDateFormat.getInstance("yyyy").parse($expr$); } catch (java.text.ParseException e) { org.apache.commons.lang3.exception.ExceptionUtils.wrapAndThrow(e); }
 
 # org.apache.commons.lang3.exception.ExceptionUtils
 .getMessage : commons-lang3 getMessage
