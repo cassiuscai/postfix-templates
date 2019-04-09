@@ -75,9 +75,6 @@
     java.lang.Iterable  [com.google.common.collect.Iterables]               →   com.google.common.collect.Iterables.toString($expr$)
     java.util.Iterator  [com.google.common.collect.Iterators]               →   com.google.common.collect.Iterators.toString($expr$)
 
-.isEmpty : guava is empty
-    java.lang.Iterable  [com.google.common.collect.Iterables]               →   com.google.common.collect.Iterables.isEmpty($expr$)
-
 .frequency : guava frequency
     java.lang.Iterable  [com.google.common.collect.Iterables]               →   com.google.common.collect.Iterables.frequency($expr$, $element$)
     java.util.Iterator  [com.google.common.collect.Iterators]               →   com.google.common.collect.Iterators.frequency($expr$, $element$)
@@ -88,7 +85,6 @@
 
 .toImmutableIterator : guava toImmutableIterator
     java.util.Iterator  [com.google.common.collect.Iterators]               →   com.google.common.collect.Iterators.unmodifiableIterator($expr$)
-
 
 # List Operations
 .reverse : guava reverse
