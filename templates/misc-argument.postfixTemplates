@@ -32,9 +32,8 @@
 .requireNotBlank : misc-argument requireNotBlank
     # String
     java.lang.String        [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notBlank($expr$, "the parameter require not blank");
-    java.lang.String        [org.springframework.util.Assert]       →  org.springframework.util.Assert.hasText($expr$, "the parameter require not blank");
     java.lang.String        [com.google.common.base.Preconditions]  →  com.google.common.base.Preconditions.checkArgument(!com.google.common.base.CharMatcher.whitespace().matchesAllOf($exmp$), "the parameter require not blank");
-    java.lang.String        [org.springframework.util.Assert]       →  org.springframework.util.Assert.isTrue(org.springframework.util.StringUtils.hasText($expr$), "the parameter require not blank");
+    java.lang.String        [org.springframework.util.Assert]       →  org.springframework.util.Assert.hasText($expr$, "the parameter require not blank");
     java.lang.String                                                →  if ($expr$ == null || $expr$.length() == 0) {\
                                                                             throw new IllegalArgumentException("the parameter require not blank");\
                                                                        }\
