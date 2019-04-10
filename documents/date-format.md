@@ -1,5 +1,5 @@
 #### [date-operation](../templates/date-operation.postfixTemplates)
-> Templates for operate on the old fashioned `Date/Calendar` API
+> Templates for format and parse Date
 - Utility classes preferred to use if available for these templates
     - `org.apache.commons.lang3.time.DateFormatUtils`
     - `org.apache.commons.lang3.time.FastDateFormat`
