@@ -4,7 +4,7 @@
     - `org.apache.commons.lang3.time.DateFormatUtils`
     - `org.apache.commons.lang3.time.FastDateFormat`
     - `org.apache.commons.lang.time.DateFormatUtils`
-- Required the `Apache Commons Lang` library available, `Apache Commons Lang 3.x` is recommended. Choose one of the follows
+- Required the `Apache Commons Lang` library available, `Apache Commons Lang 3.x` is recommended. 
     - [Apache Commons Lang 3.x](https://mvnrepository.com/artifact/org.apache.commons/commons-lang3)
     ```xml
       <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
@@ -24,7 +24,7 @@
       </dependency>
     ```
 - Available postfix 
-    - `Apache Ccommons Lang 2.5+ and 3.x`
+    - `Apache Commons Lang 2.5+ and 3.x`
         - `.format`
         - `.formatToMillisecond` Use `yyyy-MM-dd HH:mm:ss SSS` date format
         - `.formatToSecond` Use `yyyy-MM-dd HH:mm:ss` date format
@@ -33,7 +33,7 @@
         - `.formatToDay` Use `yyyy-MM-dd` date format
         - `.formatToMonth` Use `yyyy-MM` date format
         - `.formatToYear` Use `yyyy` date format
-    - `Apache Ccommons Lang 3.x Only`
+    - `Apache Commons Lang 3.x Only`
         - `.parseToDate`
         - `.parseToDateFromMillisecond` Use `yyyy-MM-dd HH:mm:ss SSS` date format
         - `.parseToDateFromSecond` Use `yyyy-MM-dd HH:mm:ss` date format

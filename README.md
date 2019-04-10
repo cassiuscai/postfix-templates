@@ -11,10 +11,10 @@
         * [guava-collection](#guava-collection)
         * [commons-lang3](#commons-lang3)
     * Functions based templates
-        * [Check the `Array/Collection/Map/String` is or not empty](documents/misc-empty.md)
-        * [Argument check for `Array/Collection/Map/String/Boolean`](documents/misc-argument.md)
-        * [Operations for the `Date/Calendar` API](documents/date-operation.md)
-        * [Format `Date` to `String` and Parse `String` to `Date`](documents/date-operation.md)
+        * [Check the Array/Collection/Map/String is or not empty](documents/misc-empty.md)
+        * [Argument check for Array/Collection/Map/String/Boolean](documents/misc-argument.md)
+        * [Operations for the Date/Calendar API](documents/date-operation.md)
+        * [Format Date to String and Parse String to Date](documents/date-operation.md)
 
 ****
 

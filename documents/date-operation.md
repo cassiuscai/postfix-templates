@@ -3,7 +3,7 @@
 - Utility classes preferred to use if available for these templates
     - `org.apache.commons.lang3.time.DateUtils`
     - `org.apache.commons.lang.time.DateUtils`
-- Required the `Apache Commons Lang` library available, `Apache Commons Lang 3.x` is recommended. Choose one of the follows
+- Required the `Apache Commons Lang` library available, `Apache Commons Lang 3.x` is recommended. 
     - [Apache Commons Lang 3.x](https://mvnrepository.com/artifact/org.apache.commons/commons-lang3)
     ```xml
       <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
