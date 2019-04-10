@@ -1,4 +1,4 @@
-#### [misc-require](../templates/misc-require.postfixTemplates)
+#### [misc-argument](../templates/misc-argument.postfixTemplates)
 > Argument check for `Array/Collection/Map/String/Boolean`
 - Utility classes preferred to use if available, otherwise using JDK methods.
     - `org.apache.commons.lang3.Validate`

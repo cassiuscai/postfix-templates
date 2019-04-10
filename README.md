@@ -3,15 +3,18 @@
 ## Table of Contents
 
 * Java templates
-    * [slf4j](#slf4j)
-    * [assertj-core](#assertj-core)
-    * [mockito](#mockito)
-    * [guava-string](#guava-string)
-    * [guava-collection](#guava-collection)
-    * [commons-lang3](#commons-lang3)
-    * misc
-        * [misc-empty](documents/misc-empty.md)
-        * [misc-require](documents/misc-require.md)
+    * Library based templates
+        * [slf4j](#slf4j)
+        * [assertj-core](#assertj-core)
+        * [mockito](#mockito)
+        * [guava-string](#guava-string)
+        * [guava-collection](#guava-collection)
+        * [commons-lang3](#commons-lang3)
+    * Functions based templates
+        * [Check the `Array/Collection/Map/String` is or not empty](documents/misc-empty.md)
+        * [Argument check for `Array/Collection/Map/String/Boolean`](documents/misc-argument.md)
+        * [Operations for the `Date/Calendar` API](documents/date-operation.md)
+        * [Format `Date` to `String` and Parse `String` to `Date`](documents/date-operation.md)
 
 ****
 
@@ -179,79 +182,7 @@
 - [`com.google.common.collect.ImmutableSortedSet`](templates/guava-collection.postfixTemplates)
     - `.newImmutableSortedSet`
     - `.toImmutableSortedSet`
-
-
-
 ### [commons-lang3](https://commons.apache.org/proper/commons-lang/)
-- [`org.apache.commons.lang3.Validate`](templates/commons-lang3.postfixTemplates)
-    - `.shouldBeTrue`
-    - `.shouldNotFalse`
-    - `.shouldNotNull`
-    - `.shouldNotBlank`
-    - `.shouldNotEmpty`
-    - `.shouldNotContainsNull`
-
-- [`org.apache.commons.lang3.time.DateUtils`](templates/commons-lang3.postfixTemplates)
-    - `.addMilliseconds`
-    - `.addSeconds`
-    - `.addMinutes`
-    - `.addHours`
-    - `.addDays`
-    - `.addWeeks`
-    - `.addMonths`
-    - `.addYears`
-    - `.setMilliseconds`
-    - `.setSeconds`
-    - `.setMinutes`
-    - `.setHours`
-    - `.setDays`
-    - `.setWeeks`
-    - `.setMonths`
-    - `.setYears`
-    - `.ceilMillisecond`
-    - `.ceilSecond`
-    - `.ceilMinute`
-    - `.ceilHour`
-    - `.ceilDay`
-    - `.ceilMonth`
-    - `.ceilYear`
-    - `.floorMillisecond`
-    - `.floorSecond`
-    - `.floorMinute`
-    - `.floorHour`
-    - `.floorDay`
-    - `.floorMonth`
-    - `.floorYear`
-    - `.roundMillisecond`
-    - `.roundSecond`
-    - `.roundMinute`
-    - `.roundHour`
-    - `.roundDay`
-    - `.roundMonth`
-    - `.roundYear`
-    - `.toCalendar`
-    - `.toCalendarWithTimeZone`
-
-- [`org.apache.commons.lang3.time.DateFormatUtils`](templates/commons-lang3.postfixTemplates)
-    - `.format`
-    - `.formatToMillisecond`
-    - `.formatToSecond`
-    - `.formatToMinute`
-    - `.formatToHour`
-    - `.formatToDay`
-    - `.formatToMonth`
-    - `.formatToYear`
-
-- [`org.apache.commons.lang3.time.FastDateFormat`](templates/commons-lang3.postfixTemplates)
-    - `.parseToDate`
-    - `.parseToDateFromMillisecond`
-    - `.parseToDateFromSecond`
-    - `.parseToDateFromMinute`
-    - `.parseToDateFromHour`
-    - `.parseToDateFromDay`
-    - `.parseToDateFromMonth`
-    - `.parseToDateFromYear`
-
 - [`org.apache.commons.lang3.exception.ExceptionUtils`](templates/commons-lang3.postfixTemplates)
     - `.getMessage`
     - `.getRootCause`

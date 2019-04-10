@@ -1,6 +1,6 @@
-# isEmpty
-.isEmpty : postfix misc-empty isEmpty
-# Array
+# Check the Array/Collection/Map/String is or not empty
+.isEmpty : misc-empty isEmpty
+    # Array
     ARRAY                [org.apache.commons.lang3.ArrayUtils]              → org.apache.commons.lang3.ArrayUtils.isEmpty($expr$)
     ARRAY                [org.apache.commons.lang.ArrayUtils]               → org.apache.commons.lang.ArrayUtils.isEmpty($expr$)
     ARRAY                                                                   → ($expr$ == null || $expr$.length == 0)
@@ -20,9 +20,8 @@
     java.util.Map        [org.springframework.util.CollectionUtils]         → org.springframework.util.CollectionUtils.isEmpty($expr$)
     java.util.Map                                                           → ($expr$ == null || $expr$.isEmpty())
 
-# isNotEmpty
-.isNotEmpty : postfix misc-empty isNotEmpty
-# Array
+.isNotEmpty : misc-empty isNotEmpty
+    # Array
     ARRAY                [org.apache.commons.lang3.ArrayUtils]              → org.apache.commons.lang3.ArrayUtils.isNotEmpty($expr$)
     ARRAY                [org.apache.commons.lang.ArrayUtils]               → org.apache.commons.lang.ArrayUtils.isNotEmpty($expr$)
     ARRAY                                                                   → ($expr$ != null && $expr$.length > 0)
@@ -42,9 +41,8 @@
     java.util.Map        [org.springframework.util.CollectionUtils]         → !org.springframework.util.CollectionUtils.isEmpty($expr$)
     java.util.Map                                                           → ($expr$ != null && !$expr$.isEmpty())
 
-# ifEmpty
-.ifEmpty : postfix misc-empty ifEmpty
-# Array
+.ifEmpty : misc-empty ifEmpty
+    # Array
     ARRAY                [org.apache.commons.lang3.ArrayUtils]              → if(org.apache.commons.lang3.ArrayUtils.isEmpty($expr$)){\
                                                                                 $END$\
                                                                               }
@@ -94,9 +92,8 @@
                                                                                 $END$\
                                                                               }
 
-# ifNotEmpty
-.ifNotEmpty : postfix misc-empty ifNotEmpty
-# Array
+.ifNotEmpty : misc-empty ifNotEmpty
+    # Array
     ARRAY                [org.apache.commons.lang3.ArrayUtils]              → if(org.apache.commons.lang3.ArrayUtils.isNotEmpty($expr$)){\
                                                                                 $END$\
                                                                               }

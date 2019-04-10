@@ -1,5 +1,6 @@
-# Argument Check: org.apache.commons.lang3.Validate
-.requireTrue : postfix misc-require requireTrue
+# Argument check for Array/Collection/Map/String/Boolean
+.requireTrue : misc-argument requireTrue
+    # Boolean
     BOOLEAN                 [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.isTrue($expr$, "the parameter require to be true");
     BOOLEAN                 [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.isTrue($expr$, "the parameter require to be true");
     BOOLEAN                 [com.google.common.base.Preconditions]  →  com.google.common.base.Preconditions.checkArgument($expr$, "the parameter require to be true");
@@ -8,7 +9,8 @@
                                                                             throw new IllegalArgumentException("the parameter require to be true");\
                                                                        }
 
-.requireNotFalse : postfix misc-require requireNotFalse
+.requireNotFalse : misc-argument requireNotFalse
+    # Boolean
     BOOLEAN                 [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.isTrue($expr$, "the parameter require not false");
     BOOLEAN                 [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.isTrue($expr$, "the parameter require not false");
     BOOLEAN                 [com.google.common.base.Preconditions]  →  com.google.common.base.Preconditions.checkArgument($expr$, "the parameter require not false");
@@ -17,7 +19,8 @@
                                                                             throw new IllegalArgumentException("the parameter require not false");\
                                                                        }
 
-.requireNotNull : postfix misc-require requireNotNull
+.requireNotNull : misc-argument requireNotNull
+    # Object
     NON_VOID                [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notNull($expr$, "the parameter require not null");
     NON_VOID                [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.notNull($expr$, "the parameter require not null");
     NON_VOID                [com.google.common.base.Preconditions]  →  com.google.common.base.Preconditions.checkNotNull($expr$, "the parameter require not null");
@@ -26,7 +29,8 @@
                                                                             throw new IllegalArgumentException("the parameter require not null");\
                                                                        }
 
-.requireNotBlank : postfix misc-require requireNotBlank
+.requireNotBlank : misc-argument requireNotBlank
+    # String
     java.lang.String        [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notBlank($expr$, "the parameter require not blank");
     java.lang.String        [org.springframework.util.Assert]       →  org.springframework.util.Assert.hasText($expr$, "the parameter require not blank");
     java.lang.String        [com.google.common.base.Preconditions]  →  com.google.common.base.Preconditions.checkArgument(!com.google.common.base.CharMatcher.whitespace().matchesAllOf($exmp$), "the parameter require not blank");
@@ -45,8 +49,8 @@
                                                                             throw new IllegalArgumentException("the parameter require not blank");\
                                                                        }\
 
-.requireNotEmpty : postfix misc-require requireNotEmpty
-# Array
+.requireNotEmpty : misc-argument requireNotEmpty
+    # Array
     ARRAY                   [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notEmpty($expr$, "the parameter require not empty");
     ARRAY                   [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.notEmpty($expr$, "the parameter require not empty");
     ARRAY                   [com.google.common.base.Preconditions]  →  com.google.common.base.Preconditions.checkArgument($expr$ != null && $expr$.length > 0, "the parameter require not empty");
@@ -54,7 +58,6 @@
     ARRAY                                                           →  if($expr$ == null || $expr$.length == 0){\
                                                                             throw new IllegalArgumentException("the parameter require not empty");\
                                                                        }
-
     # Map
     java.util.Map           [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notEmpty($expr$, "the parameter require not empty");
     java.util.Map           [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.notEmpty($expr$, "the parameter require not empty");
@@ -63,8 +66,7 @@
     java.util.Map                                                   →  if($expr$ == null || $expr$.size() == 0){\
                                                                             throw new IllegalArgumentException("the parameter require not empty");\
                                                                        }
-
-
+    # Collection
     java.util.Collection    [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notEmpty($expr$, "the parameter require not empty");
     java.util.Collection    [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.notEmpty($expr$, "the parameter require not empty");
     java.util.Collection    [com.google.common.base.Preconditions]  →  com.google.common.base.Preconditions.checkArgument($expr$ != null && $expr$.size() > 0, "the parameter require not empty");
@@ -74,8 +76,8 @@
                                                                        }
 
 
-.requireNotContainsNull : postfix misc-require requireNotContainsNull
-# Array
+.requireNotContainsNull : misc-argument requireNotContainsNull
+    # Array
     ARRAY                   [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.noNullElements($expr$, "the parameter require not contains null element");
     ARRAY                   [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.noNullElements($expr$, "the parameter require not contains null element");
     ARRAY                   [com.google.common.base.Preconditions]  →  com.google.common.base.Preconditions.checkArgument($expr$ != null && !com.google.common.collect.Lists.newArrayList($expr$).contains(null), "the parameter require not contains null element");

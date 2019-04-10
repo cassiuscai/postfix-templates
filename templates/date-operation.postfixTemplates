@@ -1,0 +1,198 @@
+# Templates for Date and Calendar API: org.apache.commons.lang3.time.DateUtils
+.addMilliseconds : date-operation addMilliseconds
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.addMilliseconds($expr$, $amount$)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.addMilliseconds($expr$, $amount$)
+
+.addSeconds : date-operation addSeconds
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.addSeconds($expr$, $amount$)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.addSeconds($expr$, $amount$)
+
+.addMinutes : date-operation addMinutes
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.addMinutes($expr$, $amount$)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.addMinutes($expr$, $amount$)
+
+.addHours : date-operation addHours
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.addHours($expr$, $amount$)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.addHours($expr$, $amount$)
+
+.addDays : date-operation addDays
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.addDays($expr$, $amount$)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.addDays($expr$, $amount$)
+
+.addWeeks : date-operation addWeeks
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.addWeeks($expr$, $amount$)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.addWeeks($expr$, $amount$)
+
+.addMonths : date-operation addMonths
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.addMonths($expr$, $amount$)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.addMonths($expr$, $amount$)
+
+.addYears : date-operation addYears
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.addYears($expr$, $amount$)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.addYears($expr$, $amount$)
+
+.setMilliseconds : date-operation setMilliseconds
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.setMilliseconds($expr$, $amount$)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.setMilliseconds($expr$, $amount$)
+
+.setSeconds : date-operation setSeconds
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.setSeconds($expr$, $amount$)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.setSeconds($expr$, $amount$)
+
+.setMinutes : date-operation setMinutes
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.setMinutes($expr$, $amount$)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.setMinutes($expr$, $amount$)
+
+.setHours : date-operation setHours
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.setHours($expr$, $amount$)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.setHours($expr$, $amount$)
+
+.setDays : date-operation setDays
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.setDays($expr$, $amount$)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.setDays($expr$, $amount$)
+
+.setWeeks : date-operation setWeeks
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.setWeeks($expr$, $amount$)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]   →    org.apache.commons.lang.time.DateUtils.setWeeks($expr$, $amount$)
+
+.setMonths : date-operation setMonths
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.setMonths($expr$, $amount$)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.setMonths($expr$, $amount$)
+
+.setYears : date-operation setYears
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.setYears($expr$, $amount$)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.setYears($expr$, $amount$)
+
+.ceilMillisecond : date-operation ceilMillisecond
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.MILLISECOND)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.MILLISECOND)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.MILLISECOND)
+    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.MILLISECOND)
+
+.ceilSecond : date-operation ceilSecond
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.SECOND)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.SECOND)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.SECOND)
+    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.SECOND)
+
+.ceilMinute : date-operation ceilMinute
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.MINUTE)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.MINUTE)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.MINUTE)
+    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.MINUTE)
+
+.ceilHour : date-operation ceilHour
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.HOUR_OF_DAY)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.HOUR_OF_DAY)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.HOUR_OF_DAY)
+    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.HOUR_OF_DAY)
+
+.ceilDay : date-operation ceilDay
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.DAY_OF_MONTH)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.DAY_OF_MONTH)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.DAY_OF_MONTH)
+    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.DAY_OF_MONTH)
+
+.ceilMonth : date-operation ceilMonth
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.MONTH)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.MONTH)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.MONTH)
+    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.MONTH)
+
+
+.ceilYear : date-operation ceilYear
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.YEAR)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.YEAR)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.YEAR)
+    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.YEAR)
+
+.floorMillisecond : date-operation floorMillisecond
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.MILLISECOND)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.MILLISECOND)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.MILLISECOND)
+    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.MILLISECOND)
+
+.floorSecond : date-operation floorSecond
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.SECOND)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.SECOND)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.SECOND)
+    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.SECOND)
+
+.floorMinute : date-operation floorMinute
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.MINUTE)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.MINUTE)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.MINUTE)
+    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.MINUTE)
+
+.floorHour : date-operation floorHour
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.HOUR_OF_DAY)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.HOUR_OF_DAY)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.HOUR_OF_DAY)
+    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.HOUR_OF_DAY)
+
+.floorDay : date-operation floorDay
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.DAY_OF_MONTH)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.DAY_OF_MONTH)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.DAY_OF_MONTH)
+    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.DAY_OF_MONTH)
+
+.floorMonth : date-operation floorMonth
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.MONTH)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.MONTH)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.MONTH)
+    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.MONTH)
+
+.floorYear : date-operation floorYear
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.YEAR)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.YEAR)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.YEAR)
+    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.YEAR)
+
+
+.roundMillisecond : date-operation roundMillisecond
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.MILLISECOND)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.MILLISECOND)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.MILLISECOND)
+    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.MILLISECOND)
+
+.roundSecond : date-operation roundSecond
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.SECOND)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.SECOND)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.SECOND)
+    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.SECOND)
+
+.roundMinute : date-operation roundMinute
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.MINUTE)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.MINUTE)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.MINUTE)
+    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.MINUTE)
+
+.roundHour : date-operation roundHour
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.HOUR_OF_DAY)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.HOUR_OF_DAY)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.HOUR_OF_DAY)
+    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.HOUR_OF_DAY)
+
+.roundDay : date-operation roundDay
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.DAY_OF_MONTH)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.DAY_OF_MONTH)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.DAY_OF_MONTH)
+    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.DAY_OF_MONTH)
+
+.roundMonth : date-operation roundMonth
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.MONTH)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.MONTH)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.MONTH)
+    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.MONTH)
+
+.roundYear : date-operation roundYear
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.YEAR)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.YEAR)
+    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.YEAR)
+    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.YEAR)
+
+.toCalendar : date-operation toCalendar
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.toCalendar($expr$, java.util.TimeZone.getDefault())
+
+.toCalendarWithTimeZone : date-operation toCalendarWithTimeZone
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.toCalendar($expr$, java.util.TimeZone.getTimeZone($timeZone$))
