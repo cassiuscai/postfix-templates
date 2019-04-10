@@ -54,5 +54,4 @@ fabric.properties
 .idea/httpRequests
 .idea
 *.iml
-src
 target
