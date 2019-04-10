@@ -1,7 +1,3 @@
-/**
-  * Alipay.com Inc.
-  * Copyright (c) 2004-2019 All Rights Reserved.
-  */
 package com.cassiuscai.example.flink.batch
 
 import org.apache.flink.api.scala.ExecutionEnvironment
