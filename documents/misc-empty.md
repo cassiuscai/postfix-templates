@@ -1,6 +1,6 @@
 #### [misc-empty](../templates/misc-empty.postfixTemplates)
 > Check the `Array/Collection/Map/String` is or not empty
-- Utility classes preferred to use in order if available, otherwise using JDK methods.
+- Utility classes preferred to use if available, otherwise using JDK methods.
     - Array
         - `org.apache.commons.lang3.ArrayUtils`
         - `org.apache.commons.lang.ArrayUtils`
