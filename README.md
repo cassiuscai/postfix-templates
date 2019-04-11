@@ -13,8 +13,8 @@
     * Functions based templates
         * [Check the Array/Collection/Map/String is or not empty](documents/misc-empty.md)
         * [Argument check for Array/Collection/Map/String/Boolean](documents/misc-argument.md)
-        * [Operations for the Date/Calendar API](documents/date-operation.md)
-        * [Format Date to String and Parse String to Date](documents/date-operation.md)
+        * [Operations for the Date/Calendar API](documents/commons-lang.date.md)
+        * [Format Date to String and Parse String to Date](documents/date-format.md)
 
 ****
 
