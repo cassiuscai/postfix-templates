@@ -15,3 +15,12 @@
     java.util.concurrent.CompletableFuture  [reactor.core.publisher.Mono] → reactor.core.publisher.Mono.fromFuture($expr$)
     java.util.Optional                      [reactor.core.publisher.Mono] → reactor.core.publisher.Mono.justOrEmpty($expr$)
     NON_VOID                                [reactor.core.publisher.Mono] → reactor.core.publisher.Mono.justOrEmpty($expr$)
+
+.toJavaList: reactor-core toJavaList
+    reactor.core.publisher.Flux             [reactor.core.publisher.Flux] → $expr$.collectList().block()
+.toJavaSortedList: reactor-core toJavaSortedList
+    reactor.core.publisher.Flux             [reactor.core.publisher.Flux] → $expr$.collectSortedList().block()
+.toJavaMap: reactor-core toJavaMap
+    reactor.core.publisher.Flux             [reactor.core.publisher.Flux] → $expr$.collectMap(it -> $keyExpr$, it -> $valueExpr$).block()
+.toJavaMultimap: reactor-core toJavaMultimap
+    reactor.core.publisher.Flux             [reactor.core.publisher.Flux] → $expr$.collectMultimap(it -> $keyExpr$, it -> $valueExpr$).block()
