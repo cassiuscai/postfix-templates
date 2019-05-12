@@ -28,10 +28,3 @@
 
 .assertThatRuntimeException : assertj-core assertThatRuntimeException
     ANY               [org.assertj.core.api.Assertions]     →  org.assertj.core.api.Assertions.assertThatExceptionOfType(java.lang.RuntimeException.class).isThrownBy(() -> $expr$)  [USE_STATIC_IMPORTS]
-
-# BDDAssertions
-.then : assertj-core then
-    ANY               [org.assertj.core.api.BDDAssertions]  → org.assertj.core.api.BDDAssertions.then($expr$)$END$   [USE_STATIC_IMPORTS]
-
-.thenThrownBy : assertj-core thenThrownBy
-    ANY               [org.assertj.core.api.BDDAssertions]  → org.assertj.core.api.BDDAssertions.thenThrownBy(() -> $expr$)$END$   [USE_STATIC_IMPORTS]

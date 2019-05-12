@@ -30,7 +30,3 @@
     ANY                 [org.mockito.Mockito]       →  org.mockito.Mockito.doAnswer((org.mockito.stubbing.Answer<$answerType$>) invocation -> $answerBody$).when($expr$).$END$    [USE_STATIC_IMPORTS]
 .doReturn : mockito doReturn
     ANY                 [org.mockito.Mockito]       →  org.mockito.Mockito.doReturn($returnValue$).when($expr$).$END$    [USE_STATIC_IMPORTS]
-
-# BDDMOckito given
-.given : mockito given
-    ANY                 [org.mockito.BDDMockito]    →  org.mockito.BDDMockito.given($expr$) [USE_STATIC_IMPORTS]
