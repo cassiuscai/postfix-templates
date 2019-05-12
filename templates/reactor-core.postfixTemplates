@@ -1,0 +1,17 @@
+# Templates for reactor-core
+.toFlux: reactor-core toFlux
+    ARRAY                                   [reactor.core.publisher.Flux] → reactor.core.publisher.Flux.fromArray($expr$)
+    java.lang.Iterable                      [reactor.core.publisher.Flux] → reactor.core.publisher.Flux.fromIterable($expr$)
+    java.util.stream.Stream                 [reactor.core.publisher.Flux] → reactor.core.publisher.Flux.fromStream($expr$)
+    org.reactivestreams.Publisher           [reactor.core.publisher.Flux] → reactor.core.publisher.Flux.from($expr$)
+    NON_VOID                                [reactor.core.publisher.Flux] → reactor.core.publisher.Flux.just($expr$)
+
+.toMono: reactor-core toMono
+    org.reactivestreams.Publisher           [reactor.core.publisher.Mono] → reactor.core.publisher.Mono.from($expr$)
+    java.lang.Runnable                      [reactor.core.publisher.Mono] → reactor.core.publisher.Mono.fromRunnable($expr$)
+    java.util.concurrent.Callable           [reactor.core.publisher.Mono] → reactor.core.publisher.Mono.fromCallable($expr$)
+    java.util.function.Supplier             [reactor.core.publisher.Mono] → reactor.core.publisher.Mono.fromSupplier($expr$)
+    java.util.concurrent.CompletionStage    [reactor.core.publisher.Mono] → reactor.core.publisher.Mono.fromCompletionStage($expr$)
+    java.util.concurrent.CompletableFuture  [reactor.core.publisher.Mono] → reactor.core.publisher.Mono.fromFuture($expr$)
+    java.util.Optional                      [reactor.core.publisher.Mono] → reactor.core.publisher.Mono.justOrEmpty($expr$)
+    NON_VOID                                [reactor.core.publisher.Mono] → reactor.core.publisher.Mono.justOrEmpty($expr$)

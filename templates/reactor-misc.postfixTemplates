@@ -1,0 +1,2 @@
+.println: reactor-core println
+    org.reactivestreams.Publisher   [org.reactivestreams.Publisher] → $expr$.subscribe(System.out::println);
