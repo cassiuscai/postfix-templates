@@ -182,8 +182,8 @@
 - [`com.google.common.collect.ImmutableSortedSet`](templates/guava-collection.postfixTemplates)
     - `.newImmutableSortedSet`
     - `.toImmutableSortedSet`
-### [commons-lang3](https://commons.apache.org/proper/commons-lang/)
-- [`org.apache.commons.lang3.exception.ExceptionUtils`](templates/commons-lang3.postfixTemplates)
+### [commons-lang3.exception](https://commons.apache.org/proper/commons-lang/)
+- [`org.apache.commons.lang3.exception.ExceptionUtils`](templates/commons-lang.exception.postfixTemplates)
     - `.getMessage`
     - `.getRootCause`
     - `.getRootCauseMessage`

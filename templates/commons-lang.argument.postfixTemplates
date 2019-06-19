@@ -1,0 +1,39 @@
+# Argument check for Array/Collection/Map/String/Boolean
+.requireTrue : commons-lang requireTrue
+    # Boolean
+    BOOLEAN                 [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.isTrue($expr$, "the parameter require to be true");
+    BOOLEAN                 [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.isTrue($expr$, "the parameter require to be true");
+
+.requireNotFalse : commons-lang requireNotFalse
+    # Boolean
+    BOOLEAN                 [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.isTrue($expr$, "the parameter require not false");
+    BOOLEAN                 [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.isTrue($expr$, "the parameter require not false");
+
+.requireNotNull : commons-lang requireNotNull
+    # Object
+    NON_VOID                [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notNull($expr$, "the parameter require not null");
+    NON_VOID                [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.notNull($expr$, "the parameter require not null");
+
+.requireNotBlank : commons-lang requireNotBlank
+    # String
+    java.lang.String        [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notBlank($expr$, "the parameter require not blank");
+
+.requireNotEmpty : commons-lang requireNotEmpty
+    # Array
+    ARRAY                   [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notEmpty($expr$, "the parameter require not empty");
+    ARRAY                   [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.notEmpty($expr$, "the parameter require not empty");
+    # Map
+    java.util.Map           [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notEmpty($expr$, "the parameter require not empty");
+    java.util.Map           [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.notEmpty($expr$, "the parameter require not empty");
+    # Collection
+    java.util.Collection    [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notEmpty($expr$, "the parameter require not empty");
+    java.util.Collection    [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.notEmpty($expr$, "the parameter require not empty");
+
+
+.requireNotContainsNull : commons-lang requireNotContainsNull
+    # Array
+    ARRAY                   [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.noNullElements($expr$, "the parameter require not contains null element");
+    ARRAY                   [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.noNullElements($expr$, "the parameter require not contains null element");
+    # Collection
+    java.lang.Collection    [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.noNullElements($expr$, "the parameter require not contains null element");
+    java.util.Collection    [org.apache.commons.lang.Validate]      →  org.apache.commons.lang.Validate.noNullElements($expr$, "the parameter require not contains null element");
