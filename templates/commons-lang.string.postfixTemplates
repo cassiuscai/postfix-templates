@@ -3,7 +3,6 @@
     java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.equals($expr$, $another$)
     java.lang.String     [org.apache.commons.lang.StringUtils]              → org.apache.commons.lang.StringUtils.equals($expr$, $another$)
 
-
 .ifEquals : commons-lang ifEquals
     java.lang.String     [org.apache.commons.lang3.StringUtils]             → if(org.apache.commons.lang3.StringUtils.equals($expr$, $another$)){\
                                                                                 $END$\
@@ -11,11 +10,33 @@
     java.lang.String     [org.apache.commons.lang.StringUtils]              → if(org.apache.commons.lang.StringUtils.equals($expr$, $another$)){\
                                                                                 $END$\
                                                                               }
-
 .ifNotEquals : commons-lang ifNotEquals
     java.lang.String     [org.apache.commons.lang3.StringUtils]             → if(!org.apache.commons.lang3.StringUtils.equals($expr$, $another$)){\
                                                                                 $END$\
                                                                               }
     java.lang.String     [org.apache.commons.lang.StringUtils]              → if(!org.apache.commons.lang.StringUtils.equals($expr$, $another$)){\
+                                                                                $END$\
+                                                                              }
+.isBlank : commons-lang isBlank
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.isBlank($expr$)
+    java.lang.String     [org.apache.commons.lang.StringUtils]              → org.apache.commons.lang.StringUtils.isBlank($expr$)
+
+.isNotBlank : commons-lang isNotBlank
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.isNotBlank($expr$)
+    java.lang.String     [org.apache.commons.lang.StringUtils]              → org.apache.commons.lang.StringUtils.isNotBlank($expr$)
+
+.ifBlank : commons-lang ifBlank
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → if(org.apache.commons.lang3.StringUtils.isBlank($expr$)){\
+                                                                                $END$\
+                                                                              }
+    java.lang.String     [org.apache.commons.lang.StringUtils]              → if(org.apache.commons.lang.StringUtils.isBlank($expr$)){\
+                                                                                $END$\
+                                                                              }
+
+.ifNotBlank : commons-lang ifNotBlank
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → if(org.apache.commons.lang3.StringUtils.isNotBlank($expr$)){\
+                                                                                $END$\
+                                                                              }
+    java.lang.String     [org.apache.commons.lang.StringUtils]              → if(org.apache.commons.lang.StringUtils.isNotBlank($expr$)){\
                                                                                 $END$\
                                                                               }
