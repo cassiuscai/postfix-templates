@@ -17,6 +17,26 @@
     java.lang.String     [org.apache.commons.lang.StringUtils]              → if(!org.apache.commons.lang.StringUtils.equals($expr$, $another$)){\
                                                                                 $END$\
                                                                               }
+
+.equalsIgnoreCase : commons-lang equalsIgnoreCase
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.equalsIgnoreCase($expr$, $another$)
+    java.lang.String     [org.apache.commons.lang.StringUtils]              → org.apache.commons.lang.StringUtils.equalsIgnoreCase($expr$, $another$)
+
+.ifEqualsIgnoreCase : commons-lang ifEqualsIgnoreCase
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → if(org.apache.commons.lang3.StringUtils.equalsIgnoreCase($expr$, $another$)){\
+                                                                                $END$\
+                                                                              }
+    java.lang.String     [org.apache.commons.lang.StringUtils]              → if(org.apache.commons.lang.StringUtils.equalsIgnoreCase($expr$, $another$)){\
+                                                                                $END$\
+                                                                              }
+.ifNotEqualsIgnoreCase : commons-lang ifNotEqualsIgnoreCase
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → if(!org.apache.commons.lang3.StringUtils.equalsIgnoreCase($expr$, $another$)){\
+                                                                                $END$\
+                                                                              }
+    java.lang.String     [org.apache.commons.lang.StringUtils]              → if(!org.apache.commons.lang.StringUtils.equalsIgnoreCase($expr$, $another$)){\
+                                                                                $END$\
+                                                                              }
+
 .isBlank : commons-lang isBlank
     java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.isBlank($expr$)
     java.lang.String     [org.apache.commons.lang.StringUtils]              → org.apache.commons.lang.StringUtils.isBlank($expr$)
