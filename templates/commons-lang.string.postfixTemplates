@@ -1,0 +1,21 @@
+# Check the Array/Collection/Map/String is or not empty
+.equals : commons-lang equals
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.equals($expr$, $another$)
+    java.lang.String     [org.apache.commons.lang.StringUtils]              → org.apache.commons.lang.StringUtils.equals($expr$, $another$)
+
+
+.ifEquals : commons-lang ifEquals
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → if(org.apache.commons.lang3.StringUtils.equals($expr$, $another$)){\
+                                                                                $END$\
+                                                                              }
+    java.lang.String     [org.apache.commons.lang.StringUtils]              → if(org.apache.commons.lang.StringUtils.equals($expr$, $another$)){\
+                                                                                $END$\
+                                                                              }
+
+.ifNotEquals : commons-lang ifNotEquals
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → if(!org.apache.commons.lang3.StringUtils.equals($expr$, $another$)){\
+                                                                                $END$\
+                                                                              }
+    java.lang.String     [org.apache.commons.lang.StringUtils]              → if(!org.apache.commons.lang.StringUtils.equals($expr$, $another$)){\
+                                                                                $END$\
+                                                                              }
