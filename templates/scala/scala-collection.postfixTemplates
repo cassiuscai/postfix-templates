@@ -1,18 +1,17 @@
 # scala collection
-.asVarArgs: convert to varargs
-    java.util.Iterator          →  [IMPORT scala.collection.JavaConverters._] $expr$.asSeq : _*
-    java.lang.Iterable          →  [IMPORT scala.collection.JavaConverters._] $expr$.asSeq : _*
-    java.util.Enumeration       →  [IMPORT scala.collection.JavaConverters._] $expr$.asSeq : _*
-    scala.collection.Iterator   →  [IMPORT scala.collection.JavaConverters._] $expr$ : _*
-    scala.collection.Iterable   →  [IMPORT scala.collection.JavaConverters._] $expr$ : _*
+.asVarArgs: asVarArgs
+    java.util.List                  →  [IMPORT scala.collection.JavaConverters._] $expr$.asScala: _*
+    java.util.Set                   →  [IMPORT scala.collection.JavaConverters._] $expr$.asScala.toSeq: _*
+    scala.collection.Set            →  $expr$.toSeq: _*
+    scala.collection.Seq            →  $expr$: _*
 
 .asScala : asScala
-    java.util.Iterator          →  [IMPORT scala.collection.JavaConverters._] $expr$.asScala
-    java.lang.Iterable          →  [IMPORT scala.collection.JavaConverters._] $expr$.asScala
-    java.util.Map               →  [IMPORT scala.collection.JavaConverters._] $expr$.asScala
-    java.util.Enumeration       →  [IMPORT scala.collection.JavaConverters._] $expr$.asScala
+    java.util.Iterator              →  [IMPORT scala.collection.JavaConverters._] $expr$.asScala
+    java.lang.Iterable              →  [IMPORT scala.collection.JavaConverters._] $expr$.asScala
+    java.util.Map                   →  [IMPORT scala.collection.JavaConverters._] $expr$.asScala
+    java.util.Enumeration           →  [IMPORT scala.collection.JavaConverters._] $expr$.asScala
 
 .asJava : asJava
-    scala.collection.Iterator  →  [IMPORT scala.collection.JavaConverters._] $expr$.asJava
-    scala.collection.Iterable  →  [IMPORT scala.collection.JavaConverters._] $expr$.asJava
+    scala.collection.Iterator       →  [IMPORT scala.collection.JavaConverters._] $expr$.asJava
+    scala.collection.Iterable       →  [IMPORT scala.collection.JavaConverters._] $expr$.asJava
 
