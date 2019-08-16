@@ -2,6 +2,27 @@
 .assertThat : assertj-core assertThat
     ANY               [org.assertj.core.api.Assertions]     →  org.assertj.core.api.Assertions.assertThat($expr$)   [USE_STATIC_IMPORTS]
 
+.assertThatEqualTo : assertj-core assertThatEqualTo
+    ANY               [org.assertj.core.api.Assertions]     →  org.assertj.core.api.Assertions.assertThat($expr$).isEqualTo($other$)$END$   [USE_STATIC_IMPORTS]
+
+.assertThatIsNull : assertj-core assertThatIsNull
+    ANY               [org.assertj.core.api.Assertions]     →  org.assertj.core.api.Assertions.assertThat($expr$).isNull()   [USE_STATIC_IMPORTS]
+
+.assertThatNotNull : assertj-core assertThatNotNull
+    ANY               [org.assertj.core.api.Assertions]     →  org.assertj.core.api.Assertions.assertThat($expr$).isNotNull()   [USE_STATIC_IMPORTS]
+
+.assertThatIsBlank : assertj-core assertThatIsBlank
+    java.lang.String  [org.assertj.core.api.Assertions]     →  org.assertj.core.api.Assertions.assertThat($expr$).isBlank()   [USE_STATIC_IMPORTS]
+
+.assertThatNotBlank : assertj-core assertThatNotBlank
+    java.lang.String  [org.assertj.core.api.Assertions]     →  org.assertj.core.api.Assertions.assertThat($expr$).isNotBlank()   [USE_STATIC_IMPORTS]
+
+.assertThatIsTrue : assertj-core assertThatIsBlank
+    BOOLEAN           [org.assertj.core.api.Assertions]     →  org.assertj.core.api.Assertions.assertThat($expr$).isTrue()   [USE_STATIC_IMPORTS]
+
+.assertThatIsFalse : assertj-core assertThatIsBlank
+    BOOLEAN           [org.assertj.core.api.Assertions]     →  org.assertj.core.api.Assertions.assertThat($expr$).isFalse()   [USE_STATIC_IMPORTS]
+
 .assertThatCode : assertj-core assertThatCode
     ANY               [org.assertj.core.api.Assertions]     →  org.assertj.core.api.Assertions.assertThatCode(() -> $expr$)  [USE_STATIC_IMPORTS]
 

@@ -24,7 +24,7 @@ object FlinkBatchExample {
     val a = new util.ArrayList[String]().asScala: _*
 
     val b = new util.HashSet[String]().asScala
-    val df:DataFrame = null;
+    val df:DataFrame = null
     val javaSet = new util.HashSet[String]()
     val javaList = new util.ArrayList[String]()
     val scalaSet = Set("1","2")

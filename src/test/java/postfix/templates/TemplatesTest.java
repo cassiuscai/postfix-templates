@@ -12,7 +12,5 @@ public class TemplatesTest {
      */
     @Test
     public void testGenerateTemplate() {
-
-
     }
 }
