@@ -1,0 +1,8 @@
+.pirntln : println
+    NON_VOID                        →   println($expr$)
+
+.val : val
+    NON_VOID                        →   val $var:suggestVariableName$ = $expr$
+
+.var : var
+    NON_VOID                        →   var $var:suggestVariableName$ = $expr$

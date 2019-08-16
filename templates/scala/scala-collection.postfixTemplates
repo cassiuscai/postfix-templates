@@ -14,4 +14,3 @@
 .asJava : asJava
     scala.collection.Iterator       →  [IMPORT scala.collection.JavaConverters._] $expr$.asJava
     scala.collection.Iterable       →  [IMPORT scala.collection.JavaConverters._] $expr$.asJava
-
