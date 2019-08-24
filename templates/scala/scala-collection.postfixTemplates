@@ -1,16 +1,153 @@
 # scala collection
-.asVarArgs: asVarArgs
+.toVarArgs: toVarArgs
     java.util.List                  →  [IMPORT scala.collection.JavaConverters._] $expr$.asScala: _*
     java.util.Set                   →  [IMPORT scala.collection.JavaConverters._] $expr$.asScala.toSeq: _*
     scala.collection.Set            →  $expr$.toSeq: _*
     scala.collection.Seq            →  $expr$: _*
 
-.asScala : asScala
+.toScala : toScala
     java.util.Iterator              →  [IMPORT scala.collection.JavaConverters._] $expr$.asScala
     java.lang.Iterable              →  [IMPORT scala.collection.JavaConverters._] $expr$.asScala
     java.util.Map                   →  [IMPORT scala.collection.JavaConverters._] $expr$.asScala
     java.util.Enumeration           →  [IMPORT scala.collection.JavaConverters._] $expr$.asScala
 
-.asJava : asJava
+.toJava : asJava
     scala.collection.Iterator       →  [IMPORT scala.collection.JavaConverters._] $expr$.asJava
     scala.collection.Iterable       →  [IMPORT scala.collection.JavaConverters._] $expr$.asJava
+
+.map: map
+    java.util.Map                   →   $expr$.asScala.map {\
+											case (key,value) => $END$\
+										} [IMPORT scala.collection.JavaConverters._]
+
+    scala.collection.Map			→   $expr$.map {\
+											case (key,value) => $END$\
+										}
+
+    java.lang.Iterable              →  	$expr$.asScala.map {\
+											item =>  $END$\
+										} [IMPORT scala.collection.JavaConverters._]
+
+    scala.collection.Iterable       →  	$expr$.map {\
+											item => $END$\
+										}
+
+.mapEntries: mapEntries
+    java.util.Map                   →   $expr$.asScala.map {\
+											entry => $END$\
+										} [IMPORT scala.collection.JavaConverters._]
+
+    scala.collection.Map			→   $expr$.map {\
+											entry => $END$\
+										}
+
+.mapValues: mapValues
+    java.util.Map                   →   $expr$.asScala.mapValues {\
+											entry => $END$\
+										} [IMPORT scala.collection.JavaConverters._]
+
+    scala.collection.Map			→   $expr$.mapValues {\
+											entry => $END$\
+										}
+
+.flatmap: flatmap
+    java.util.Map                   →   $expr$.asScala.flatMap {\
+											case (key,value) => $END$\
+										} [IMPORT scala.collection.JavaConverters._]
+
+    scala.collection.Map			→   $expr$.flatMap {\
+											case (key,value) => $END$\
+										}
+
+    java.lang.Iterable              →  	$expr$.asScala.flatMap {\
+											item => $END$\
+										} [IMPORT scala.collection.JavaConverters._]
+
+    scala.collection.Iterable       →  	$expr$.flatMap {\
+											item => $END$\
+										}
+
+.filter: filter
+    java.util.Map                   →   $expr$.asScala.filter {\
+											case (key,value) => $END$\
+										} [IMPORT scala.collection.JavaConverters._]
+
+    scala.collection.Map			→   $expr$.filter {\
+											case (key,value) => $END$\
+										}
+
+    java.lang.Iterable              →  	$expr$.asScala.filter {\
+											item => $END$\
+										} [IMPORT scala.collection.JavaConverters._]
+
+    scala.collection.Iterable       →  	$expr$.filter {\
+											item => $END$\
+										}
+
+.filterNot: filterNot
+    java.util.Map                   →   $expr$.asScala.filterNot {\
+											case (key,value) => $END$\
+										} [IMPORT scala.collection.JavaConverters._]
+
+    scala.collection.Map			→   $expr$.filterNot {\
+											case (key,value) => $END$\
+										}
+
+    java.lang.Iterable              →  	$expr$.asScala.filterNot {\
+											item => $END$\
+										} [IMPORT scala.collection.JavaConverters._]
+
+    scala.collection.Iterable       →  	$expr$.filterNot {\
+											item => $END$\
+										}
+
+.foreach: foreach
+    java.util.Map                   →   $expr$.asScala.foreach {\
+											case (key,value) => $END$\
+										} [IMPORT scala.collection.JavaConverters._]
+
+    scala.collection.Map			→   $expr$.foreach {\
+											case (key,value) => $END$\
+										}
+
+    java.lang.Iterable              →  	$expr$.asScala.foreach {\
+											item => $END$\
+										} [IMPORT scala.collection.JavaConverters._]
+
+    scala.collection.Iterable       →  	$expr$.foreach {\
+											item => $END$\
+										}
+
+.forall: forall
+    java.util.Map                   →   $expr$.asScala.forall {\
+											case (key,value) => $END$\
+										} [IMPORT scala.collection.JavaConverters._]
+
+    scala.collection.Map			→   $expr$.forall {\
+											case (key,value) => $END$\
+										}
+
+    java.lang.Iterable              →  	$expr$.asScala.forall {\
+											item =>  $END$\
+										} [IMPORT scala.collection.JavaConverters._]
+
+    scala.collection.Iterable       →  	$expr$.forall {\
+											item => $END$\
+										}
+
+.exists: exists
+    java.util.Map                   →   $expr$.asScala.exists {\
+											case (key,value) => $END$\
+										} [IMPORT scala.collection.JavaConverters._]
+
+    scala.collection.Map			→   $expr$.exists {\
+											case (key,value) => $END$\
+										}
+
+    java.lang.Iterable              →  	$expr$.asScala.exists {\
+											item => $END$\
+										} [IMPORT scala.collection.JavaConverters._]
+
+    scala.collection.Iterable       →  	$expr$.exists {\
+											item => $END$\
+										}
