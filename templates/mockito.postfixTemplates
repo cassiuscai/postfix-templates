@@ -30,3 +30,6 @@
     ANY                 [org.mockito.Mockito]       →  org.mockito.Mockito.doAnswer((org.mockito.stubbing.Answer<$answerType$>) invocation -> $answerBody$).when($expr$).$END$    [USE_STATIC_IMPORTS]
 .doReturn : mockito doReturn
     ANY                 [org.mockito.Mockito]       →  org.mockito.Mockito.doReturn($returnValue$).when($expr$).$END$    [USE_STATIC_IMPORTS]
+
+.initMockito : mockito initMockito
+    ANY                 [org.mockito.Mockito]       →  org.mockito.MockitoAnnotations.initMocks($expr$);

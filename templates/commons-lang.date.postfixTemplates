@@ -1,195 +1,137 @@
 # Templates for Date and Calendar API: org.apache.commons.lang3.time.DateUtils
 .addMilliseconds : commons-lang.date addMilliseconds
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.addMilliseconds($expr$, $amount$)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.addMilliseconds($expr$, $amount$)
 
 .addSeconds : commons-lang.date addSeconds
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.addSeconds($expr$, $amount$)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.addSeconds($expr$, $amount$)
 
 .addMinutes : commons-lang.date addMinutes
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.addMinutes($expr$, $amount$)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.addMinutes($expr$, $amount$)
 
 .addHours : commons-lang.date addHours
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.addHours($expr$, $amount$)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.addHours($expr$, $amount$)
 
 .addDays : commons-lang.date addDays
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.addDays($expr$, $amount$)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.addDays($expr$, $amount$)
 
 .addWeeks : commons-lang.date addWeeks
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.addWeeks($expr$, $amount$)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.addWeeks($expr$, $amount$)
 
 .addMonths : commons-lang.date addMonths
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.addMonths($expr$, $amount$)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.addMonths($expr$, $amount$)
 
 .addYears : commons-lang.date addYears
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.addYears($expr$, $amount$)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.addYears($expr$, $amount$)
 
 .setMilliseconds : commons-lang.date setMilliseconds
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.setMilliseconds($expr$, $amount$)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.setMilliseconds($expr$, $amount$)
 
 .setSeconds : commons-lang.date setSeconds
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.setSeconds($expr$, $amount$)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.setSeconds($expr$, $amount$)
 
 .setMinutes : commons-lang.date setMinutes
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.setMinutes($expr$, $amount$)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.setMinutes($expr$, $amount$)
 
 .setHours : commons-lang.date setHours
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.setHours($expr$, $amount$)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.setHours($expr$, $amount$)
 
 .setDays : commons-lang.date setDays
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.setDays($expr$, $amount$)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.setDays($expr$, $amount$)
 
 .setWeeks : commons-lang.date setWeeks
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.setWeeks($expr$, $amount$)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]   →    org.apache.commons.lang.time.DateUtils.setWeeks($expr$, $amount$)
 
 .setMonths : commons-lang.date setMonths
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.setMonths($expr$, $amount$)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.setMonths($expr$, $amount$)
 
 .setYears : commons-lang.date setYears
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.setYears($expr$, $amount$)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.setYears($expr$, $amount$)
 
 .ceilMillisecond : commons-lang.date ceilMillisecond
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.MILLISECOND)
     java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.MILLISECOND)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.MILLISECOND)
-    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.MILLISECOND)
 
 .ceilSecond : commons-lang.date ceilSecond
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.SECOND)
     java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.SECOND)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.SECOND)
-    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.SECOND)
 
 .ceilMinute : commons-lang.date ceilMinute
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.MINUTE)
     java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.MINUTE)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.MINUTE)
-    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.MINUTE)
 
 .ceilHour : commons-lang.date ceilHour
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.HOUR_OF_DAY)
     java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.HOUR_OF_DAY)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.HOUR_OF_DAY)
-    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.HOUR_OF_DAY)
 
 .ceilDay : commons-lang.date ceilDay
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.DAY_OF_MONTH)
     java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.DAY_OF_MONTH)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.DAY_OF_MONTH)
-    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.DAY_OF_MONTH)
 
 .ceilMonth : commons-lang.date ceilMonth
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.MONTH)
     java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.MONTH)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.MONTH)
-    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.MONTH)
 
 
 .ceilYear : commons-lang.date ceilYear
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.YEAR)
     java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.YEAR)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.YEAR)
-    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.ceiling($expr$, java.util.Calendar.YEAR)
 
 .floorMillisecond : commons-lang.date floorMillisecond
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.MILLISECOND)
     java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.MILLISECOND)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.MILLISECOND)
-    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.MILLISECOND)
 
 .floorSecond : commons-lang.date floorSecond
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.SECOND)
     java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.SECOND)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.SECOND)
-    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.SECOND)
 
 .floorMinute : commons-lang.date floorMinute
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.MINUTE)
     java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.MINUTE)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.MINUTE)
-    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.MINUTE)
 
 .floorHour : commons-lang.date floorHour
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.HOUR_OF_DAY)
     java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.HOUR_OF_DAY)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.HOUR_OF_DAY)
-    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.HOUR_OF_DAY)
 
 .floorDay : commons-lang.date floorDay
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.DAY_OF_MONTH)
     java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.DAY_OF_MONTH)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.DAY_OF_MONTH)
-    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.DAY_OF_MONTH)
 
 .floorMonth : commons-lang.date floorMonth
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.MONTH)
     java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.MONTH)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.MONTH)
-    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.MONTH)
 
 .floorYear : commons-lang.date floorYear
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.YEAR)
     java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.YEAR)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.YEAR)
-    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.truncate($expr$, java.util.Calendar.YEAR)
 
 
 .roundMillisecond : commons-lang.date roundMillisecond
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.MILLISECOND)
     java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.MILLISECOND)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.MILLISECOND)
-    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.MILLISECOND)
 
 .roundSecond : commons-lang.date roundSecond
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.SECOND)
     java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.SECOND)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.SECOND)
-    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.SECOND)
 
 .roundMinute : commons-lang.date roundMinute
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.MINUTE)
     java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.MINUTE)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.MINUTE)
-    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.MINUTE)
 
 .roundHour : commons-lang.date roundHour
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.HOUR_OF_DAY)
     java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.HOUR_OF_DAY)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.HOUR_OF_DAY)
-    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.HOUR_OF_DAY)
 
 .roundDay : commons-lang.date roundDay
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.DAY_OF_MONTH)
     java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.DAY_OF_MONTH)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.DAY_OF_MONTH)
-    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.DAY_OF_MONTH)
 
 .roundMonth : commons-lang.date roundMonth
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.MONTH)
     java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.MONTH)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.MONTH)
-    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.MONTH)
 
 .roundYear : commons-lang.date roundYear
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.YEAR)
     java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.YEAR)
-    java.util.Date          [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.YEAR)
-    java.util.Calendar      [org.apache.commons.lang.time.DateUtils]    →   org.apache.commons.lang.time.DateUtils.round($expr$, java.util.Calendar.YEAR)
 
 .toCalendar : commons-lang.date toCalendar
     java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.toCalendar($expr$, java.util.TimeZone.getDefault())
