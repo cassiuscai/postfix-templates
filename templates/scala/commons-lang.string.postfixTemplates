@@ -1,0 +1,191 @@
+## Templates for Apache commons-lang3 ##
+.center : center text in string
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.center($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.capitalize : capitalize first character
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.capitalize($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.uncapitalize : capitalize first character
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.uncapitalize($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.abbreviate : abbreviate
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.abbreviate($expr$, $maxLength$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.abbreviateMiddle : abbreviate middle
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.abbreviateMiddle($expr$, $middle$, $length$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.chop : remove last character
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.chop($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.chomp : remove tailing line separators
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.chomp($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isAllLowerCase : is all lower case
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isAllLowerCase($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isAllUpperCase : is all upper case
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isAllUpperCase($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isBlank : is blank
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isBlank($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isAnyBlank : is any blank
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isAnyBlank($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isNoneBlank : is none blank
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isNoneBlank($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isNotBlank : is not blank
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isNotBlank($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isEmptyNullSafe : null safe is empty
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isEmpty($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isAnyEmpty : is any empty
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isEmpty($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isNoneEmpty : is none empty
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isNoneEmpty($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isNotEmpty : is none empty
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isNotEmpty($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isAlpha : contains only alphabetic characters
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isAlpha($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isAlphaSpace : contains only alphabetic characters and spaces
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isAlphaSpace($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isAlphanumeric : contains only alphanumeric characters
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isAlphanumeric($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isAlphanumericSpace : contains only alphanumeric characters and spaces
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isAlphanumericSpace($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isNumeric : contains only numeric characters
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isNumeric($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isNumericSpace : contains only numeric characters and spaces
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isNumericSpace($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isAsciiPrintable : is ASCII printable
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isAsciiPrintable($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isWhitespace : is whitespace
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isWhitespace($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.reverse : reverse
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.reverse($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.remove : remove
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.remove($expr$, $chars$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.removeStart : remove start
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.removeStart($expr$, $chars$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.removeStartIgnoreCase : remove start
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.removeStartIgnoreCase($expr$, $chars$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.removeEnd : remove end
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.removeEnd($expr$, $chars$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.removeEndIgnoreCase : remove end
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.removeEndIgnoreCase($expr$, $chars$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.strip : strip
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.strip($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.containsAny : contains any
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.containsAny($expr$, $chars$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.containsNone : contains none
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.containsNone($expr$, $chars$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.containsOnly : contains only
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.containsOnly($expr$, $chars$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.appendIfMissing : append if missing
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.appendIfMissing($expr$, $suffix$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.appendIfMissingIgnoreCase : append if missing by ignoring case
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.appendIfMissingIgnoreCase($expr$, $suffix$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.prependIfMissing : prepend if missing
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.prependIfMissing($expr$, $suffix$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.prependIfMissingIgnoreCase : prepend if missing by ignoring case
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.prependIfMissingIgnoreCase($expr$, $suffix$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.substringBefore : substring before the first delimiter
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.substringBefore($expr$, $delimiter$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.substringBeforeLast : substring before the last delimiter
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.substringBeforeLast($expr$, $delimiter$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.substringAfter : substring after the first delimiter
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.substringAfter($expr$, $delimiter$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.substringAfterLast : substring after the last delimiter
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.substringAfterLast($expr$, $delimiter$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.substringBetween : substring between strings
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.substringBetween($expr$, $tag$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.substringsBetween : substring between strings
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.substringsBetween($expr$, $open$, $close$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.stringBefore : substring before the first delimiter
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.substringBefore($expr$, $delimiter$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.stringBeforeLast : substring before the last delimiter
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.substringBeforeLast($expr$, $delimiter$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.stringAfter : substring after the first delimiter
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.substringAfter($expr$, $delimiter$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.stringAfterLast : substring after the last delimiter
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.substringAfterLast($expr$, $delimiter$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.stringBetween : substring between strings
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.substringBetween($expr$, $tag$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.stringsBetween : substring between strings
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.substringsBetween($expr$, $open$, $close$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.equals : commons-lang equals
+    java.lang.String [org.apache.commons.lang3.StringUtils]  → StringUtils.equals($expr$, $another$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.ifEquals : commons-lang ifEquals
+    java.lang.String [org.apache.commons.lang3.StringUtils]  → if(StringUtils.equals($expr$, $another$)){\
+                                                                 $END$\
+                                                               } [IMPORT org.apache.commons.lang3.StringUtils]
+.ifNotEquals : commons-lang ifNotEquals
+    java.lang.String [org.apache.commons.lang3.StringUtils] → if(!StringUtils.equals($expr$, $another$)){\
+                                                                 $END$\
+                                                              } [IMPORT org.apache.commons.lang3.StringUtils]
+
+.equalsIgnoreCase : commons-lang equalsIgnoreCase
+    java.lang.String [org.apache.commons.lang3.StringUtils] → StringUtils.equalsIgnoreCase($expr$, $another$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.ifEqualsIgnoreCase : commons-lang ifEqualsIgnoreCase
+    java.lang.String [org.apache.commons.lang3.StringUtils] → if(StringUtils.equalsIgnoreCase($expr$, $another$)){\
+                                                                $END$\
+                                                              } [IMPORT org.apache.commons.lang3.StringUtils]
+.ifNotEqualsIgnoreCase : commons-lang ifNotEqualsIgnoreCase
+    java.lang.String [org.apache.commons.lang3.StringUtils] → if(!StringUtils.equalsIgnoreCase($expr$, $another$)){\
+                                                                $END$\
+                                                              } [IMPORT org.apache.commons.lang3.StringUtils]
+.isBlank : commons-lang isBlank
+    java.lang.String [org.apache.commons.lang3.StringUtils] → StringUtils.isBlank($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isNotBlank : commons-lang isNotBlank
+    java.lang.String [org.apache.commons.lang3.StringUtils] → StringUtils.isNotBlank($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.ifBlank : commons-lang ifBlank
+    java.lang.String [org.apache.commons.lang3.StringUtils] → if(StringUtils.isBlank($expr$)){\
+                                                                 $END$\
+                                                               } [IMPORT org.apache.commons.lang3.StringUtils]
+.ifNotBlank : commons-lang ifNotBlank
+    java.lang.String [org.apache.commons.lang3.StringUtils] → if(StringUtils.isNotBlank($expr$)){\
+                                                                $END$\
+                                                              } [IMPORT org.apache.commons.lang3.StringUtils]
