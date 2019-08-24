@@ -33,7 +33,7 @@
 
 .assertNotEmpty : assertj-core assertNotEmpty
     ARRAY               [org.assertj.core.api.Assertions]     →  org.assertj.core.api.Assertions.assertThat($expr$).isNotEmpty()   [USE_STATIC_IMPORTS]
-    java.lang.String    [org.assertj.core.api.Assertions]     →  org.assertj.core.api.Assertions.assertThat($expr$).isNotEmpty()   [USE_STATIC_IMPORTS]
+    java.util.Map       [org.assertj.core.api.Assertions]     →  org.assertj.core.api.Assertions.assertThat($expr$).isNotEmpty()   [USE_STATIC_IMPORTS]
     java.lang.Iterable  [org.assertj.core.api.Assertions]     →  org.assertj.core.api.Assertions.assertThat($expr$).isNotEmpty()   [USE_STATIC_IMPORTS]
 
 .asserThrowException : assertj-core asserThrowException

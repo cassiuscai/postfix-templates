@@ -1,0 +1,45 @@
+## Templates for assertj ##
+.assertThat : assertj-core assertThat
+    ANY               [org.assertj.core.api.Assertions]     →  [IMPORT org.assertj.core.api.Assertions._] assertThat($expr$)
+
+.assertCall : assertj-core assertCall
+    ANY               [org.assertj.core.api.Assertions]     →  [IMPORT org.assertj.core.api.Assertions._] assertThatCode(() => $expr$)
+
+.assertEqualTo : assertj-core assertEqualTo
+    ANY               [org.assertj.core.api.Assertions]     →  [IMPORT org.assertj.core.api.Assertions._] assertThat($expr$).isEqualTo($other$)$END$   
+
+.assertNull : assertj-core assertNull
+    ANY               [org.assertj.core.api.Assertions]     →  [IMPORT org.assertj.core.api.Assertions._] assertThat($expr$).isNull()   
+
+.assertNotNull : assertj-core assertNotNull
+    ANY               [org.assertj.core.api.Assertions]     →  [IMPORT org.assertj.core.api.Assertions._] assertThat($expr$).isNotNull()   
+
+.assertBlank : assertj-core assertBlank
+    java.lang.String  [org.assertj.core.api.Assertions]     →  [IMPORT org.assertj.core.api.Assertions._] assertThat($expr$).isBlank()   
+
+.assertNotBlank : assertj-core assertNotBlank
+    java.lang.String  [org.assertj.core.api.Assertions]     →  [IMPORT org.assertj.core.api.Assertions._] assertThat($expr$).isNotBlank()   
+
+.assertTrue : assertj-core assertTrue
+    BOOLEAN           [org.assertj.core.api.Assertions]     →  [IMPORT org.assertj.core.api.Assertions._] assertThat($expr$).isTrue()   
+
+.assertFalse : assertj-core assertFalse
+    BOOLEAN           [org.assertj.core.api.Assertions]     →  [IMPORT org.assertj.core.api.Assertions._] assertThat($expr$).isFalse()   
+
+.assertEmpty : assertj-core assertEmpty
+    java.util.Map           [org.assertj.core.api.Assertions]     →  [IMPORT org.assertj.core.api.Assertions._] assertThat($expr$).isEmpty()
+    scala.collection.Map    [org.assertj.core.api.Assertions]     →  [IMPORT org.assertj.core.api.Assertions._] [IMPORT scala.collection.JavaConverters._]  assertThat($expr$.asJava).isEmpty()
+    java.lang.Iterable      [org.assertj.core.api.Assertions]     →  [IMPORT org.assertj.core.api.Assertions._] assertThat($expr$).isEmpty()
+    scala.collection.Seq    [org.assertj.core.api.Assertions]     →  [IMPORT org.assertj.core.api.Assertions._] [IMPORT scala.collection.JavaConverters._]  assertThat($expr$.toIterable.asJava).isEmpty()
+
+.assertNotEmpty : assertj-core assertNotEmpty
+    java.util.Map           [org.assertj.core.api.Assertions]     →  [IMPORT org.assertj.core.api.Assertions._] assertThat($expr$).isNotEmpty()
+    scala.collection.Map    [org.assertj.core.api.Assertions]     →  [IMPORT org.assertj.core.api.Assertions._] [IMPORT scala.collection.JavaConverters._]  assertThat($expr$.asJava).isNotEmpty()
+    java.lang.Iterable      [org.assertj.core.api.Assertions]     →  [IMPORT org.assertj.core.api.Assertions._] assertThat($expr$).isNotEmpty()
+    scala.collection.Seq    [org.assertj.core.api.Assertions]     →  [IMPORT org.assertj.core.api.Assertions._] [IMPORT scala.collection.JavaConverters._]  assertThat($expr$.toIterable.asJava).isNotEmpty()
+
+.asserThrowException : assertj-core asserThrowException
+    ANY                 [org.assertj.core.api.Assertions]     →  [IMPORT org.assertj.core.api.Assertions._] assertThatThrownBy(() => $expr$)
+
+.asserNotThrowException : assertj-core asserNotThrowException
+    ANY                 [org.assertj.core.api.Assertions]     →  [IMPORT org.assertj.core.api.Assertions._] assertThatCode(() => $expr$).doesNotThrowAnyException()
