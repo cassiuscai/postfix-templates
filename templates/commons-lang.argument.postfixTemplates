@@ -28,4 +28,4 @@
 # Array
     ARRAY                   [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.noNullElements($expr$, "the parameter require not contains null element");
     # Collection
-    java.lang.Collection    [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.noNullElements($expr$, "the parameter require not contains null element");
+    java.util.Collection    [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.noNullElements($expr$, "the parameter require not contains null element");
