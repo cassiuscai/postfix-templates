@@ -43,11 +43,11 @@
 
 .mapValues: mapValues
     java.util.Map                   →   $expr$.asScala.mapValues {\
-											entry => $END$\
+											value => $END$\
 										} [IMPORT scala.collection.JavaConverters._]
 
     scala.collection.Map			→   $expr$.mapValues {\
-											entry => $END$\
+											value => $END$\
 										}
 
 .flatmap: flatmap
