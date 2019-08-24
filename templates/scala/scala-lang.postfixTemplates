@@ -2,7 +2,10 @@
     NON_VOID                        →   println($expr$)
 
 .val : val
-    NON_VOID                        →   val $var:suggestVariableName$ = $expr$
+    NON_VOID                        →   val $name$ = $expr$
 
 .var : var
-    NON_VOID                        →   var $var:suggestVariableName$ = $expr$
+    NON_VOID                        →   var $name$ = $expr$
+
+.class : class
+    ANY                             →   classOf[$expr$]
