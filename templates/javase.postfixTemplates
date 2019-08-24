@@ -2,12 +2,10 @@
 .not : javase not
     BOOLEAN             →       !$expr$
 
-
 .if : javase if
     BOOLEAN             →       if($expr$) {\
 								    $END$\
 							    }
-
 .ifNot : javase ifNot
     BOOLEAN             →       if(!$expr$) {\
 								    $END$\
@@ -37,10 +35,10 @@
 .println : javase println
     NON_VOID            →		System.out.println($expr$);
 
-.errprint : javase errprint
+.eprint : javase errprint
     NON_VOID            →		System.err.print($expr$);
 
-.errprintln : javase errprintln
+.eprintln : javase errprintln
     NON_VOID            →		System.err.println($expr$);
 
 .format : javase format
