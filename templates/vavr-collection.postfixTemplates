@@ -1,0 +1,3 @@
+.toVavrList: vavr toVavrList
+    java.lang.Iterable  [io.vavr.collection.List]   →   io.vavr.collection.List.ofAll($expr$)
+    java.lang.Iterable  [io.vavr.collection.List]   →   io.vavr.collection.List.ofAll($expr$)
