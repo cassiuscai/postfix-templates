@@ -1,3 +1,4 @@
+# Seq
 .toVavrArray : to vavr Array
     java.lang.Iterable              [io.vavr.collection.Array]   →   io.vavr.collection.Array.ofAll($expr$)
     java.util.stream.Stream         [io.vavr.collection.Array]   →   io.vavr.collection.Array.ofAll($expr$)
@@ -28,7 +29,7 @@
     ARRAY                           [io.vavr.collection.List]   →   io.vavr.collection.List.of($expr$)
     NON_VOID                        [io.vavr.collection.List]   →   io.vavr.collection.List.of($expr$)
 
-
+# Set
 .toVavrHashSet : to vavr HashSet
     java.lang.Iterable              [io.vavr.collection.HashSet]   →   io.vavr.collection.HashSet.ofAll($expr$)
     java.util.stream.Stream         [io.vavr.collection.HashSet]   →   io.vavr.collection.HashSet.ofAll($expr$)
@@ -44,7 +45,7 @@
     java.util.stream.Stream         [io.vavr.collection.TreeSet]   →   io.vavr.collection.TreeSet.ofAll($expr$)
     NON_VOID                        [io.vavr.collection.TreeSet]   →   io.vavr.collection.TreeSet.of($expr$)
 
-
+# Map
 .toVavrHashMap : to vavr HashMap
     java.util.Map                   [io.vavr.collection.HashMap]   →   io.vavr.collection.HashMap.ofAll($expr$)
     java.util.stream.Stream         [io.vavr.collection.HashMap]   →   io.vavr.collection.HashMap.ofAll($expr$, it -> io.vavr.Tuple.of($key$,$value$))
@@ -57,7 +58,7 @@
     java.util.Map                   [io.vavr.collection.TreeMap]   →   io.vavr.collection.TreeMap.ofAll($expr$)
     java.util.stream.Stream         [io.vavr.collection.TreeMap]   →   io.vavr.collection.TreeMap.ofAll($expr$, it -> io.vavr.Tuple.of($key$,$value$))
 
-
+# Try
 .toVavrTry : to vavr Try
     java.lang.Throwable             [io.vavr.control.Try]       →   io.vavr.control.Try.failure($expr$)
     java.util.function.Supplier     [io.vavr.control.Try]       →   io.vavr.control.Try.ofSupplier($expr$)
@@ -66,14 +67,17 @@
     NON_VOID                        [io.vavr.control.Try]       →   io.vavr.control.Try.of(() -> $expr$)
     VOID                            [io.vavr.control.Try]       →   io.vavr.control.Try.run(() -> $expr$)
 
+# Lazy
 .toVavrLazy : to vavr Lazy
     java.util.function.Supplier     [io.vavr.control.Try]       →   io.vavr.Lazy.of($expr$)
     NON_VOID                        [io.vavr.control.Try]       →   io.vavr.Lazy.of(() -> $expr$)
 
+# Option
 .toVavrOption : to vavr Option
     java.util.Optional              [io.vavr.control.Option]    →   io.vavr.control.Option.ofOptional($expr$)
     NON_VOID                        [io.vavr.control.Option]    →   io.vavr.control.Option.of($expr$)
 
+# Match
 .vavrMatchOrElseValue : vavrMatchOrElseValue
     NON_VOID                        [io.vavr.API.Match]         → io.vavr.API.Match($expr$).of( \
                 io.vavr.API.Case(io.vavr.API.\$(io.vavr.Predicates.is($case1$)), $val1$), \
