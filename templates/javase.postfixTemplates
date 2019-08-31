@@ -4,12 +4,12 @@
 
 .if : javase if
     BOOLEAN             →       if($expr$) {\
-								    $END$\
-							    }
+                                    $END$\
+                                }
 .ifNot : javase ifNot
     BOOLEAN             →       if(!$expr$) {\
-								    $END$\
-							    }
+                                    $END$\
+                                }
 
 .while : javase while
     BOOLEAN             →       while($expr$) {\
@@ -18,31 +18,35 @@
 
 .ifNull : javase ifNull
     NON_VOID            →       if($expr$ == null) {
-                                    $END$\
+    $END$\
                                 }
 
 .ifNotNull : javase ifNotNull
     NON_VOID            →       if($expr$ != null) {
-                                    $END$\
+    $END$\
                                 }
 
 .return : javase return
     NON_VOID            →       return $expr$;
 
 .print : javase print
-    NON_VOID            →		System.out.print($expr$);
+    NON_VOID            →       System.out.print($expr$);
 
 .println : javase println
-    NON_VOID            →		System.out.println($expr$);
+    NON_VOID            →       System.out.println($expr$);
 
 .eprint : javase errprint
-    NON_VOID            →		System.err.print($expr$);
+    NON_VOID            →       System.err.print($expr$);
 
 .eprintln : javase errprintln
-    NON_VOID            →		System.err.println($expr$);
+    NON_VOID            →       System.err.println($expr$);
 
 .format : javase format
-    STRING_LITERAL      →		String.format($expr$, $END$)
+    STRING_LITERAL      →       String.format($expr$, $END$)
 
 .toOptional : javase toOptional
     NON_VOID            →       java.util.Optional.ofNullable($expr$)
+
+.wrapToString : wrapToString
+    NUMBER_LITERAL      →       "$expr$"
+    BOOLEAN             →       "$expr$"
