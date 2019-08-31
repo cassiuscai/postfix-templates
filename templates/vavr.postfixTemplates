@@ -1,9 +1,64 @@
-.vavrToList : vavr to List
+.toVavrArray : to vavr Array
+    java.lang.Iterable              [io.vavr.collection.Array]   →   io.vavr.collection.Array.ofAll($expr$)
+    java.util.stream.Stream         [io.vavr.collection.Array]   →   io.vavr.collection.Array.ofAll($expr$)
+    ARRAY                           [io.vavr.collection.Array]   →   io.vavr.collection.Array.of($expr$)
+    NON_VOID                        [io.vavr.collection.Array]   →   io.vavr.collection.Array.of($expr$)
+
+.toVavrQueue : to vavr queue
+    java.lang.Iterable              [io.vavr.collection.Queue]   →   io.vavr.collection.Queue.ofAll($expr$)
+    java.util.stream.Stream         [io.vavr.collection.Queue]   →   io.vavr.collection.Queue.ofAll($expr$)
+    ARRAY                           [io.vavr.collection.Queue]   →   io.vavr.collection.Queue.of($expr$)
+    NON_VOID                        [io.vavr.collection.Queue]   →   io.vavr.collection.Queue.of($expr$)
+
+.toVavrVector : to vavr vector
+    java.lang.Iterable              [io.vavr.collection.Vector]   →   io.vavr.collection.Vector.ofAll($expr$)
+    java.util.stream.Stream         [io.vavr.collection.Vector]   →   io.vavr.collection.Vector.ofAll($expr$)
+    ARRAY                           [io.vavr.collection.Vector]   →   io.vavr.collection.Vector.of($expr$)
+    NON_VOID                        [io.vavr.collection.Vector]   →   io.vavr.collection.Vector.of($expr$)
+
+.toVavrStream : to vavr stream
+    java.lang.Iterable              [io.vavr.collection.Stream]   →   io.vavr.collection.Stream.ofAll($expr$)
+    java.util.stream.Stream         [io.vavr.collection.Stream]   →   io.vavr.collection.Stream.ofAll($expr$)
+    ARRAY                           [io.vavr.collection.Stream]   →   io.vavr.collection.Stream.of($expr$)
+    NON_VOID                        [io.vavr.collection.Stream]   →   io.vavr.collection.Stream.of($expr$)
+
+.toVavrList : to vavr list
     java.lang.Iterable              [io.vavr.collection.List]   →   io.vavr.collection.List.ofAll($expr$)
-    java.lang.Iterable              [io.vavr.collection.List]   →   io.vavr.collection.List.ofAll($expr$)
+    java.util.stream.Stream         [io.vavr.collection.List]   →   io.vavr.collection.List.ofAll($expr$)
+    ARRAY                           [io.vavr.collection.List]   →   io.vavr.collection.List.of($expr$)
     NON_VOID                        [io.vavr.collection.List]   →   io.vavr.collection.List.of($expr$)
 
-.vavrToTry : vavr to Try
+
+.toVavrHashSet : to vavr HashSet
+    java.lang.Iterable              [io.vavr.collection.HashSet]   →   io.vavr.collection.HashSet.ofAll($expr$)
+    java.util.stream.Stream         [io.vavr.collection.HashSet]   →   io.vavr.collection.HashSet.ofAll($expr$)
+    NON_VOID                        [io.vavr.collection.HashSet]   →   io.vavr.collection.HashSet.of($expr$)
+
+.toVavrLinkedHashSet : to vavr LinkedHashSet
+    java.lang.Iterable              [io.vavr.collection.HashSet]   →   io.vavr.collection.HashSet.ofAll($expr$)
+    java.util.stream.Stream         [io.vavr.collection.HashSet]   →   io.vavr.collection.HashSet.ofAll($expr$)
+    NON_VOID                        [io.vavr.collection.HashSet]   →   io.vavr.collection.HashSet.of($expr$)
+
+.toVavrTreeSet : to vavr TreeSet
+    java.lang.Iterable              [io.vavr.collection.TreeSet]   →   io.vavr.collection.TreeSet.ofAll($expr$)
+    java.util.stream.Stream         [io.vavr.collection.TreeSet]   →   io.vavr.collection.TreeSet.ofAll($expr$)
+    NON_VOID                        [io.vavr.collection.TreeSet]   →   io.vavr.collection.TreeSet.of($expr$)
+
+
+.toVavrHashMap : to vavr HashMap
+    java.util.Map                   [io.vavr.collection.HashMap]   →   io.vavr.collection.HashMap.ofAll($expr$)
+    java.util.stream.Stream         [io.vavr.collection.HashMap]   →   io.vavr.collection.HashMap.ofAll($expr$, it -> io.vavr.Tuple.of($key$,$value$))
+
+.toVavrLinkedHashMap : to vavr LinkedHashMap
+    java.util.Map                   [io.vavr.collection.LinkedHashMap]   →   io.vavr.collection.LinkedHashMap.ofAll($expr$)
+    java.util.stream.Stream         [io.vavr.collection.LinkedHashMap]   →   io.vavr.collection.LinkedHashMap.ofAll($expr$, it -> io.vavr.Tuple.of($key$,$value$))
+
+.toVavrTreeMap : to vavr TreeMap
+    java.util.Map                   [io.vavr.collection.TreeMap]   →   io.vavr.collection.TreeMap.ofAll($expr$)
+    java.util.stream.Stream         [io.vavr.collection.TreeMap]   →   io.vavr.collection.TreeMap.ofAll($expr$, it -> io.vavr.Tuple.of($key$,$value$))
+
+
+.toVavrTry : to vavr Try
     java.lang.Throwable             [io.vavr.control.Try]       →   io.vavr.control.Try.failure($expr$)
     java.util.function.Supplier     [io.vavr.control.Try]       →   io.vavr.control.Try.ofSupplier($expr$)
     java.util.concurrent.Callable   [io.vavr.control.Try]       →   io.vavr.control.Try.ofCallable($expr$)
@@ -11,11 +66,11 @@
     NON_VOID                        [io.vavr.control.Try]       →   io.vavr.control.Try.of(() -> $expr$)
     VOID                            [io.vavr.control.Try]       →   io.vavr.control.Try.run(() -> $expr$)
 
-.vavrToLazy : vavr to Lazy
+.toVavrLazy : to vavr Lazy
     java.util.function.Supplier     [io.vavr.control.Try]       →   io.vavr.Lazy.of($expr$)
     NON_VOID                        [io.vavr.control.Try]       →   io.vavr.Lazy.of(() -> $expr$)
 
-.vavrToOption : vavr to Option
+.toVavrOption : to vavr Option
     java.util.Optional              [io.vavr.control.Option]    →   io.vavr.control.Option.ofOptional($expr$)
     NON_VOID                        [io.vavr.control.Option]    →   io.vavr.control.Option.of($expr$)
 
