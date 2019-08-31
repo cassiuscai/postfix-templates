@@ -1,0 +1,36 @@
+.vavrToList : vavr to List
+    java.lang.Iterable              [io.vavr.collection.List]   →   io.vavr.collection.List.ofAll($expr$)
+    java.lang.Iterable              [io.vavr.collection.List]   →   io.vavr.collection.List.ofAll($expr$)
+    NON_VOID                        [io.vavr.collection.List]   →   io.vavr.collection.List.of($expr$)
+
+.vavrToTry : vavr to Try
+    java.lang.Throwable             [io.vavr.control.Try]       →   io.vavr.control.Try.failure($expr$)
+    java.util.function.Supplier     [io.vavr.control.Try]       →   io.vavr.control.Try.ofSupplier($expr$)
+    java.util.concurrent.Callable   [io.vavr.control.Try]       →   io.vavr.control.Try.ofCallable($expr$)
+    java.lang.Runnable              [io.vavr.control.Try]       →   io.vavr.control.Try.runRunnable($expr$)
+    NON_VOID                        [io.vavr.control.Try]       →   io.vavr.control.Try.of(() -> $expr$)
+    VOID                            [io.vavr.control.Try]       →   io.vavr.control.Try.run(() -> $expr$)
+
+.vavrToLazy : vavr to Lazy
+    java.util.function.Supplier     [io.vavr.control.Try]       →   io.vavr.Lazy.of($expr$)
+    NON_VOID                        [io.vavr.control.Try]       →   io.vavr.Lazy.of(() -> $expr$)
+
+.vavrToOption : vavr to Option
+    java.util.Optional              [io.vavr.control.Option]    →   io.vavr.control.Option.ofOptional($expr$)
+    NON_VOID                        [io.vavr.control.Option]    →   io.vavr.control.Option.of($expr$)
+
+.vavrMatchOrElseValue : vavrMatchOrElseValue
+    NON_VOID                        [io.vavr.API.Match]         → io.vavr.API.Match($expr$).of( \
+                io.vavr.API.Case(io.vavr.API.\$(io.vavr.Predicates.is($case1$)), $val1$), \
+                io.vavr.API.Case(io.vavr.API.\$(io.vavr.Predicates.is($case2$)), $val2$), \
+                io.vavr.API.Case(io.vavr.API.\$(io.vavr.Predicates.is($case3$)), $val3$), \
+                io.vavr.API.Case(io.vavr.API.\$(), $default$) \
+        )$END$ [USE_STATIC_IMPORTS]
+
+.vavrMatchOrElseThrow : vavrMatchOrElseValue
+    NON_VOID                        [io.vavr.API.Match]         →   io.vavr.API.Match($expr$).of( \
+                io.vavr.API.Case(io.vavr.API.\$(io.vavr.Predicates.is($case1$)), $val1$), \
+                io.vavr.API.Case(io.vavr.API.\$(io.vavr.Predicates.is($case2$)), $val2$), \
+                io.vavr.API.Case(io.vavr.API.\$(io.vavr.Predicates.is($case3$)), $val3$), \
+                io.vavr.API.Case(io.vavr.API.\$(), it -> io.vavr.API.run(() -> {throw new $exception$;})) \
+        )$END$ [USE_STATIC_IMPORTS]

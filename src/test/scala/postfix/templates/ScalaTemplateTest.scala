@@ -8,7 +8,7 @@ import org.testng.annotations.Test
 class ScalaTemplateTest {
 
   @Test
-  def test(): Unit = {
+  def testPostfixComplete(): Unit = {
 
   }
 }
