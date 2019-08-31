@@ -1,4 +1,4 @@
-## Templates for assertj ##
+## Templates for assertj vavr##
 .assertVavr : assertj-vavr assertThat
     io.vavr.Lazy  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$)
     io.vavr.control.Either  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$)
