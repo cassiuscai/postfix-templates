@@ -1,0 +1,9 @@
+## Templates for assertj ##
+.vavrAssertThat : assertj-vavr assertThat
+    io.vavr.Lazy  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$)
+    io.vavr.control.Either  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$)
+    io.vavr.control.Validation  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$)
+    io.vavr.control.Option  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$)
+    io.vavr.control.Try  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$)
+    io.vavr.collection.Seq  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$)
+    io.vavr.collection.Map  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$)
