@@ -1,0 +1,7 @@
+.toRDD : convert to spark rdd
+    java.util.List              [org.apache.spark.SparkContext] → sparkContext.makeRDD($expr$.asScala)         [IMPORT scala.collection.JavaConverters._]
+    java.util.Set               [org.apache.spark.SparkContext] → sparkContext.makeRDD($expr$.asScala.toSeq)   [IMPORT scala.collection.JavaConverters._]
+    java.util.Map               [org.apache.spark.SparkContext] → sparkContext.makeRDD($expr$.asScala.toSeq)   [IMPORT scala.collection.JavaConverters._]
+    scala.collection.Seq        [org.apache.spark.SparkContext] → sparkContext.makeRDD($expr$)
+    scala.collection.Set        [org.apache.spark.SparkContext] → sparkContext.makeRDD($expr$.toSeq)
+    scala.collection.Map        [org.apache.spark.SparkContext] → sparkContext.makeRDD($expr$.toSeq)
