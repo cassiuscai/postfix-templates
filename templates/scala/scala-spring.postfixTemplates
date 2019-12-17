@@ -1,4 +1,4 @@
 .bean : spring bean
     ANY                             →   @Autowired\
                                         @transient\
-                                        var camelCase($expr$):$expr$ = _ [IMPORT org.springframework.beans.factory.annotation.Autowired]
+                                        var $name:camelCase($expr$)$:$expr$ = _ [IMPORT org.springframework.beans.factory.annotation.Autowired]
