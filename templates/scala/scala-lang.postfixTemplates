@@ -1,4 +1,7 @@
-.pirntln : println
+.println : println
+    NON_VOID                        →   println($expr$)
+
+.show : println
     NON_VOID                        →   println($expr$)
 
 .val : val

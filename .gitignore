@@ -55,3 +55,6 @@ fabric.properties
 .idea
 *.iml
 target
+.project
+.settings/org.eclipse.m2e.core.prefs
+.classpath
