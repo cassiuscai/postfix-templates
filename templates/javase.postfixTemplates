@@ -35,6 +35,9 @@
 .println : javase println
     NON_VOID            →       System.out.println($expr$);
 
+.show : javase println
+    NON_VOID            →       System.out.println($expr$);
+
 .eprint : javase errprint
     NON_VOID            →       System.err.print($expr$);
 
@@ -47,6 +50,9 @@
 .toOptional : javase toOptional
     NON_VOID            →       java.util.Optional.ofNullable($expr$)
 
-.wrapToString : wrapToString
+.wrapWithDoubleQuote : wrapToString
     NUMBER_LITERAL      →       "$expr$"
     BOOLEAN             →       "$expr$"
+
+.wrapWithSingleQuote : wrapToString
+    ANY                 →       '$expr$'
