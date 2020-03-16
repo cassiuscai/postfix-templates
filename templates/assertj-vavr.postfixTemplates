@@ -1,5 +1,5 @@
 ## Templates for assertj vavr##
-.assertVavr : assertj-vavr assertThat
+.assertThat : assertj-vavr assertThat
     io.vavr.Lazy  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$)
     io.vavr.control.Either  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$)
     io.vavr.control.Validation  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$)
@@ -7,3 +7,112 @@
     io.vavr.control.Try  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$)
     io.vavr.collection.Seq  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$)
     io.vavr.collection.Map  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$)
+
+# Lazy Assertions
+.assertIsEvaluated : assert vavr contains instance on left
+    io.vavr.Lazy  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).isEvaluated()
+
+.assertIsNotEvaluated : assert vavr contains instance on left
+    io.vavr.Lazy  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).isNotEvaluated()
+
+
+# Either Assertions
+.assertIsLeft : assert vavr either is left
+    io.vavr.control.Either  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).isLeft()
+
+.assertIsRight : assert vavr either is right
+    io.vavr.control.Either  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).isRight()
+
+.assertContainsRight : assert vavr contains value on right
+    io.vavr.control.Either  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).containsOnRight($expectedValue$)
+
+.assertContainsLeft : assert vavr contains value on left
+    io.vavr.control.Either  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).containsOnLeft($expectedValue$)
+
+.assertContainsRightExactly : assert vavr contains extract value on right
+    io.vavr.control.Either  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).containsRightSame($expectedValue$)
+
+.assertContainsLeftExactly : assert vavr contains extract value on left
+    io.vavr.control.Either  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).containsLeftSame($expectedValue$)
+
+.assertContainsRightInstance : assert vavr contains instance on right
+    io.vavr.control.Either  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).containsRightInstanceOf($expectedValue$)
+
+.assertContainsLeftInstance : assert vavr contains instance on left
+    io.vavr.control.Either  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).containsLeftInstanceOf($expectedValue$)
+
+# Option Assertions
+.assertIsPresent : assert vavr option is present
+    io.vavr.control.Option  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).isDefines($expectedValue$)
+
+.assertIsNotPresent : assert vavr option is present
+    io.vavr.control.Option  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).isEmpty($expectedValue$)
+
+
+# Try Assertions
+.assertIsSuccess : assert vavr try is success
+    io.vavr.control.Try  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).isSuccess()
+
+.assertIsFailure : assert vavr try is failure
+    io.vavr.control.Try  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).isFailure()
+
+.assertFailWithMessage : assert vavr try failed with message
+    io.vavr.control.Try  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).failReasonHasMessage($expectedValue$)
+
+
+# Seq Assertions
+.assertContains : assert vavr seq contains
+    io.vavr.collection.Seq  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).contains($value$, org.assertj.core.data.Index.atIndex($index$))
+
+.assertNotContains : assert vavr seq contains
+    io.vavr.collection.Seq  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).doesNotContain($value$, org.assertj.core.data.Index.atIndex($index$))
+
+.assertIsSorted : assert vavr seq is sorted
+    io.vavr.collection.Seq  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).isSorted()
+
+
+# Map Assertions
+.assertIsNullOrEmpty : assert vavr map is null or empty
+    io.vavr.collection.Map  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).isNullOrEmpty()
+
+.assertIsEmpty : assert vavr map is empty
+    io.vavr.collection.Map  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).isEmpty()
+
+.assertNotEmpty : assert vavr map is empty
+    io.vavr.collection.Map  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).isNotEmpty()
+
+.assertContains : assert vavr map is contains
+    io.vavr.collection.Map  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).containsEntry($key$, $value$)
+
+.assertThatKeys : assert vavr map is contains
+    io.vavr.collection.Map  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$.keySet().toList())$END$
+
+.assertThatValues : assert vavr map is contains
+    io.vavr.collection.Map  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$.values())$END$
+
+.assertContainsValue : assert vavr map is contains
+    io.vavr.collection.Map  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).containsEntry($key$, $value$)
+
+.assertNotContains : assert vavr map is not contains
+    io.vavr.collection.Map  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).doesNotContainEntry($key$, $value$)
+
+.hasSize : assert vavr map is not contains
+    io.vavr.collection.Map  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).hasSize($expectedValue$)
+
+.hasSameSizeAs : assert vavr map has same size
+    io.vavr.collection.Map  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).hasSameSizeAs($expectedValue$)
+
+
+# Value Assertions
+.assertHasValue : assert vavr try has value
+    io.vavr.control.Try     [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).contains($expectedValue$)
+    io.vavr.control.Option  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).contains($expectedValue$)
+
+.assertHasExactlyValue : assert vavr try has same value
+    io.vavr.control.Try     [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).containsSame($expectedValue$)
+    io.vavr.control.Option  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).containsSame($expectedValue$)
+
+.assertHasValueInstance : assert vavr try has value class
+    io.vavr.control.Try     [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).containsInstanceOf($expectedValue$)
+    io.vavr.control.Option  [org.assertj.vavr.api.VavrAssertions]     →  org.assertj.vavr.api.VavrAssertions.assertThat($expr$).containsInstanceOf($expectedValue$)
+
