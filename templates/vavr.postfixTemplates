@@ -29,6 +29,11 @@
     ARRAY                           [io.vavr.collection.List]   →   io.vavr.collection.List.of($expr$)
     NON_VOID                        [io.vavr.collection.List]   →   io.vavr.collection.List.of($expr$)
 
+.toVavrIterator : to vavr iterator
+    NON_VOID                        [io.vavr.collection.Iterator]   →   io.vavr.collection.Iterator.of($expr$)
+    java.lang.Iterable              [io.vavr.collection.Iterator]   →   io.vavr.collection.Iterator.ofAll($expr$)
+    java.util.Iterator              [io.vavr.collection.Iterator]   →   io.vavr.collection.Iterator.ofAll($expr$)
+
 # Set
 .toVavrHashSet : to vavr HashSet
     java.lang.Iterable              [io.vavr.collection.HashSet]   →   io.vavr.collection.HashSet.ofAll($expr$)
