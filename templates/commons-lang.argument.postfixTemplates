@@ -3,13 +3,18 @@
 # Boolean
     BOOLEAN                 [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.isTrue($expr$, "the parameter $expr$ require to be true");
 
+.requireFalse : commons-lang requireFalse
+# Boolean
+    BOOLEAN                 [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.isTrue(!$expr$, "the parameter $expr$ require to be false");
+
+
 .requireNotFalse : commons-lang requireNotFalse
 # Boolean
     BOOLEAN                 [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.isTrue($expr$, "the parameter $expr$ require not false");
 
 .requireNotNull : commons-lang requireNotNull
 # Object
-    NON_VOID                [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notNull($expr$, "the parameter $expr$ require not null");
+    NON_VOID                [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.isTrue($expr$ != null, "the parameter $expr$ require not null");
 
 .requireNotBlank : commons-lang requireNotBlank
 # String
