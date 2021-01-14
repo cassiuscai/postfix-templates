@@ -13,7 +13,7 @@
 # Array
     ARRAY                [org.apache.commons.lang3.ArrayUtils]              → org.apache.commons.lang3.ArrayUtils.isNotEmpty($expr$)
     # String
-    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.isEmpty($expr$)
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.isNotEmpty($expr$)
     # Collection
     java.util.Collection [org.apache.commons.collections4.CollectionUtils]  → org.apache.commons.collections4.CollectionUtils.isNotEmpty($expr$)
     # Map
@@ -42,7 +42,7 @@
                                                                                 $END$\
                                                                               }
     # String
-    java.lang.String     [org.apache.commons.lang3.StringUtils]             → if(org.apache.commons.lang3.StringUtils.isEmpty($expr$)){\
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → if(org.apache.commons.lang3.StringUtils.isNotEmpty($expr$)){\
                                                                                 $END$\
                                                                               }
     # Collection
