@@ -50,9 +50,15 @@
 .toOptional : javase toOptional
     NON_VOID            →       java.util.Optional.ofNullable($expr$)
 
-.wrapWithDoubleQuote : wrapToString
+.wrapWithDoubleQuote : wrapWithDoubleQuote
     NUMBER_LITERAL      →       "$expr$"
     BOOLEAN             →       "$expr$"
 
-.wrapWithSingleQuote : wrapToString
+.wrapWithSingleQuote : wrapWithSingleQuote
     ANY                 →       '$expr$'
+
+.singletonList : wrap by Collections.singletonList
+    NON_VOID -> java.util.Collections.singletonList($expr$)
+
+.arraysAsList : wrap by java.util.Arrays.asList
+    NON_VOID -> java.util.Arrays.asList($expr$)
