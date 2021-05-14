@@ -1,0 +1,215 @@
+# Validate argument for Array/Collection/Map/String/Boolean
+.requireTrue : commons-lang requireTrue
+# Boolean
+    BOOLEAN                 [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.isTrue($expr$, "the parameter $expr$ require to be true");
+
+.requireFalse : commons-lang requireFalse
+# Boolean
+    BOOLEAN                 [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.isTrue(!$expr$, "the parameter $expr$ require to be false");
+
+
+.requireNotFalse : commons-lang requireNotFalse
+# Boolean
+    BOOLEAN                 [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.isTrue($expr$, "the parameter $expr$ require not false");
+
+.requireNotNull : commons-lang requireNotNull
+# Object
+    NON_VOID                [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.isTrue($expr$ != null, "the parameter $expr$ require not null");
+
+.requireNotBlank : commons-lang requireNotBlank
+# String
+    java.lang.String        [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notBlank($expr$, "the parameter $expr$ require not blank");
+
+.requireNotEmpty : commons-lang requireNotEmpty
+# Array
+    ARRAY                   [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notEmpty($expr$, "the parameter $expr$ require not empty");
+    # Map
+    java.util.Map           [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notEmpty($expr$, "the parameter $expr$ require not empty");
+    # Collection
+    java.util.Collection    [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.notEmpty($expr$, "the parameter $expr$ require not empty");
+
+
+.requireNotContainsNull : commons-lang requireNotContainsNull
+# Array
+    ARRAY                   [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.noNullElements($expr$, "the parameter $expr$ require not contains null element");
+    # Collection
+    java.util.Collection    [org.apache.commons.lang3.Validate]     →  org.apache.commons.lang3.Validate.noNullElements($expr$, "the parameter $expr$ require not contains null element");
+
+
+# Templates for Date and Calendar API: org.apache.commons.lang3.time.DateUtils
+.addMilliseconds : commons-lang.date addMilliseconds
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.addMilliseconds($expr$, $amount$)
+
+.addSeconds : commons-lang.date addSeconds
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.addSeconds($expr$, $amount$)
+
+.addMinutes : commons-lang.date addMinutes
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.addMinutes($expr$, $amount$)
+
+.addHours : commons-lang.date addHours
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.addHours($expr$, $amount$)
+
+.addDays : commons-lang.date addDays
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.addDays($expr$, $amount$)
+
+.addWeeks : commons-lang.date addWeeks
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.addWeeks($expr$, $amount$)
+
+.addMonths : commons-lang.date addMonths
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.addMonths($expr$, $amount$)
+
+.addYears : commons-lang.date addYears
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.addYears($expr$, $amount$)
+
+.setMilliseconds : commons-lang.date setMilliseconds
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.setMilliseconds($expr$, $amount$)
+
+.setSeconds : commons-lang.date setSeconds
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.setSeconds($expr$, $amount$)
+
+.setMinutes : commons-lang.date setMinutes
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.setMinutes($expr$, $amount$)
+
+.setHours : commons-lang.date setHours
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.setHours($expr$, $amount$)
+
+.setDays : commons-lang.date setDays
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.setDays($expr$, $amount$)
+
+.setWeeks : commons-lang.date setWeeks
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.setWeeks($expr$, $amount$)
+
+.setMonths : commons-lang.date setMonths
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.setMonths($expr$, $amount$)
+
+.setYears : commons-lang.date setYears
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.setYears($expr$, $amount$)
+
+.ceilMillisecond : commons-lang.date ceilMillisecond
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.MILLISECOND)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.MILLISECOND)
+
+.ceilSecond : commons-lang.date ceilSecond
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.SECOND)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.SECOND)
+
+.ceilMinute : commons-lang.date ceilMinute
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.MINUTE)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.MINUTE)
+
+.ceilHour : commons-lang.date ceilHour
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.HOUR_OF_DAY)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.HOUR_OF_DAY)
+
+.ceilDay : commons-lang.date ceilDay
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.DAY_OF_MONTH)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.DAY_OF_MONTH)
+
+.ceilMonth : commons-lang.date ceilMonth
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.MONTH)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.MONTH)
+
+
+.ceilYear : commons-lang.date ceilYear
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.YEAR)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.ceiling($expr$, java.util.Calendar.YEAR)
+
+.floorMillisecond : commons-lang.date floorMillisecond
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.MILLISECOND)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.MILLISECOND)
+
+.floorSecond : commons-lang.date floorSecond
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.SECOND)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.SECOND)
+
+.floorMinute : commons-lang.date floorMinute
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.MINUTE)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.MINUTE)
+
+.floorHour : commons-lang.date floorHour
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.HOUR_OF_DAY)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.HOUR_OF_DAY)
+
+.floorDay : commons-lang.date floorDay
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.DAY_OF_MONTH)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.DAY_OF_MONTH)
+
+.floorMonth : commons-lang.date floorMonth
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.MONTH)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.MONTH)
+
+.floorYear : commons-lang.date floorYear
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.YEAR)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.truncate($expr$, java.util.Calendar.YEAR)
+
+
+.roundMillisecond : commons-lang.date roundMillisecond
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.MILLISECOND)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.MILLISECOND)
+
+.roundSecond : commons-lang.date roundSecond
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.SECOND)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.SECOND)
+
+.roundMinute : commons-lang.date roundMinute
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.MINUTE)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.MINUTE)
+
+.roundHour : commons-lang.date roundHour
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.HOUR_OF_DAY)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.HOUR_OF_DAY)
+
+.roundDay : commons-lang.date roundDay
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.DAY_OF_MONTH)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.DAY_OF_MONTH)
+
+.roundMonth : commons-lang.date roundMonth
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.MONTH)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.MONTH)
+
+.roundYear : commons-lang.date roundYear
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.YEAR)
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.round($expr$, java.util.Calendar.YEAR)
+
+.toCalendar : commons-lang.date toCalendar
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.toCalendar($expr$, java.util.TimeZone.getDefault())
+
+.toCalendarWithTimeZone : commons-lang.date toCalendarWithTimeZone
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   org.apache.commons.lang3.time.DateUtils.toCalendar($expr$, java.util.TimeZone.getTimeZone($timeZone$))
+
+# org.apache.commons.lang3.exception.ExceptionUtils
+.getMessage : commons-lang getMessage
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   org.apache.commons.lang3.exception.ExceptionUtils.getMessage($expr$)
+
+.getRootCause : commons-lang getRootCause
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   org.apache.commons.lang3.exception.ExceptionUtils.getRootCause($expr$)
+
+.getRootCauseMessage : commons-lang getRootCauseMessage
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   org.apache.commons.lang3.exception.ExceptionUtils.getRootCauseMessage($expr$)
+
+.getRootCauseStackTrace : commons-lang getRootCauseStackTrace
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   org.apache.commons.lang3.exception.ExceptionUtils.getRootCauseStackTrace($expr$)
+
+.getStackFrames : commons-lang getStackFrames
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   org.apache.commons.lang3.exception.ExceptionUtils.getStackFrames($expr$)
+
+.getThrowableCount : commons-lang getThrowableCount
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   org.apache.commons.lang3.exception.ExceptionUtils.getThrowableCount($expr$)
+
+.getThrowableList : commons-lang getThrowableList
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   org.apache.commons.lang3.exception.ExceptionUtils.getThrowableList($expr$)
+
+.getThrowableArray : commons-lang getThrowableList
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   org.apache.commons.lang3.exception.ExceptionUtils.getThrowables($expr$)
+
+.getStackTraceAsString : commons-lang getStackTraceAsString
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   org.apache.commons.lang3.exception.ExceptionUtils.getStackTrace($expr$)
+
+.printRootCauseStackTrace : commons-lang printRootCauseStackTrace
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   org.apache.commons.lang3.exception.ExceptionUtils.printRootCauseStackTrace($expr$)
+
+.rethrow : commons-lang rethrow
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   org.apache.commons.lang3.exception.ExceptionUtils.rethrow($expr$)
+
+.wrapAndThrow : commons-lang wrapAndThrow
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   org.apache.commons.lang3.exception.ExceptionUtils.wrapAndThrow($expr$)
