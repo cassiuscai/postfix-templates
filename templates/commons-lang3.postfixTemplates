@@ -213,3 +213,98 @@
 
 .wrapAndThrow : commons-lang wrapAndThrow
     java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   org.apache.commons.lang3.exception.ExceptionUtils.wrapAndThrow($expr$)
+
+# Check the Array/Collection/Map/String is or not empty
+.equals : commons-lang3 equals
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.equals($expr$, $another$)
+
+.ifEquals : commons-lang3 ifEquals
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → if(org.apache.commons.lang3.StringUtils.equals($expr$, $another$)){\
+                                                                                $END$\
+                                                                              }
+.ifNotEquals : commons-lang3 ifNotEquals
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → if(!org.apache.commons.lang3.StringUtils.equals($expr$, $another$)){\
+                                                                                $END$\
+                                                                              }
+
+.equalsIgnoreCase : commons-lang3 equalsIgnoreCase
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.equalsIgnoreCase($expr$, $another$)
+
+.ifEqualsIgnoreCase : commons-lang3 ifEqualsIgnoreCase
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → if(org.apache.commons.lang3.StringUtils.equalsIgnoreCase($expr$, $another$)){\
+                                                                                $END$\
+                                                                              }
+.ifNotEqualsIgnoreCase : commons-lang3 ifNotEqualsIgnoreCase
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → if(!org.apache.commons.lang3.StringUtils.equalsIgnoreCase($expr$, $another$)){\
+                                                                                $END$\
+                                                                              }
+.isBlank : commons-lang3 isBlank
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.isBlank($expr$)
+
+.isNotBlank : commons-lang3 isNotBlank
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.isNotBlank($expr$)
+
+.ifBlank : commons-lang3 ifBlank
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → if(org.apache.commons.lang3.StringUtils.isBlank($expr$)){\
+                                                                                $END$\
+                                                                              }
+.ifNotBlank : commons-lang3 ifNotBlank
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → if(org.apache.commons.lang3.StringUtils.isNotBlank($expr$)){\
+                                                                                $END$\
+                                                                              }
+
+# Check the Array/Collection/Map/String is or not empty
+.isEmpty : commons-lang isEmpty
+# Array
+    ARRAY                [org.apache.commons.lang3.ArrayUtils]              → org.apache.commons.lang3.ArrayUtils.isEmpty($expr$)
+    # String
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.isEmpty($expr$)
+    # Collection
+    java.util.Collection [org.apache.commons.collections4.CollectionUtils]  → org.apache.commons.collections4.CollectionUtils.isEmpty($expr$)
+    # Map
+    java.util.Map        [org.apache.commons.collections4.MapUtils]         → org.apache.commons.collections4.MapUtils.isEmpty($expr$)
+
+.isNotEmpty : commons-lang isNotEmpty
+# Array
+    ARRAY                [org.apache.commons.lang3.ArrayUtils]              → org.apache.commons.lang3.ArrayUtils.isNotEmpty($expr$)
+    # String
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.isNotEmpty($expr$)
+    # Collection
+    java.util.Collection [org.apache.commons.collections4.CollectionUtils]  → org.apache.commons.collections4.CollectionUtils.isNotEmpty($expr$)
+    # Map
+    java.util.Map        [org.apache.commons.collections4.MapUtils]         → org.apache.commons.collections4.MapUtils.isNotEmpty($expr$)
+
+.ifEmpty : commons-lang ifEmpty
+# Array
+    ARRAY                [org.apache.commons.lang3.ArrayUtils]              → if(org.apache.commons.lang3.ArrayUtils.isEmpty($expr$)){\
+                                                                                $END$\
+                                                                              }
+    # String
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → if(org.apache.commons.lang3.StringUtils.isEmpty($expr$)){\
+                                                                                $END$\
+                                                                              }
+    # Collection
+    java.util.Collection [org.apache.commons.collections4.CollectionUtils]  → if(org.apache.commons.collections4.CollectionUtils.isEmpty($expr$)){\
+                                                                                $END$\
+                                                                              }
+    # Map
+    java.util.Map        [org.apache.commons.collections4.MapUtils]         → if(org.apache.commons.collections4.MapUtils.isEmpty($expr$)){\
+                                                                                $END$\
+                                                                              }
+.ifNotEmpty : commons-lang ifNotEmpty
+# Array
+    ARRAY                [org.apache.commons.lang3.ArrayUtils]              → if(org.apache.commons.lang3.ArrayUtils.isNotEmpty($expr$)){\
+                                                                                $END$\
+                                                                              }
+    # String
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → if(org.apache.commons.lang3.StringUtils.isNotEmpty($expr$)){\
+                                                                                $END$\
+                                                                              }
+    # Collection
+    java.util.Collection [org.apache.commons.collections4.CollectionUtils]  → if(org.apache.commons.collections4.CollectionUtils.isNotEmpty($expr$)){\
+                                                                                $END$\
+                                                                              }
+    # Map
+    java.util.Map        [org.apache.commons.collections4.MapUtils]         → if(org.apache.commons.collections4.MapUtils.isNotEmpty($expr$)){\
+                                                                                $END$\
+                                                                              }
