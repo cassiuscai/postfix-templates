@@ -23,7 +23,7 @@
 # loggerWarn
 .logWarn : slf4j logWarn
     java.lang.String    [org.slf4j.Logger]          → $log:variableOfType("org.slf4j.Logger"):"logger"$.warn($expr$);
-    java.lang.Throwable [org.slf4j.Logger]          → $log:variableOfType("org.slf4j.Logger"):"logger"$.warm($msg$, $expr$);
+    java.lang.Throwable [org.slf4j.Logger]          → $log:variableOfType("org.slf4j.Logger"):"logger"$.warn($msg$, $expr$);
 
 # loggerError
 .logError : slf4j logError
