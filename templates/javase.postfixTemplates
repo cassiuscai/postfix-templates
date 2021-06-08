@@ -38,10 +38,10 @@
 .show : javase println
     NON_VOID            →       System.out.println($expr$);
 
-.eprint : javase errprint
+.errprint : javase errprint
     NON_VOID            →       System.err.print($expr$);
 
-.eprintln : javase errprintln
+.errprintln : javase errprintln
     NON_VOID            →       System.err.println($expr$);
 
 .format : javase format
@@ -57,8 +57,87 @@
 .wrapWithSingleQuote : wrapWithSingleQuote
     ANY                 →       '$expr$'
 
-.singletonList : wrap by Collections.singletonList
-    NON_VOID -> java.util.Collections.singletonList($expr$)
+.toSingletonList : singletonList
+    NON_VOID → java.util.Collections.singletonList($expr$)
 
-.arraysAsList : wrap by java.util.Arrays.asList
-    NON_VOID -> java.util.Arrays.asList($expr$)
+.toSingletonSet : singletonSet
+    NON_VOID → java.util.Collections.singleton($expr$)
+
+.toSingletonMap : singletonMap
+    NON_VOID → java.util.Collections.singletonMap($expr$, $END$)
+
+.reverse : reverse
+    java.util.List -> java.util.Collections.reverse($expr$)
+
+.shuffle : shuffle
+    java.util.List -> java.util.Collections.shuffle($expr$)
+
+.toUnmodifiable : toUnmodifiable
+    java.util.SortedSet           → java.util.Collections.unmodifiableSortedSet($expr$)
+    java.util.NavigableSet        → java.util.Collections.unmodifiableNavigableSet($expr$)
+    java.util.Set                 → java.util.Collections.unmodifiableSet($expr$)
+    java.util.SortedMap           → java.util.Collections.unmodifiableSortedMap($expr$)
+    java.util.NavigableMap        → java.util.Collections.unmodifiableNavigableMap($expr$)
+    java.util.Map                 → java.util.Collections.unmodifiableMap($expr$)
+    java.util.List                → java.util.Collections.unmodifiableList($expr$)
+    java.util.Collection          → java.util.Collections.unmodifiableCollection($expr$)
+
+.toSynchronized : .toSynchronized
+    java.util.SortedSet           → java.util.Collections.synchronizedSortedSet($expr$)
+    java.util.NavigableSet        → java.util.Collections.synchronizedNavigableSet($expr$)
+    java.util.Set                 → java.util.Collections.synchronizedSet($expr$)
+    java.util.SortedMap           → java.util.Collections.synchronizedSortedMap($expr$)
+    java.util.NavigableMap        → java.util.Collections.synchronizedNavigableMap($expr$)
+    java.util.Map                 → java.util.Collections.synchronizedMap($expr$)
+    java.util.List                → java.util.Collections.synchronizedList($expr$)
+    java.util.Collection          → java.util.Collections.synchronizedCollection($expr$)
+
+.toChecked : checked
+    java.util.NavigableSet        → java.util.Collections.checkedNavigableSet($expr$, $clazz:iterableComponentType(expr)$.class)$END$
+    java.util.SortedSet           → java.util.Collections.checkedSortedSet($expr$, $clazz:iterableComponentType(expr)$.class)$END$
+    java.util.Set                 → java.util.Collections.checkedSet($expr$, $clazz:iterableComponentType(expr)$.class)$END$
+    java.util.List                → java.util.Collections.checkedList($expr$, $clazz:iterableComponentType(expr)$.class)$END$
+    java.util.Queue               → java.util.Collections.checkedQueue($expr$, $clazz:iterableComponentType(expr)$.class)$END$
+    java.util.Collection          → java.util.Collections.checkedCollection($expr$, $clazz:iterableComponentType(expr)$.class)$END$
+    # fixme: auto set key type and value type of map
+    java.util.NavigableMap        → java.util.Collections.checkedNavigableMap($expr$, $keyType$.class, $valueType$.class)$END$
+    java.util.SortedMap           → java.util.Collections.checkedSortedMap($expr$, $keyType$.class, $valueType$.class)$END$
+    java.util.Map                 → java.util.Collections.checkedMap($expr$, $keyType$.class, $valueType$.class)$END$
+
+# java.util.Arrays
+.sort : sort
+    ARRAY               → java.util.Arrays.sort($expr$)
+
+.parallelSort : sort parallelly
+    ARRAY               → java.util.Arrays.sortParallel($expr$)
+
+.asList : wrap by java.util.Arrays.asList
+    NON_VOID            → java.util.Arrays.asList($expr$)
+
+.binarySearch : binary search
+    ARRAY               → java.util.Arrays.binarySearch($expr$, $that:variableOfType(iterableComponentType(expr))$$END$)
+    java.util.List      → java.util.Collections.binarySearch($expr$, $that:variableOfType(iterableComponentType(expr))$$END$)
+
+.fill : arrays fill
+    ARRAY               → java.util.Arrays.fill($expr$, $that:variableOfType(iterableComponentType(expr))$$END$)
+
+.arrayEquals : array equals
+    ARRAY               → java.util.Arrays.equals($expr$, $that:variableOfType(typeOfVariable(expr))$$END$)
+
+.arrayToString : arrays toString
+    ARRAY               → java.util.Arrays.toString($expr$)
+
+.arrayHashCode : arrays hashCode
+    ARRAY               → java.util.Arrays.hashCode($expr$)
+
+.arrayDeepEquals : array equals
+    ARRAY               → java.util.Arrays.deepEquals($expr$, $that:variableOfType(typeOfVariable(expr))$$END$)
+
+.arrayDeepToString : arrays toString
+    ARRAY               → java.util.Arrays.deepToString($expr$)
+
+.arrayDeepHashCode : arrays hashCode
+    ARRAY               → java.util.Arrays.deepHashCode($expr$)
+
+.stream : arrays stream
+    ARRAY               → java.util.Arrays.stream($expr$)
