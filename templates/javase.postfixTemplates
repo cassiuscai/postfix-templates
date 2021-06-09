@@ -104,6 +104,11 @@
     java.util.SortedMap           → java.util.Collections.checkedSortedMap($expr$, $keyType$.class, $valueType$.class)$END$
     java.util.Map                 → java.util.Collections.checkedMap($expr$, $keyType$.class, $valueType$.class)$END$
 
+.toString : to string
+    NUMBER              → String.valueOf($expr$)
+    BOOLEAN             → String.valueOf($expr$)
+    ARRAY               → java.util.Arrays.toString($expr$)
+
 # java.util.Arrays
 .sort : sort
     ARRAY               → java.util.Arrays.sort($expr$)
@@ -123,9 +128,6 @@
 
 .arrayEquals : array equals
     ARRAY               → java.util.Arrays.equals($expr$, $that:variableOfType(typeOfVariable(expr))$$END$)
-
-.arrayToString : arrays toString
-    ARRAY               → java.util.Arrays.toString($expr$)
 
 .arrayHashCode : arrays hashCode
     ARRAY               → java.util.Arrays.hashCode($expr$)
