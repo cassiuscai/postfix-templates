@@ -1,0 +1,48 @@
+# MockMvc ResultHandlers
+.andDoLog : MockMvc andDoLog
+    org.springframework.test.web.servlet.ResultActions → $expr$.andDo(org.springframework.test.web.servlet.result.MockMvcResultHandlers.print()) [USE_STATIC_IMPORTS]
+
+.andDoPrint : MockMvc andDoPrint
+    org.springframework.test.web.servlet.ResultActions → $expr$.andDo(org.springframework.test.web.servlet.result.MockMvcResultHandlers.print()) [USE_STATIC_IMPORTS]
+
+# MockMvc ContentResultMatchers
+.hasContentType : hasContentType
+    org.springframework.test.web.servlet.ResultActions → $expr$.andExpect(org.springframework.test.web.servlet.result.MockMvcResultMatchers.content().contentType(org.springframework.http.MediaType$END$)) [USE_STATIC_IMPORTS]
+
+.hasContentTypeAll : hasContentTypeAll
+    org.springframework.test.web.servlet.ResultActions → $expr$.andExpect(org.springframework.test.web.servlet.result.MockMvcResultMatchers.content().contentType(org.springframework.http.MediaType.ALL)) [USE_STATIC_IMPORTS]
+
+.hasContentTypeApplicationJson : hasContentTypeApplicationJson
+    org.springframework.test.web.servlet.ResultActions → $expr$.andExpect(org.springframework.test.web.servlet.result.MockMvcResultMatchers.content().contentType(org.springframework.http.MediaType.APPLICATION_JSON)) [USE_STATIC_IMPORTS]
+
+.hasContentTypeApplicationXml : hasContentTypeApplicationXml
+    org.springframework.test.web.servlet.ResultActions → $expr$.andExpect(org.springframework.test.web.servlet.result.MockMvcResultMatchers.content().contentType(org.springframework.http.MediaType.APPLICATION_XML)) [USE_STATIC_IMPORTS]
+
+.hasContentTypeApplicationPdf : hasContentTypeApplicationPdf
+    org.springframework.test.web.servlet.ResultActions → $expr$.andExpect(org.springframework.test.web.servlet.result.MockMvcResultMatchers.content().contentType(org.springframework.http.MediaType.APPLICATION_PDF)) [USE_STATIC_IMPORTS]
+
+## ContentType: image/jpg, image/png, image/gif
+.hasContentTypeImageJpg : hasContentTypeImageJpg
+    org.springframework.test.web.servlet.ResultActions → $expr$.andExpect(org.springframework.test.web.servlet.result.MockMvcResultMatchers.content().contentType(org.springframework.http.MediaType.IMAGE_JPEG)) [USE_STATIC_IMPORTS]
+
+.hasContentTypeImagePng : hasContentTypeImagePng
+    org.springframework.test.web.servlet.ResultActions → $expr$.andExpect(org.springframework.test.web.servlet.result.MockMvcResultMatchers.content().contentType(org.springframework.http.MediaType.IMAGE_PNG)) [USE_STATIC_IMPORTS]
+
+.hasContentTypeImageGif : hasContentTypeImageGif
+    org.springframework.test.web.servlet.ResultActions → $expr$.andExpect(org.springframework.test.web.servlet.result.MockMvcResultMatchers.content().contentType(org.springframework.http.MediaType.IMAGE_GIF)) [USE_STATIC_IMPORTS]
+
+## ContentType: text/html, text/xml, text/plain, text/markdown
+.hasContentTypeTextHtml : hasContentTypeTextHtml
+    org.springframework.test.web.servlet.ResultActions → $expr$.andExpect(org.springframework.test.web.servlet.result.MockMvcResultMatchers.content().contentType(org.springframework.http.MediaType.TEXT_HTML)) [USE_STATIC_IMPORTS]
+
+.hasContentTypeTextXml : hasContentTypeTextXml
+    org.springframework.test.web.servlet.ResultActions → $expr$.andExpect(org.springframework.test.web.servlet.result.MockMvcResultMatchers.content().contentType(org.springframework.http.MediaType.TEXT_XML)) [USE_STATIC_IMPORTS]
+
+.hasContentTypeTextPlain : hasContentTypeTextPlain
+    org.springframework.test.web.servlet.ResultActions → $expr$.andExpect(org.springframework.test.web.servlet.result.MockMvcResultMatchers.content().contentType(org.springframework.http.MediaType.TEXT_PLAIN)) [USE_STATIC_IMPORTS]
+
+.hasContentTypeTextMarkdown : hasContentTypeTextMarkdown
+    org.springframework.test.web.servlet.ResultActions → $expr$.andExpect(org.springframework.test.web.servlet.result.MockMvcResultMatchers.content().contentType(org.springframework.http.MediaType.TEXT_MARKDOWN)) [USE_STATIC_IMPORTS]
+
+.hasContentTypeTextEventStream : hasContentTypeTextEventStream
+    org.springframework.test.web.servlet.ResultActions → $expr$.andExpect(org.springframework.test.web.servlet.result.MockMvcResultMatchers.content().contentType(org.springframework.http.MediaType.TEXT_EVENT_STREAM)) [USE_STATIC_IMPORTS]
