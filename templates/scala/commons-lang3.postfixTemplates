@@ -1,0 +1,448 @@
+# Argument check for Array/Collection/Map/String/Boolean
+.requireTrue : commons-lang requireTrue
+# Boolean
+    BOOLEAN                 [org.apache.commons.lang3.Validate]     →  Validate.isTrue($expr$, "the parameter require to be true") [IMPORT org.apache.commons.lang3.Validate]
+
+.requireNotFalse : commons-lang requireNotFalse
+# Boolean
+    BOOLEAN                 [org.apache.commons.lang3.Validate]     →  Validate.isTrue($expr$, "the parameter require not false") [IMPORT org.apache.commons.lang3.Validate]
+
+.requireNotNull : commons-lang requireNotNull
+# Object
+    NON_VOID                [org.apache.commons.lang3.Validate]     →  Validate.notNull($expr$, "the parameter require not null") [IMPORT org.apache.commons.lang3.Validate]
+
+.requireNotBlank : commons-lang requireNotBlank
+# String
+    java.lang.String        [org.apache.commons.lang3.Validate]     →  Validate.notBlank($expr$, "the parameter require not blank") [IMPORT org.apache.commons.lang3.Validate]
+
+.requireNotEmpty : commons-lang requireNotEmpty
+# Array
+    # Map
+    java.util.Map           [org.apache.commons.lang3.Validate]     →  Validate.notEmpty($expr$, "the parameter require not empty") [IMPORT org.apache.commons.lang3.Validate]
+    # Collection
+    java.util.Collection    [org.apache.commons.lang3.Validate]     →  Validate.notEmpty($expr$, "the parameter require not empty") [IMPORT org.apache.commons.lang3.Validate]
+
+
+.requireNotContainsNull : commons-lang requireNotContainsNull
+# Array
+    java.util.Collection    [org.apache.commons.lang3.Validate]     →  Validate.noNullElements($expr$, "the parameter require not contains null element") [IMPORT org.apache.commons.lang3.Validate]
+
+# Templates for Date and Calendar API: org.apache.commons.lang3.time.DateUtils
+.addMilliseconds : commons-lang.date addMilliseconds
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.addMilliseconds($expr$, $amount$) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.addSeconds : commons-lang.date addSeconds
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.addSeconds($expr$, $amount$) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.addMinutes : commons-lang.date addMinutes
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.addMinutes($expr$, $amount$) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.addHours : commons-lang.date addHours
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.addHours($expr$, $amount$) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.addDays : commons-lang.date addDays
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.addDays($expr$, $amount$) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.addWeeks : commons-lang.date addWeeks
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.addWeeks($expr$, $amount$) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.addMonths : commons-lang.date addMonths
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.addMonths($expr$, $amount$) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.addYears : commons-lang.date addYears
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.addYears($expr$, $amount$) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.setMilliseconds : commons-lang.date setMilliseconds
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.setMilliseconds($expr$, $amount$) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.setSeconds : commons-lang.date setSeconds
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.setSeconds($expr$, $amount$) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.setMinutes : commons-lang.date setMinutes
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.setMinutes($expr$, $amount$) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.setHours : commons-lang.date setHours
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.setHours($expr$, $amount$) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.setDays : commons-lang.date setDays
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.setDays($expr$, $amount$) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.setWeeks : commons-lang.date setWeeks
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.setWeeks($expr$, $amount$) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.setMonths : commons-lang.date setMonths
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.setMonths($expr$, $amount$) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.setYears : commons-lang.date setYears
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.setYears($expr$, $amount$) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.ceilMillisecond : commons-lang.date ceilMillisecond
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.ceiling($expr$, java.util.Calendar.MILLISECOND) [IMPORT org.apache.commons.lang3.time.DateUtils]
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.ceiling($expr$, java.util.Calendar.MILLISECOND) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.ceilSecond : commons-lang.date ceilSecond
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.ceiling($expr$, java.util.Calendar.SECOND) [IMPORT org.apache.commons.lang3.time.DateUtils]
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.ceiling($expr$, java.util.Calendar.SECOND) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.ceilMinute : commons-lang.date ceilMinute
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.ceiling($expr$, java.util.Calendar.MINUTE) [IMPORT org.apache.commons.lang3.time.DateUtils]
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.ceiling($expr$, java.util.Calendar.MINUTE) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.ceilHour : commons-lang.date ceilHour
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.ceiling($expr$, java.util.Calendar.HOUR_OF_DAY) [IMPORT org.apache.commons.lang3.time.DateUtils]
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.ceiling($expr$, java.util.Calendar.HOUR_OF_DAY) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.ceilDay : commons-lang.date ceilDay
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.ceiling($expr$, java.util.Calendar.DAY_OF_MONTH) [IMPORT org.apache.commons.lang3.time.DateUtils]
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.ceiling($expr$, java.util.Calendar.DAY_OF_MONTH) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.ceilMonth : commons-lang.date ceilMonth
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.ceiling($expr$, java.util.Calendar.MONTH) [IMPORT org.apache.commons.lang3.time.DateUtils]
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.ceiling($expr$, java.util.Calendar.MONTH) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+
+.ceilYear : commons-lang.date ceilYear
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.ceiling($expr$, java.util.Calendar.YEAR) [IMPORT org.apache.commons.lang3.time.DateUtils]
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.ceiling($expr$, java.util.Calendar.YEAR) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.floorMillisecond : commons-lang.date floorMillisecond
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.truncate($expr$, java.util.Calendar.MILLISECOND) [IMPORT org.apache.commons.lang3.time.DateUtils]
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.truncate($expr$, java.util.Calendar.MILLISECOND) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.floorSecond : commons-lang.date floorSecond
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.truncate($expr$, java.util.Calendar.SECOND) [IMPORT org.apache.commons.lang3.time.DateUtils]
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.truncate($expr$, java.util.Calendar.SECOND) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.floorMinute : commons-lang.date floorMinute
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.truncate($expr$, java.util.Calendar.MINUTE) [IMPORT org.apache.commons.lang3.time.DateUtils]
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.truncate($expr$, java.util.Calendar.MINUTE) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.floorHour : commons-lang.date floorHour
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.truncate($expr$, java.util.Calendar.HOUR_OF_DAY) [IMPORT org.apache.commons.lang3.time.DateUtils]
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.truncate($expr$, java.util.Calendar.HOUR_OF_DAY) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.floorDay : commons-lang.date floorDay
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.truncate($expr$, java.util.Calendar.DAY_OF_MONTH) [IMPORT org.apache.commons.lang3.time.DateUtils]
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.truncate($expr$, java.util.Calendar.DAY_OF_MONTH) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.floorMonth : commons-lang.date floorMonth
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.truncate($expr$, java.util.Calendar.MONTH) [IMPORT org.apache.commons.lang3.time.DateUtils]
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.truncate($expr$, java.util.Calendar.MONTH) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.floorYear : commons-lang.date floorYear
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.truncate($expr$, java.util.Calendar.YEAR) [IMPORT org.apache.commons.lang3.time.DateUtils]
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.truncate($expr$, java.util.Calendar.YEAR) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+
+.roundMillisecond : commons-lang.date roundMillisecond
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.round($expr$, java.util.Calendar.MILLISECOND) [IMPORT org.apache.commons.lang3.time.DateUtils]
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.round($expr$, java.util.Calendar.MILLISECOND) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.roundSecond : commons-lang.date roundSecond
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.round($expr$, java.util.Calendar.SECOND) [IMPORT org.apache.commons.lang3.time.DateUtils]
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.round($expr$, java.util.Calendar.SECOND) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.roundMinute : commons-lang.date roundMinute
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.round($expr$, java.util.Calendar.MINUTE) [IMPORT org.apache.commons.lang3.time.DateUtils]
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.round($expr$, java.util.Calendar.MINUTE) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.roundHour : commons-lang.date roundHour
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.round($expr$, java.util.Calendar.HOUR_OF_DAY) [IMPORT org.apache.commons.lang3.time.DateUtils]
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.round($expr$, java.util.Calendar.HOUR_OF_DAY) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.roundDay : commons-lang.date roundDay
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.round($expr$, java.util.Calendar.DAY_OF_MONTH) [IMPORT org.apache.commons.lang3.time.DateUtils]
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.round($expr$, java.util.Calendar.DAY_OF_MONTH) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.roundMonth : commons-lang.date roundMonth
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.round($expr$, java.util.Calendar.MONTH) [IMPORT org.apache.commons.lang3.time.DateUtils]
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.round($expr$, java.util.Calendar.MONTH) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.roundYear : commons-lang.date roundYear
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.round($expr$, java.util.Calendar.YEAR) [IMPORT org.apache.commons.lang3.time.DateUtils]
+    java.util.Calendar      [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.round($expr$, java.util.Calendar.YEAR) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.toCalendar : commons-lang.date toCalendar
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.toCalendar($expr$, java.util.TimeZone.getDefault()) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+.toCalendarWithTimeZone : commons-lang.date toCalendarWithTimeZone
+    java.util.Date          [org.apache.commons.lang3.time.DateUtils]   →   DateUtils.toCalendar($expr$, java.util.TimeZone.getTimeZone($timeZone$)) [IMPORT org.apache.commons.lang3.time.DateUtils]
+
+
+# Check the Array/Collection/Map/String is or not empty
+.isEmpty : commons-lang isEmpty
+# Array
+# String
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → StringUtils.isEmpty($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+    # Collection
+    java.util.Collection [org.apache.commons.collections4.CollectionUtils]  → CollectionUtils.isEmpty($expr$) [IMPORT org.apache.commons.collections4.CollectionUtils]
+    # Map
+    java.util.Map        [org.apache.commons.collections4.MapUtils]         → MapUtils.isEmpty($expr$) [IMPORT org.apache.commons.collections4.MapUtils]
+
+.isNotEmpty : commons-lang isNotEmpty
+# Array
+# String
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → StringUtils.isEmpty($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+    # Collection
+    java.util.Collection [org.apache.commons.collections4.CollectionUtils]  → CollectionUtils.isNotEmpty($expr$) [IMPORT org.apache.commons.collections4.CollectionUtils]
+    # Map
+    java.util.Map        [org.apache.commons.collections4.MapUtils]         → MapUtils.isNotEmpty($expr$) [IMPORT org.apache.commons.collections4.MapUtils]
+
+.ifEmpty : commons-lang ifEmpty
+# Array
+# String
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → if(StringUtils.isEmpty($expr$)){\
+                                                                                $END$\
+                                                                              } [IMPORT org.apache.commons.lang3.StringUtils]
+    # Collection
+    java.util.Collection [org.apache.commons.collections4.CollectionUtils]  → if(CollectionUtils.isEmpty($expr$)){\
+                                                                                $END$\
+                                                                              } [IMPORT org.apache.commons.collections4.CollectionUtils]
+    # Map
+    java.util.Map        [org.apache.commons.collections4.MapUtils]         → if(MapUtils.isEmpty($expr$)){\
+                                                                                $END$\
+                                                                              } [IMPORT org.apache.commons.collections4.MapUtils]
+.ifNotEmpty : commons-lang ifNotEmpty
+# Array
+# String
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → if(StringUtils.isEmpty($expr$)){\
+                                                                                $END$\
+                                                                              } [IMPORT org.apache.commons.lang3.StringUtils]
+    # Collection
+    java.util.Collection [org.apache.commons.collections4.CollectionUtils]  → if(CollectionUtils.isNotEmpty($expr$)){\
+                                                                                $END$\
+                                                                              } [IMPORT org.apache.commons.collections4.CollectionUtils]
+    # Map
+    java.util.Map        [org.apache.commons.collections4.MapUtils]         → if(MapUtils.isNotEmpty($expr$)){\
+                                                                                $END$\
+                                                                              } [IMPORT org.apache.commons.collections4.MapUtils]
+
+# org.apache.commons.lang3.exception.ExceptionUtils
+.getMessage : commons-lang getMessage
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   ExceptionUtils.getMessage($expr$) [IMPORT org.apache.commons.lang3.exception.ExceptionUtils]
+
+.getRootCause : commons-lang getRootCause
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   ExceptionUtils.getRootCause($expr$) [IMPORT org.apache.commons.lang3.exception.ExceptionUtils]
+
+.getRootCauseMessage : commons-lang getRootCauseMessage
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   ExceptionUtils.getRootCauseMessage($expr$) [IMPORT org.apache.commons.lang3.exception.ExceptionUtils]
+
+.getRootCauseStackTrace : commons-lang getRootCauseStackTrace
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   ExceptionUtils.getRootCauseStackTrace($expr$) [IMPORT org.apache.commons.lang3.exception.ExceptionUtils]
+
+.getStackFrames : commons-lang getStackFrames
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   ExceptionUtils.getStackFrames($expr$) [IMPORT org.apache.commons.lang3.exception.ExceptionUtils]
+
+.getThrowableCount : commons-lang getThrowableCount
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   ExceptionUtils.getThrowableCount($expr$) [IMPORT org.apache.commons.lang3.exception.ExceptionUtils]
+
+.getThrowableList : commons-lang getThrowableList
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   ExceptionUtils.getThrowableList($expr$) [IMPORT org.apache.commons.lang3.exception.ExceptionUtils]
+
+.getThrowableArray : commons-lang getThrowableList
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   ExceptionUtils.getThrowables($expr$) [IMPORT org.apache.commons.lang3.exception.ExceptionUtils]
+
+.getStackTraceAsString : commons-lang getStackTraceAsString
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   ExceptionUtils.getStackTrace($expr$) [IMPORT org.apache.commons.lang3.exception.ExceptionUtils]
+
+.printRootCauseStackTrace : commons-lang printRootCauseStackTrace
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   ExceptionUtils.printRootCauseStackTrace($expr$) [IMPORT org.apache.commons.lang3.exception.ExceptionUtils]
+
+.rethrow : commons-lang rethrow
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   ExceptionUtils.rethrow($expr$) [IMPORT org.apache.commons.lang3.exception.ExceptionUtils]
+
+.wrapAndThrow : commons-lang wrapAndThrow
+    java.lang.Throwable [org.apache.commons.lang3.exception.ExceptionUtils]     →   ExceptionUtils.wrapAndThrow($expr$) [IMPORT org.apache.commons.lang3.exception.ExceptionUtils]
+
+
+## Templates for Apache commons-lang3 ##
+.center : center text in string
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.center($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.capitalize : capitalize first character
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.capitalize($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.uncapitalize : capitalize first character
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.uncapitalize($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.abbreviate : abbreviate
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.abbreviate($expr$, $maxLength$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.abbreviateMiddle : abbreviate middle
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.abbreviateMiddle($expr$, $middle$, $length$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.chop : remove last character
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.chop($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.chomp : remove tailing line separators
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.chomp($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isAllLowerCase : is all lower case
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isAllLowerCase($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isAllUpperCase : is all upper case
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isAllUpperCase($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isBlank : is blank
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isBlank($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isAnyBlank : is any blank
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isAnyBlank($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isNoneBlank : is none blank
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isNoneBlank($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isNotBlank : is not blank
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isNotBlank($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isEmptyNullSafe : null safe is empty
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isEmpty($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isAnyEmpty : is any empty
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isEmpty($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isNoneEmpty : is none empty
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isNoneEmpty($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isNotEmpty : is none empty
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isNotEmpty($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isAlpha : contains only alphabetic characters
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isAlpha($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isAlphaSpace : contains only alphabetic characters and spaces
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isAlphaSpace($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isAlphanumeric : contains only alphanumeric characters
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isAlphanumeric($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isAlphanumericSpace : contains only alphanumeric characters and spaces
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isAlphanumericSpace($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isNumeric : contains only numeric characters
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isNumeric($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isNumericSpace : contains only numeric characters and spaces
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isNumericSpace($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isAsciiPrintable : is ASCII printable
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isAsciiPrintable($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isWhitespace : is whitespace
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.isWhitespace($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.reverse : reverse
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.reverse($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.remove : remove
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.remove($expr$, $chars$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.removeStart : remove start
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.removeStart($expr$, $chars$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.removeStartIgnoreCase : remove start
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.removeStartIgnoreCase($expr$, $chars$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.removeEnd : remove end
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.removeEnd($expr$, $chars$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.removeEndIgnoreCase : remove end
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.removeEndIgnoreCase($expr$, $chars$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.strip : strip
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.strip($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.containsAny : contains any
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.containsAny($expr$, $chars$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.containsNone : contains none
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.containsNone($expr$, $chars$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.containsOnly : contains only
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.containsOnly($expr$, $chars$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.appendIfMissing : append if missing
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.appendIfMissing($expr$, $suffix$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.appendIfMissingIgnoreCase : append if missing by ignoring case
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.appendIfMissingIgnoreCase($expr$, $suffix$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.prependIfMissing : prepend if missing
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.prependIfMissing($expr$, $suffix$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.prependIfMissingIgnoreCase : prepend if missing by ignoring case
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.prependIfMissingIgnoreCase($expr$, $suffix$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.substringBefore : substring before the first delimiter
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.substringBefore($expr$, $delimiter$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.substringBeforeLast : substring before the last delimiter
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.substringBeforeLast($expr$, $delimiter$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.substringAfter : substring after the first delimiter
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.substringAfter($expr$, $delimiter$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.substringAfterLast : substring after the last delimiter
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.substringAfterLast($expr$, $delimiter$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.substringBetween : substring between strings
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.substringBetween($expr$, $tag$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.substringsBetween : substring between strings
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.substringsBetween($expr$, $open$, $close$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.stringBefore : substring before the first delimiter
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.substringBefore($expr$, $delimiter$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.stringBeforeLast : substring before the last delimiter
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.substringBeforeLast($expr$, $delimiter$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.stringAfter : substring after the first delimiter
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.substringAfter($expr$, $delimiter$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.stringAfterLast : substring after the last delimiter
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.substringAfterLast($expr$, $delimiter$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.stringBetween : substring between strings
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.substringBetween($expr$, $tag$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.stringsBetween : substring between strings
+    java.lang.String [org.apache.commons.lang3.StringUtils]  →  StringUtils.substringsBetween($expr$, $open$, $close$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.equals : commons-lang equals
+    java.lang.String [org.apache.commons.lang3.StringUtils]  → StringUtils.equals($expr$, $another$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.ifEquals : commons-lang ifEquals
+    java.lang.String [org.apache.commons.lang3.StringUtils]  → if(StringUtils.equals($expr$, $another$)){\
+                                                                 $END$\
+                                                               } [IMPORT org.apache.commons.lang3.StringUtils]
+.ifNotEquals : commons-lang ifNotEquals
+    java.lang.String [org.apache.commons.lang3.StringUtils] → if(!StringUtils.equals($expr$, $another$)){\
+                                                                 $END$\
+                                                              } [IMPORT org.apache.commons.lang3.StringUtils]
+
+.equalsIgnoreCase : commons-lang equalsIgnoreCase
+    java.lang.String [org.apache.commons.lang3.StringUtils] → StringUtils.equalsIgnoreCase($expr$, $another$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.ifEqualsIgnoreCase : commons-lang ifEqualsIgnoreCase
+    java.lang.String [org.apache.commons.lang3.StringUtils] → if(StringUtils.equalsIgnoreCase($expr$, $another$)){\
+                                                                $END$\
+                                                              } [IMPORT org.apache.commons.lang3.StringUtils]
+.ifNotEqualsIgnoreCase : commons-lang ifNotEqualsIgnoreCase
+    java.lang.String [org.apache.commons.lang3.StringUtils] → if(!StringUtils.equalsIgnoreCase($expr$, $another$)){\
+                                                                $END$\
+                                                              } [IMPORT org.apache.commons.lang3.StringUtils]
+.isBlank : commons-lang isBlank
+    java.lang.String [org.apache.commons.lang3.StringUtils] → StringUtils.isBlank($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.isNotBlank : commons-lang isNotBlank
+    java.lang.String [org.apache.commons.lang3.StringUtils] → StringUtils.isNotBlank($expr$) [IMPORT org.apache.commons.lang3.StringUtils]
+
+.ifBlank : commons-lang ifBlank
+    java.lang.String [org.apache.commons.lang3.StringUtils] → if(StringUtils.isBlank($expr$)){\
+                                                                 $END$\
+                                                               } [IMPORT org.apache.commons.lang3.StringUtils]
+.ifNotBlank : commons-lang ifNotBlank
+    java.lang.String [org.apache.commons.lang3.StringUtils] → if(StringUtils.isNotBlank($expr$)){\
+                                                                $END$\
+                                                              } [IMPORT org.apache.commons.lang3.StringUtils]

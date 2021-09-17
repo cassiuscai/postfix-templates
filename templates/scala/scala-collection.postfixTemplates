@@ -1,21 +1,21 @@
 # scala collection
-.toVarArgs: toVarArgs
+.asVarArgs : toVarArgs
     java.util.List                  →  [IMPORT scala.collection.JavaConverters._] $expr$.asScala: _*
     java.util.Set                   →  [IMPORT scala.collection.JavaConverters._] $expr$.asScala.toSeq: _*
     scala.collection.Set            →  $expr$.toSeq: _*
     scala.collection.Seq            →  $expr$: _*
 
-.toScala : toScala
+.asScala : toScala
     java.util.Iterator              →  [IMPORT scala.collection.JavaConverters._] $expr$.asScala
     java.lang.Iterable              →  [IMPORT scala.collection.JavaConverters._] $expr$.asScala
     java.util.Map                   →  [IMPORT scala.collection.JavaConverters._] $expr$.asScala
     java.util.Enumeration           →  [IMPORT scala.collection.JavaConverters._] $expr$.asScala
 
-.toJava : asJava
+.asJava : asJava
     scala.collection.Iterator       →  [IMPORT scala.collection.JavaConverters._] $expr$.asJava
     scala.collection.Iterable       →  [IMPORT scala.collection.JavaConverters._] $expr$.asJava
 
-.map: map
+.map : map
     java.util.Map                   →   $expr$.asScala.map {\
                                             case (key,value) => $END$\
                                         } [IMPORT scala.collection.JavaConverters._]
@@ -32,7 +32,7 @@
                                             item => $END$\
                                         }
 
-.mapEntries: mapEntries
+.mapEntries : mapEntries
     java.util.Map                   →   $expr$.asScala.map {\
                                             entry => $END$\
                                         } [IMPORT scala.collection.JavaConverters._]
@@ -41,7 +41,7 @@
                                             entry => $END$\
                                         }
 
-.mapValues: mapValues
+.mapValues : mapValues
     java.util.Map                   →   $expr$.asScala.mapValues {\
                                             value => $END$\
                                         } [IMPORT scala.collection.JavaConverters._]
@@ -50,7 +50,7 @@
                                             value => $END$\
                                         }
 
-.flatmap: flatmap
+.flatmap : flatmap
     java.util.Map                   →   $expr$.asScala.flatMap {\
                                             case (key,value) => $END$\
                                         } [IMPORT scala.collection.JavaConverters._]
@@ -67,7 +67,7 @@
                                             item => $END$\
                                         }
 
-.filter: filter
+.filter : filter
     java.util.Map                   →   $expr$.asScala.filter {\
                                             case (key,value) => $END$\
                                         } [IMPORT scala.collection.JavaConverters._]
@@ -84,7 +84,7 @@
                                             item => $END$\
                                         }
 
-.filterNot: filterNot
+.filterNot : filterNot
     java.util.Map                   →   $expr$.asScala.filterNot {\
                                             case (key,value) => $END$\
                                         } [IMPORT scala.collection.JavaConverters._]
@@ -101,7 +101,7 @@
                                             item => $END$\
                                         }
 
-.foreach: foreach
+.foreach : foreach
     java.util.Map                   →   $expr$.asScala.foreach {\
                                             case (key,value) => $END$\
                                         } [IMPORT scala.collection.JavaConverters._]
@@ -118,7 +118,7 @@
                                             item => $END$\
                                         }
 
-.forall: forall
+.forall : forall
     java.util.Map                   →   $expr$.asScala.forall {\
                                             case (key,value) => $END$\
                                         } [IMPORT scala.collection.JavaConverters._]
@@ -135,7 +135,7 @@
                                             item => $END$\
                                         }
 
-.exists: exists
+.exists : exists
     java.util.Map                   →   $expr$.asScala.exists {\
                                             case (key,value) => $END$\
                                         } [IMPORT scala.collection.JavaConverters._]
