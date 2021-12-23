@@ -143,3 +143,6 @@
 
 .stream : arrays stream
     ARRAY               → java.util.Arrays.stream($expr$)
+
+.jarPath : jar path
+    CLASS → $expr$.class.getResource('/' + $expr$.class.getName().replace('.', '/') + ".class")
