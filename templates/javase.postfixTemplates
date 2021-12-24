@@ -146,3 +146,13 @@
 
 .jarPath : jar path
     CLASS → $expr$.class.getResource('/' + $expr$.class.getName().replace('.', '/') + ".class")
+
+.asInstanceOf : asInstanceOf
+    ANY → (($TYPE$) $expr$)$END$
+
+.toFile: toFile
+    STRING → java.io.File($expr$)
+
+.toClassPathFile : toClassPathFile
+    java.lang.String → new java.io.File(java.util.Objects.requireNonNull(getClass().getClassLoader().getResource($expr$), String.format("class path resource [%s] not exists", $expr$)).getFile())
+    STRING_LITERAL → new java.io.File(java.util.Objects.requireNonNull(getClass().getClassLoader().getResource($expr$), String.format("class path resource [%s] not exists", $expr$)).getFile())

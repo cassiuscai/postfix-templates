@@ -1,0 +1,5 @@
+.readLines : readLines
+    java.io.File [org.apache.commons.io.FileUtils] → org.apache.commons.io.FileUtils.readLines($expr$, java.nio.charset.StandardCharsets.UTF_8)$END$
+
+.readString : readString
+    java.io.File [org.apache.commons.io.FileUtils] → org.apache.commons.io.FileUtils.readFileToString($expr$, java.nio.charset.StandardCharsets.UTF_8)$END$

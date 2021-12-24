@@ -1,0 +1,10 @@
+# com.google.common.io.Resources
+.toResource : toResource
+    STRING_LITERAL [com.google.common.io.Resources] → com.google.common.io.Resources.getResource($expr$)
+    java.lang.String [com.google.common.io.Resources] → com.google.common.io.Resources.getResource($expr$)
+
+.readAsLines: readLines
+    java.net.URL [com.google.common.io.Resources] → com.google.common.io.Resources.readLines($expr$, java.nio.charset.StandardCharsets.UTF_8)$END$
+
+.readAsString: readString
+    java.net.URL [com.google.common.io.Resources] → com.google.common.io.Resources.toString($expr$, java.nio.charset.StandardCharsets.UTF_8)$END$
