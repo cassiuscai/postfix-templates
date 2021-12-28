@@ -36,3 +36,9 @@
     java.lang.String     [org.apache.commons.lang3.StringUtils]             → if(org.apache.commons.lang3.StringUtils.isNotBlank($expr$)){\
                                                                                 $END$\
                                                                               }
+
+.padStart : commons-lang padStart
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.leftPad($expr$, $padLength:variableOfType("int")$)
+
+.padEnd : commons-lang padEnd
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.rightPad($expr$, $padLength:variableOfType("int")$)
