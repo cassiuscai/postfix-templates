@@ -59,3 +59,5 @@ target
 .classpath
 .history
 .settings
+/src/test/java/postfix/templates/JavaTemplateTest.java
+/src/test/scala/postfix/templates/ScalaTemplateTest.scala
