@@ -324,3 +324,62 @@
     java.util.Map        [org.apache.commons.collections.MapUtils]         → if(org.apache.commons.collections.MapUtils.isNotEmpty($expr$)){\
                                                                                 $END$\
                                                                               }
+
+.trim : commons-lang trim
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.trim($expr$)
+
+.trimToNull : commons-lang trimToNull
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.trimToNull($expr$)
+
+.trimToEmpty : commons-lang trimToEmpty
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.trimToEmpty($expr$)
+
+.capitalize : commons-lang capitalize
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.capitalize($expr$)
+
+.uncapitalize : commons-lang uncapitalize
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.uncapitalize($expr$)
+
+.upperCase : commons-lang upperCase
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.upperCase($expr$)
+
+.lowerCase : commons-lang lowerCase
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.lowerCase($expr$)
+
+.toStringOrEmpty : commons-lang toStringOrEmpty
+    java.lang.Object     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.toStringOrEmpty($expr$)
+
+.truncate : commons-lang truncate
+    java.lang.Object     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.truncate($expr$, $length$)
+
+.wrap : commons-lang wrap
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.wrap($expr$, $wrap$)
+
+.wrapIfMissing : commons-lang wrapIfMissing
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.wrapIfMissing($expr$, $wrap$)
+
+.unwrap : commons-lang unwrap
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.unwrap($expr$, $wrap$)
+
+.padLeft : commons-lang padLeft
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.leftPad($expr$, $length$)
+
+.padRight : commons-lang padRight
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.rightPad($expr$, $length$)
+
+.reverse : commons-lang reverse
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.reverse($expr$)
+
+.right : commons-lang right
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.right($expr$, $length$)
+
+.left : commons-lang left
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.left($expr$, $length$)
+
+.length : commons-lang length
+    java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.length($expr$)
+
+.join : commons-lang join
+    ARRAY                  [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.join($expr$, "$delimiter$")
+    java.lang.Iterable     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.join($expr$, "$delimiter$")
+    java.util.Iterator     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.join($expr$, "$delimiter$")
