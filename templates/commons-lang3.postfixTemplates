@@ -324,6 +324,47 @@
     java.util.Map        [org.apache.commons.collections.MapUtils]         → if(org.apache.commons.collections.MapUtils.isNotEmpty($expr$)){\
                                                                                 $END$\
                                                                               }
+# Check the Array/Collection if is equal
+.isEqual : commons-lang isEqual
+# Array
+    ARRAY                                                                   → java.util.Objects.deepEquals($expr$, $that$)
+    # Collection
+    java.util.Collection [org.apache.commons.collections4.CollectionUtils]  → org.apache.commons.collections4.CollectionUtils.isEqualCollection($expr$ ,$that$)
+    java.util.Collection [org.apache.commons.collections.CollectionUtils]   → org.apache.commons.collections.CollectionUtils.isEqualCollection($expr$, $that$)
+
+.isNotEqual : commons-lang isNotEqual
+# Array
+    ARRAY                [org.apache.commons.lang3.ArrayUtils]              → !java.util.Objects.deepEquals($expr$, $that$)
+    # Collection
+    java.util.Collection [org.apache.commons.collections4.CollectionUtils]  → !org.apache.commons.collections4.CollectionUtils.isEqualCollection($expr$ ,$that$)
+    java.util.Collection [org.apache.commons.collections.CollectionUtils]   → !org.apache.commons.collections.CollectionUtils.isEqualCollection($expr$ ,$that$)
+
+.ifEqual : commons-lang ifEqual
+# Array
+    ARRAY                                                                   → if(java.util.Objects.deepEquals($expr$, $that$)) {\
+                                                                                    $END$\
+                                                                              }
+    # Collection
+    java.util.Collection [org.apache.commons.collections4.CollectionUtils]  → if(org.apache.commons.collections4.CollectionUtils.isEqualCollection($expr$ ,$that$)) {\
+                                                                                    $END$\
+                                                                              }
+    java.util.Collection [org.apache.commons.collections.CollectionUtils]   → if(org.apache.commons.collections.CollectionUtils.isEqualCollection($expr$, $that$)) {\
+                                                                                    $END$\
+                                                                              }
+
+.ifNotEqual : commons-lang ifNotEqual
+# Array
+    ARRAY                [org.apache.commons.lang3.ArrayUtils]              → if(!java.util.Objects.deepEquals($expr$, $that$)) {\
+                                                                                    $END$\
+                                                                              }
+    # Collection
+    java.util.Collection [org.apache.commons.collections4.CollectionUtils]  → if(!org.apache.commons.collections4.CollectionUtils.isEqualCollection($expr$ ,$that$)) {\
+                                                                                    $END$\
+                                                                              }
+    java.util.Collection [org.apache.commons.collections.CollectionUtils]   → if(!org.apache.commons.collections.CollectionUtils.isEqualCollection($expr$ ,$that$)) {\
+                                                                                    $END$\
+                                                                              }
+
 
 .trim : commons-lang trim
     java.lang.String     [org.apache.commons.lang3.StringUtils]             → org.apache.commons.lang3.StringUtils.trim($expr$)
