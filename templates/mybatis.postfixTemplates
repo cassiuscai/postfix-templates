@@ -1,0 +1,244 @@
+###################
+## select clause ##
+###################
+.selectAll: mybatis sqlbuilder selectAll
+    org.mybatis.dynamic.sql.SqlTable            [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.select($expr$.allColumns()).from($expr$)
+
+.select: mybatis sqlbuilder select
+    org.mybatis.dynamic.sql.SqlTable            [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.select($columns$).from($expr$)
+
+.selectDistinctAll: mybatis sqlbuilder selectAll
+    org.mybatis.dynamic.sql.SqlTable            [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.selectDistinct($expr$.allColumns()).from($expr$)
+
+.selectDistinct: mybatis sqlbuilder selectAll
+    org.mybatis.dynamic.sql.SqlTable            [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.selectDistinct($columns$).from($expr$)
+
+###################
+## bool condition #
+###################
+
+# =
+.isEqualTo: mybatis sqlbuilder isEqualTo
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isEqualTo($value$)
+
+.isEqualToWhenPresent: mybatis sqlbuilder isEqualToWhenPresent
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isEqualToWhenPresent($value$)
+
+# !=
+.isNotEqualTo: mybatis sqlbuilder isNotEqualTo
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isNotEqualTo($value$)
+
+.isNotEqualToWhenPresent: mybatis sqlbuilder isNotEqualToWhenPresent
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isNotEqualToWhenPresent($value$)
+
+# >
+.isGreaterThan: mybatis sqlbuilder isGreaterThan
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isGreaterThan($value$)
+
+.isGreaterThanWhenPresent: mybatis sqlbuilder isGreaterThanWhenPresent
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isGreaterThanWhenPresent($value$)
+
+# >=
+.isGreaterThanOrEqualTo: mybatis sqlbuilder isGreaterThanOrEqualTo
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isGreaterThanOrEqualTo($value$)
+
+.isGreaterThanOrEqualToWhenPresent: mybatis sqlbuilder isGreaterThanOrEqualToWhenPresent
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isGreaterThanOrEqualToWhenPresent($value$)
+
+# <
+.isLessThan: mybatis sqlbuilder isLessThan
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isLessThan($value$)
+
+.isLessThanWhenPresent: mybatis sqlbuilder isLessThanWhenPresent
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isLessThanWhenPresent($value$)
+
+# <=
+.isLessThanOrEqualTo: mybatis sqlbuilder isLessThanOrEqualTo
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isLessThanOrEqualTo($value$)
+
+.isLessThanOrEqualToWhenPresent: mybatis sqlbuilder isLessThanOrEqualToWhenPresent
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isLessThanOrEqualToWhenPresent($value$)
+
+# in
+.isIn: mybatis sqlbuilder isIn
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isIn($values$)
+
+.isInWhenPresent: mybatis sqlbuilder isInWhenPresent
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isInWhenPresent($values$)
+
+# in ignore case
+.isInCaseInsensitive: mybatis sqlbuilder isInCaseInsensitive
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isInCaseInsensitive($values$)
+
+.isInCaseInsensitiveWhenPresent: mybatis sqlbuilder isInCaseInsensitiveWhenPresent
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isInCaseInsensitiveWhenPresent($values$)
+
+# not in
+.isNotIn: mybatis sqlbuilder isNotIn
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isNotIn($values$)
+
+.isNotInWhenPresent: mybatis sqlbuilder isNotInWhenPresent
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isNotInWhenPresent($values$)
+
+# not in ignore case
+.isNotInCaseInsensitive: mybatis sqlbuilder isNotInCaseInsensitive
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isNotInCaseInsensitive($values$)
+
+.isNotInCaseInsensitiveWhenPresent: mybatis sqlbuilder isNotInCaseInsensitiveWhenPresent
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isNotInCaseInsensitiveWhenPresent($values$)
+
+# like
+
+.isLike: mybatis sqlbuilder isLike
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isLike($values$)
+
+.isLikeWhenPresent: mybatis sqlbuilder isLikeWhenPresent
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isLikeWhenPresent($values$)
+
+# like ignore case
+.isLikeCaseInsensitive: mybatis sqlbuilder isLikeCaseInsensitive
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isLikeCaseInsensitive($values$)
+
+.isLikeCaseInsensitiveWhenPresent: mybatis sqlbuilder isLikeCaseInsensitiveWhenPresent
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isLikeCaseInsensitiveWhenPresent($values$)
+
+# not like
+.isNotLike: mybatis sqlbuilder isNotLike
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isNotLike($values$)
+
+.isNotLikeWhenPresent: mybatis sqlbuilder isNotLikeWhenPresent
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isNotLikeWhenPresent($values$)
+
+# not like ignore case
+.isNotLikeCaseInsensitive: mybatis sqlbuilder isNotLikeCaseInsensitive
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isNotLikeCaseInsensitive($values$)
+
+.isNotLikeCaseInsensitiveWhenPresent: mybatis sqlbuilder isNotLikeCaseInsensitiveWhenPresent
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isNotLikeCaseInsensitiveWhenPresent($values$)
+
+# is between
+.isBetween: mybatis sqlbuilder isBetween
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isBetween($value1$).and($value2$)
+
+.isNotBetweenWhenPresent: mybatis sqlbuilder isNotBetweenWhenPresent
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isNotBetweenWhenPresent($value1$).and($value2$)
+
+# is not between
+.isNotBetween: mybatis sqlbuilder isNotBetween
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isNotBetween($value1$).and($value2$)
+
+.isNotBetweenWhenPresent: mybatis sqlbuilder isNotBetweenWhenPresent
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isNotBetweenWhenPresent($value1$).and($value2$)
+
+# isTrue
+.isTrue: mybatis sqlbuilder isTrue
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isTrue()
+
+# isTrue
+.isFalse: mybatis sqlbuilder isFalse
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isFalse()
+
+# isNull
+.isNull: mybatis sqlbuilder isNull
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isNull()
+
+# isNotNull
+.isNotNull: mybatis sqlbuilder isNotNull
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.isNotNull()
+
+################### Expressions
+# boolean expression
+.and: mybatis sqlbuilder and
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.and($expr$, $rest$)
+    org.mybatis.dynamic.sql.BasicColumn         [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.and($expr$, $rest$)
+    org.mybatis.dynamic.sql.ExistsPredicate     [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.and($expr$, $rest$)
+
+.or: mybatis sqlbuilder or
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.or($expr$, $rest$)
+    org.mybatis.dynamic.sql.BasicColumn         [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.or($expr$, $rest$)
+    org.mybatis.dynamic.sql.ExistsPredicate     [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.or($expr$, $rest$)
+
+.joinOnColumn: mybatis sqlbuilder joinEqualToColumn
+    org.mybatis.dynamic.sql.BasicColumn         [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.equalTo($column$)
+
+.joinOnValue: mybatis sqlbuilder joinEqualToColumn
+    org.mybatis.dynamic.sql.BasicColumn         [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.equalTo(org.mybatis.dynamic.sql.SqlBuilder.constant($value$))
+
+.joinOnStringValue: mybatis sqlbuilder joinEqualToStringValue
+    org.mybatis.dynamic.sql.BasicColumn         [org.mybatis.dynamic.sql.SqlBuilder] → $expr$, org.mybatis.dynamic.sql.SqlBuilder.equalTo(org.mybatis.dynamic.sql.SqlBuilder.stringConstant($value$))
+
+# aggregate expression
+.max: mybatis sqlbuilder max
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.max($expr$)
+
+.min: mybatis sqlbuilder min
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.min($expr$)
+
+.avg: mybatis sqlbuilder avg
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.avg($expr$)
+
+.sum: mybatis sqlbuilder sum
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.sum($expr$)
+
+
+# math expression
+.add: mybatis sqlbuilder add
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.add($expr$, $rest$)
+    org.mybatis.dynamic.sql.BasicColumn         [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.add($expr$, $rest$)
+
+.divide: mybatis sqlbuilder divide
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.divide($expr$, $rest$)
+    org.mybatis.dynamic.sql.BasicColumn         [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.divide($expr$, $rest$)
+
+.multiply: mybatis sqlbuilder multiply
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.multiply($expr$, $rest$)
+    org.mybatis.dynamic.sql.BasicColumn         [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.multiply($expr$, $rest$)
+
+.subtract: mybatis sqlbuilder subtract
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.subtract($expr$, $rest$)
+    org.mybatis.dynamic.sql.BasicColumn         [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.subtract($expr$, $rest$)
+
+# case convert
+.lower: mybatis sqlbuilder lower
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.lower($expr$, $rest$)
+
+.upper: mybatis sqlbuilder upper
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.upper($expr$, $rest$)
+
+.substring: mybatis sqlbuilder substring
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.substring($expr$, $startIndex$, $endIndex$)
+
+# general expression
+.applyOperator: mybatis sqlbuilder subtract
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.subtract($op$, $expr$, $rest$)
+
+.concatenate: mybatis sqlbuilder concatenate
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.concatenate($expr$)
+
+.constant: mybatis sqlbuilder constant
+    STRING_LITERAL                              [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.constant($expr$)
+
+.constantString: mybatis sqlbuilder constantString
+    STRING_LITERAL                              [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.stringConstant($expr$)
+
+.count: mybatis sqlbuilder count
+    org.mybatis.dynamic.sql.BasicColumn         [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.count($expr$)
+
+.countAll: mybatis sqlbuilder count
+    org.mybatis.dynamic.sql.BasicColumn         [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.count()
+
+.countDistinct: mybatis sqlbuilder countDistinct
+    org.mybatis.dynamic.sql.BasicColumn         [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.countDistinct($expr$)
+
+###################
+.exists: mybatis sqlbuilder exists
+    org.mybatis.dynamic.sql.util.Buildable      [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.exists($expr$)
+
+.notExists: mybatis sqlbuilder notExists
+    org.mybatis.dynamic.sql.util.Buildable      [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.notExists($expr$)
+
+###################
+.where: mybatis sqlbuilder where
+    org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.where($expr$, $rest$)
+
+
