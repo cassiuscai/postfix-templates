@@ -241,4 +241,12 @@
 .where: mybatis sqlbuilder where
     org.mybatis.dynamic.sql.BindableColumn      [org.mybatis.dynamic.sql.SqlBuilder] → org.mybatis.dynamic.sql.SqlBuilder.where($expr$, $rest$)
 
-
+###################
+.render: render to query
+###################
+    .render: render to query
+    org.mybatis.dynamic.sql.insert.InsertModel  [org.mybatis.dynamic.sql.SqlBuilder] → $expr$.render(org.mybatis.dynamic.sql.render.RenderingStrategies.MYBATIS3)
+    org.mybatis.dynamic.sql.delete.DeleteModel  [org.mybatis.dynamic.sql.SqlBuilder] → $expr$.render(org.mybatis.dynamic.sql.render.RenderingStrategies.MYBATIS3)
+    org.mybatis.dynamic.sql.update.UpdateModel  [org.mybatis.dynamic.sql.SqlBuilder] → $expr$.render(org.mybatis.dynamic.sql.render.RenderingStrategies.MYBATIS3)
+    org.mybatis.dynamic.sql.select.SelectModel  [org.mybatis.dynamic.sql.SqlBuilder] → $expr$.render(org.mybatis.dynamic.sql.render.RenderingStrategies.MYBATIS3)
+    org.mybatis.dynamic.sql.where.WhereModel    [org.mybatis.dynamic.sql.SqlBuilder] → $expr$.render(org.mybatis.dynamic.sql.render.RenderingStrategies.MYBATIS3)
