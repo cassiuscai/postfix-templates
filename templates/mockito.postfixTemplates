@@ -33,3 +33,21 @@
 
 .initMockito : mockito initMockito
     ANY                 [org.mockito.Mockito]       →  org.mockito.MockitoAnnotations.initMocks($expr$);
+
+# BDDMockito postfix templates from https://github.com/krrrr38/intellij-mockito-postfix-plugin
+.given : BDDMockito given
+    java.lang.Class     [org.mockito.BDDMockito]    →  org.mockito.BDDMockito.given($expr$)$END$  [USE_STATIC_IMPORTS]
+.then : BDDMockito then
+    java.lang.Class     [org.mockito.BDDMockito]    →  org.mockito.BDDMockito.then($expr$)$END$  [USE_STATIC_IMPORTS]
+.will : BDDMockito will
+    NON_VOID            [org.mockito.BDDMockito]    →  org.mockito.BDDMockito.will($answer$).given($expr$)$END$   [USE_STATIC_IMPORTS]
+.willAnswer : BDDMockito willAnswer
+    NON_VOID            [org.mockito.BDDMockito]    →  org.mockito.BDDMockito.willAnswer($answer$).given($expr$).$END$   [USE_STATIC_IMPORTS]
+.willDoNothing : BDDMockito willDoNothing
+    NON_VOID            [org.mockito.BDDMockito]    →  org.mockito.BDDMockito.willDoNothing().given($expr$)$END$   [USE_STATIC_IMPORTS]
+.willReturn : BDDMockito willReturn
+    NON_VOID            [org.mockito.BDDMockito]    →  org.mockito.BDDMockito.willReturn($return$).given($expr$)$END$   [USE_STATIC_IMPORTS]
+.willThrow : BDDMockito willThrow
+    NON_VOID            [org.mockito.BDDMockito]    →  org.mockito.BDDMockito.willThrow($ex$).given($expr$)$END$   [USE_STATIC_IMPORTS]
+.willCallRealMethod : BDDMockito willCallRealMethod
+    NON_VOID            [org.mockito.BDDMockito]    →  org.mockito.BDDMockito.willCallRealMethod().given($expr$)$END$   [USE_STATIC_IMPORTS]
