@@ -40,6 +40,8 @@
     - `.assertThatIllegalStateException`
     - `.assertThatNullPointerException`
     - `.assertThatRuntimeException`
+    - `.catchThrowable`
+    - `.catchException`
 
 ### [mockito](https://site.mockito.org/)
 - [`org.mockito.Mockito`](templates/mockito.postfixTemplates)
@@ -56,6 +58,14 @@
     - `.doNothing`
     - `.doAnswer`
     - `.doReturn`
+    - `.given`
+    - `.then`
+    - `.will`
+    - `.willAnswer`
+    - `.willDoNothing`
+    - `.willReturn`
+    - `.willThrow`
+    - `.willCallRealMethod`
 
 ### [guava-string](https://github.com/google/guava/wiki/StringsExplained)
 - [`com.google.common.base.Joiner`](templates/guava-string.postfixTemplates)
