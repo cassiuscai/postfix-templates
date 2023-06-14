@@ -19,7 +19,7 @@
         <commons-logging.version>1.2</commons-logging.version>
         <fastjson.version>1.2.83</fastjson.version>
         <flink.version>1.8.0</flink.version>
-        <guava.version>31.1-jre</guava.version>
+        <guava.version>32.0.0-jre</guava.version>
         <jool-java-8.version>0.9.14</jool-java-8.version>
         <mockito-core.version>4.3.1</mockito-core.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
