@@ -31,6 +31,7 @@
         <spring.version>5.3.20</spring.version>
         <testng.version>7.5.1</testng.version>
         <vavr.version>0.10.4</vavr.version>
+        <json-path.version>2.8.0</json-path.version>
     </properties>
 
     <dependencyManagement>
@@ -70,6 +71,12 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>${fastjson.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jayway.jsonpath</groupId>
+            <artifactId>json-path</artifactId>
+            <version>${json-path.version}</version>
         </dependency>
 
         <dependency>
