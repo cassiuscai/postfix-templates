@@ -29,7 +29,7 @@
         <slf4j.version>1.7.26</slf4j.version>
         <spark.version>2.4.1</spark.version>
         <spring.version>5.3.20</spring.version>
-        <testng.version>7.5</testng.version>
+        <testng.version>7.5.1</testng.version>
         <vavr.version>0.10.4</vavr.version>
     </properties>
 
