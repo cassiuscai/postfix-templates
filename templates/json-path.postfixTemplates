@@ -1,0 +1,35 @@
+.readJsonPathAsString : read json path as string
+    java.lang.String    [com.jayway.jsonpath.JsonPath]  →  java.lang.String $var:suggestVariableName()$  = com.jayway.jsonpath.JsonPath.read($expr$, "$END$");
+    java.net.URL        [com.jayway.jsonpath.JsonPath]  →  java.lang.String $var:suggestVariableName()$  = com.jayway.jsonpath.JsonPath.read($expr$, "$END$");
+    java.io.File        [com.jayway.jsonpath.JsonPath]  →  java.lang.String $var:suggestVariableName()$  = com.jayway.jsonpath.JsonPath.read($expr$, "$END$");
+    STRING_LITERAL      [com.jayway.jsonpath.JsonPath]  →  java.lang.String $var:suggestVariableName()$  = com.jayway.jsonpath.JsonPath.read($expr$, "$END$");
+
+.readJsonPathAsStringList : read json path as string list
+    java.lang.String    [com.jayway.jsonpath.JsonPath]  →  java.util.List<java.lang.String> $var:suggestVariableName()$  = com.jayway.jsonpath.JsonPath.read($expr$, "$END$");
+    java.net.URL        [com.jayway.jsonpath.JsonPath]  →  java.util.List<java.lang.String> $var:suggestVariableName()$  = com.jayway.jsonpath.JsonPath.read($expr$, "$END$");
+    java.io.File        [com.jayway.jsonpath.JsonPath]  →  java.util.List<java.lang.String> $var:suggestVariableName()$  = com.jayway.jsonpath.JsonPath.read($expr$, "$END$");
+    STRING_LITERAL      [com.jayway.jsonpath.JsonPath]  →  java.util.List<java.lang.String> $var:suggestVariableName()$  = com.jayway.jsonpath.JsonPath.read($expr$, "$END$");
+
+.readJsonPathAsInteger : read json path as integer
+    java.lang.String    [com.jayway.jsonpath.JsonPath]  →  java.lang.Integer $var:suggestVariableName()$  = com.jayway.jsonpath.JsonPath.read($expr$, "$END$");
+    java.net.URL        [com.jayway.jsonpath.JsonPath]  →  java.lang.Integer $var:suggestVariableName()$  = com.jayway.jsonpath.JsonPath.read($expr$, "$END$");
+    java.io.File        [com.jayway.jsonpath.JsonPath]  →  java.lang.Integer $var:suggestVariableName()$  = com.jayway.jsonpath.JsonPath.read($expr$, "$END$");
+    STRING_LITERAL      [com.jayway.jsonpath.JsonPath]  →  java.lang.Integer $var:suggestVariableName()$  = com.jayway.jsonpath.JsonPath.read($expr$, "$END$");
+
+.readJsonPathAsIntegerList : read json path as integer list
+    java.lang.String    [com.jayway.jsonpath.JsonPath]  →  java.util.List<java.lang.Integer> $var:suggestVariableName()$  = com.jayway.jsonpath.JsonPath.read($expr$, "$END$");
+    java.net.URL        [com.jayway.jsonpath.JsonPath]  →  java.util.List<java.lang.Integer> $var:suggestVariableName()$  = com.jayway.jsonpath.JsonPath.read($expr$, "$END$");
+    java.io.File        [com.jayway.jsonpath.JsonPath]  →  java.util.List<java.lang.Integer> $var:suggestVariableName()$  = com.jayway.jsonpath.JsonPath.read($expr$, "$END$");
+    STRING_LITERAL      [com.jayway.jsonpath.JsonPath]  →  java.util.List<java.lang.Integer> $var:suggestVariableName()$  = com.jayway.jsonpath.JsonPath.read($expr$, "$END$");
+
+.readJsonPathAsDouble : read json path as double
+    java.lang.String    [com.jayway.jsonpath.JsonPath]  →  java.lang.Double $var:suggestVariableName()$  = com.jayway.jsonpath.JsonPath.read($expr$, "$END$");
+    java.net.URL        [com.jayway.jsonpath.JsonPath]  →  java.lang.Double $var:suggestVariableName()$  = com.jayway.jsonpath.JsonPath.read($expr$, "$END$");
+    java.io.File        [com.jayway.jsonpath.JsonPath]  →  java.lang.Double $var:suggestVariableName()$  = com.jayway.jsonpath.JsonPath.read($expr$, "$END$");
+    STRING_LITERAL      [com.jayway.jsonpath.JsonPath]  →  java.lang.Double $var:suggestVariableName()$  = com.jayway.jsonpath.JsonPath.read($expr$, "$END$");
+
+.readJsonPathAsDoubleList : read json path as double list
+    java.lang.String    [com.jayway.jsonpath.JsonPath]  →  java.util.List<java.lang.Double> $var:suggestVariableName()$  = com.jayway.jsonpath.JsonPath.read($expr$, "$END$");
+    java.net.URL        [com.jayway.jsonpath.JsonPath]  →  java.util.List<java.lang.Double> $var:suggestVariableName()$  = com.jayway.jsonpath.JsonPath.read($expr$, "$END$");
+    java.io.File        [com.jayway.jsonpath.JsonPath]  →  java.util.List<java.lang.Double> $var:suggestVariableName()$  = com.jayway.jsonpath.JsonPath.read($expr$, "$END$");
+    STRING_LITERAL      [com.jayway.jsonpath.JsonPath]  →  java.util.List<java.lang.Double> $var:suggestVariableName()$  = com.jayway.jsonpath.JsonPath.read($expr$, "$END$");
