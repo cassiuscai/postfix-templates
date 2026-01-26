@@ -9,7 +9,7 @@
     <version>1.0.0</version>
 
     <properties>
-        <assertj-core.version>3.22.0</assertj-core.version>
+        <assertj-core.version>3.27.7</assertj-core.version>
         <assertj-vavr.version>0.4.2</assertj-vavr.version>
         <commons-collections.version>3.2.2</commons-collections.version>
         <commons-collections4.version>4.4</commons-collections4.version>
